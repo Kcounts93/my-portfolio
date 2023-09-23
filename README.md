@@ -1,5 +1,8 @@
 # Getting Started with Create React App
 
+#242628 - Charcoal
+#e2e4dd - putty
+#00aa3c - green
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
