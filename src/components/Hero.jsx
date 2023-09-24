@@ -6,7 +6,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <div name="hero" className="w-full h-screen hero-pattern px-20">
+    <div name="home" className="w-full h-screen hero-pattern px-20">
       {/* container */}
       <div className="max-width-[100%] h-full flex flex-col justify-center items-start">
         <div className="md:w-[75%] xl:w-[75%] mb-6">
@@ -20,8 +20,11 @@ const Hero = () => {
           </h1>
         </div>
         <a href="https://www.linkedin.com/in/kaylacounts/" target="blank">
-          <button className=" flex justify-center items-center mt-5 bg-putty px-5 py-3 text-charcoal text-bold hover:button-hover">
-            Contact me <FaArrowRight className="ml-2" />
+          <button className="flex items-center mt-5 px-5 py-3 border border-putty bg-putty text-charcoal text-bold hover:bg-charcoal hover:text-putty duration-300">
+            Contact me
+            <span className="duration-300">
+              <FaArrowRight className="ml-2" />
+            </span>
           </button>
         </a>
       </div>
