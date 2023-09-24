@@ -20,7 +20,7 @@ const Hero = () => {
           </h1>
         </div>
         <a href="https://www.linkedin.com/in/kaylacounts/" target="blank">
-          <button className=" flex justify-center items-center mt-5 bg-putty px-5 py-3 text-charcoal hover:button-hover">
+          <button className=" flex justify-center items-center mt-5 bg-putty px-5 py-3 text-charcoal text-bold hover:button-hover">
             Contact me <FaArrowRight className="ml-2" />
           </button>
         </a>
