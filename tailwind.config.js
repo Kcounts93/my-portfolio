@@ -2,12 +2,16 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    colors: {
-      "charcoal": "#242628",
-      "putty": "#e2e4dd",
-      "lime": "#00aa3c",
+    extend: {
+      colors: {
+        "charcoal": "#242628",
+        "putty": "#e2e4dd",
+        "blue": "#114adc",
+      },
+      backgroundImage: {
+        "hero-pattern": "src/assets/blue-circles.png",
+      },
     },
-    // extend: {},
   },
   plugins: [],
 };

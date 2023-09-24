@@ -6,14 +6,15 @@
 
 @layer base {
     body {
-        @apply bg-[#242628]
+        @apply bg-[#242628];
+        @apply font-[Montserrat];
     }
     li {
         @apply font-[Raleway];
         @apply cursor-pointer;
         @apply px-4;
     }
-    p {
-        @apply font-[Montserrat];
+    h1,h1,h3,h4,h5,h6,p,a {
+        @apply text-putty;
     }
 }
