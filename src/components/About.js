@@ -3,13 +3,13 @@ import Me from "../assets/temp-me.jpg";
 
 const About = () => {
   return (
-    <div name="about-container" className="w-full px-20">
+    <div name="about-container" className="w-full px-20 py-10">
       <div className="text-heading-section mb-10">
         <h2 className="text-putty text-3xl text-light mb-2">About me</h2>
         <hr />
       </div>
-      <div className="flex sm:flex-col md:flex-row">
-        <div className="sm:w-[100%] md:w-[50%] pr-5">
+      <div className="flex sm:flex-col lg:flex-row">
+        <div className="sm:w-[100%] lg:w-[50%] pr-5">
           <p className="text-xl leading-10">
             Hello, I'm Kayla Counts, a Front End Developer with a passion for
             creating responsive and visually captivating applications. Whether
@@ -38,7 +38,7 @@ const About = () => {
             every click reveals a world of possibility.
           </p>
         </div>
-        <div className="sm:w-[100%] md:w-[50%] p-5">
+        <div className="sm:w-[100%] lg:w-[50%] p-5">
           <img src={Me} alt="Me" />
         </div>
       </div>
