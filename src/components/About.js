@@ -39,7 +39,7 @@ const About = () => {
           </p>
         </div>
         <div className="sm:w-[100%] md:w-[50%] p-5">
-          <img src={Me} alt="picture of me" />
+          <img src={Me} alt="Me" />
         </div>
       </div>
     </div>
