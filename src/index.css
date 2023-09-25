@@ -8,6 +8,7 @@
     body {
         @apply bg-[#242628];
         @apply font-[Montserrat];
+        @apply mb-[80px];
     }
     li {
         @apply font-[Raleway];

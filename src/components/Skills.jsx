@@ -14,7 +14,7 @@ import Marquee from "react-fast-marquee";
 
 const Skills = () => {
   return (
-    <div name="skills" className="w-full my-20 py-20">
+    <div name="skills" className="w-full my-20">
       <div>
         <Marquee direction="right" speed={90} delay={5}>
           <div className="image_wrapper">

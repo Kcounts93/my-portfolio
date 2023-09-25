@@ -13,7 +13,7 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className="fixed w-full h-[80px] px-20 flex justify-between items-center bg-charcoal text-putty font-normal">
+    <div className="fixed w-full h-[80px] px-5 lg:px-20 flex justify-between items-center bg-charcoal text-putty font-normal">
       <div>
         <img src={Logo} alt="my logo" />
       </div>
