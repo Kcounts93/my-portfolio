@@ -18,7 +18,7 @@ const Hero = () => {
           <h6 className="text-2xl mb-2 font-light">
             Hello, my name is Kayla Counts
           </h6>
-          <h1 className="text-xl sm:text-2xl md:text-5xl leading-normal font-light">
+          <h1 className="sm:text-2xl md:text-5xl font-light leading-10">
             I specialize in crafting visually captivating, responsive web
             applications, bringing four years of design and development
             expertise to everything I do.

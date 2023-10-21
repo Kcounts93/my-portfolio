@@ -1,40 +1,40 @@
 import React, { useState, useEffect } from "react";
 import Project1 from "../assets/project_1.jpeg";
+import notesApp from "../assets/notes-app.png";
+import otr from "../assets/ontherocks.png";
+import cursor from "../assets/cursor.png";
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [projects, setProjects] = useState([
     {
       id: 1,
-      title: "How to center an element using JavaScript and jQuery",
+      title: "On the Rocks Mixology Website",
       subtitle: "Snippet",
-      date: "10th Oct 2022",
-      categories: ["JavaScript"],
-      image: Project1,
+      categories: ["Bootstrap, HTML, CSS"],
+      image: otr,
       projectLink: "https://example.com/project-link",
-      liveLink: "https://example.com/live-link",
+      liveLink: "https://ontherocks.counts2six.com/",
       featured: true, // Featured project
     },
     {
       id: 2,
-      title: "How to center an element using JavaScript and jQuery",
+      title: "Cursor.io Landing Page",
       subtitle: "Snippet",
-      date: "10th Oct 2022",
-      categories: ["JavaScript"],
-      image: Project1,
+      categories: ["JavaScript, react"],
+      image: cursor,
       projectLink: "https://example.com/project-link",
       liveLink: "https://example.com/live-link",
       featured: true, // Featured project
     },
     {
       id: 3,
-      title: "How to center an element using JavaScript and jQuery",
+      title: "Category Notes App",
       subtitle: "Snippet",
-      date: "10th Oct 2022",
-      categories: ["JavaScript"],
-      image: Project1,
+      categories: ["React", "Typescript"],
+      image: notesApp,
       projectLink: "https://example.com/project-link",
-      liveLink: "https://example.com/live-link",
+      liveLink: "https://notes.counts2six.com/",
       featured: true, // Featured project
     },
     {
@@ -100,20 +100,26 @@ const Projects = () => {
           <div
             key={project.id}
             onClick={() => setSelectedProject(project)}
-            className="w-full sm:w-1/2 lg:w-1/3 p-2"
+            className="w-full sm:w-1/2 lg:w-1/3 p-2 flex flex-col"
           >
             {/* Project card content */}
-            <div className="rounded-xl bg-gradient-to-br from-cyan-400 to-blue-800 p-0.5 shadow-xl transition">
+            <div className="mx-3 rounded-xl bg-gradient-to-br from-putty to-charcoal p-0.5 shadow-xl transition hover:scale-105 duration-300">
               {/* Project details */}
-              <div className="flex-col justify-center align-middle rounded-[10px] bg-darkgrey p-4 sm:p-6">
-                <img className="mb-5" src={project.image} alt={project.title} />
-                <time className="text-md">{project.date}</time>
+              <div className="flex-col justify-center align-middle rounded-[10px] bg-darkgrey p-4 sm:p-6 flex-grow">
+                <div className="">
+                  <img
+                    className="mb-5"
+                    src={project.image}
+                    alt={project.title}
+                  />
+                </div>
+
                 <h3 className="mt-0.5 text-xl font-medium">{project.title}</h3>
                 <div className="mt-4 flex flex-wrap gap-1">
                   {project.categories.map((category, index) => (
                     <span
                       key={index}
-                      className="whitespace-nowrap rounded-full bg-charcoal px-2.5 py-0.5 text-s text-cyan-500"
+                      className="whitespace-nowrap rounded-full bg-charcoal px-2.5 py-0.5 text-s"
                     >
                       {category}
                     </span>
