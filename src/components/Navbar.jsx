@@ -30,11 +30,10 @@ const Navbar = () => {
   const listItemVariants = {
     hover: {
       scale: 1.1,
-      color: "#114adc", // Change to your desired color
+      // Change to your desired color
     },
     rest: {
       scale: 1,
-      color: "inherit",
     },
   };
 
@@ -131,19 +130,19 @@ const Navbar = () => {
         )}
       </AnimatePresence>
       <ul className="hidden md:flex">
-        <li className="text-xl transition-transform hover:-translate-y-1 hover:scale-110 hover:bg-gradient-to-br hover:from-cyan-400 hover:to-blue-800 hover:bg-clip-text hover:text-transparent duration-300">
+        <li className="text-xl transition-transform hover:-translate-y-1 hover:scale-125 duration-300">
           Home
         </li>
-        <li className="text-xl transition-transform hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
+        <li className="text-xl transition-transform hover:-translate-y-1 hover:scale-125 duration-300">
           Projects
         </li>
-        <li className="text-xl transition-transform hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
+        <li className="text-xl transition-transform hover:-translate-y-1 hover:scale-125 duration-300">
           Skills
         </li>
-        <li className="text-xl transition-transform hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
+        <li className="text-xl transition-transform hover:-translate-y-1 hover:scale-125 duration-300">
           Experience
         </li>
-        <li className="text-xl transition-transform hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
+        <li className="text-xl transition-transform hover:-translate-y-1 hover:scale-125 duration-300">
           Contact
         </li>
       </ul>

@@ -2,38 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;1,900&family=Raleway:wght@300;400;600;700;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;1,900&family=Raleway:wght@300;400;600;700;900&display=swap");
 
 @layer base {
-    body {
-        @apply bg-[#121212];
-        @apply font-[Montserrat];
-        @apply mb-[80px];
-        @apply text-putty;
-    }
-    li {
-        @apply font-[Raleway];
-        @apply cursor-pointer;
-        @apply px-4;
-    }
+  body {
+    @apply bg-[#121212];
+    @apply font-[Montserrat];
+    @apply mb-[80px];
+    @apply text-putty;
+  }
+  li {
+    @apply font-[Raleway];
+    @apply cursor-pointer;
+    @apply px-4;
+  }
 }
 
 @layer utilities {
-    .animate-fadeIn {
-      animation: fadeIn 1s;
-    }
+  .animate-fadeIn {
+    animation: fadeIn 1s;
   }
-  
-  @keyframes fade-In {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+}
 
-.image_wrapper {
-    margin: 0px 5rem;
+@keyframes fade-In {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Skills Logo Wrapper */
+.image_wrapper {
+  margin: 0px 5rem;
+}
+
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #242628;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #e2e4dd;
+}
