@@ -3,8 +3,14 @@ import Triangle1 from "../assets/scroll1.svg";
 import Triangle2 from "../assets/scroll2.svg";
 import Triangle3 from "../assets/scroll3.svg";
 import { FaArrowRight } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Hero = () => {
+  const fadeInOut = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
   return (
     <div name="home" className="w-full h-screen px-20">
       {/* container */}
@@ -33,9 +39,30 @@ const Hero = () => {
         </a>
       </div>
       <div className="flex flex-col mt-[-6rem]">
-        <img className="h-[1rem]" src={Triangle1} alt="arrow down 1" />
-        <img className="h-[1rem]" src={Triangle2} alt="arrow down 2" />
-        <img className="h-[1rem]" src={Triangle3} alt="arrow down 3" />
+        <motion.img
+          initial="hidden"
+          animate="visible"
+          variants={fadeInOut}
+          className="h-[1rem]"
+          src={Triangle1}
+          alt="arrow down 1"
+        />
+        <motion.img
+          initial="hidden"
+          animate="visible"
+          variants={fadeInOut}
+          className="h-[1rem]"
+          src={Triangle2}
+          alt="arrow down 2"
+        />
+        <motion.img
+          initial="hidden"
+          animate="visible"
+          variants={fadeInOut}
+          className="h-[1rem]"
+          src={Triangle3}
+          alt="arrow down 3"
+        />
       </div>
     </div>
   );

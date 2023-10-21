@@ -50,7 +50,11 @@ const Navbar = () => {
       </div>
       {/* Hamburger */}
       <div onClick={toggleNav} className="md:hidden z-10 text-[2rem]">
-        {nav ? <FaTimes /> : <FaBars />}
+        {nav ? (
+          <FaTimes className="transition ease-in-out delay-50 hover:rotate-180 hover:scale-125 duration-300" />
+        ) : (
+          <FaBars />
+        )}
       </div>
       <AnimatePresence>
         {nav && (
@@ -109,17 +113,17 @@ const Navbar = () => {
                   href="https://www.linkedin.com/in/kaylacounts/"
                   target="blank"
                 >
-                  <FaLinkedinIn className="text-[2rem]" />
+                  <FaLinkedinIn className="text-[2rem] transition ease-in-out delay-50 hover:scale-150 duration-300" />
                 </a>
               </li>
               <li className="">
                 <a href="https://github.com/Kcounts93" target="blank">
-                  <FaGithub className="text-[2rem]" />
+                  <FaGithub className="text-[2rem] transition ease-in-out delay-50 hover:scale-150 duration-300" />
                 </a>
               </li>
               <li className="">
                 <a href="https://www.instagram.com/kaylaranae.psd/">
-                  <FaInstagram className="text-[2rem]" />
+                  <FaInstagram className="text-[2rem] transition ease-in-out delay-50 hover:scale-150 duration-300" />
                 </a>
               </li>
             </ul>
@@ -127,19 +131,19 @@ const Navbar = () => {
         )}
       </AnimatePresence>
       <ul className="hidden md:flex">
-        <li className="text-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
+        <li className="text-xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
           Home
         </li>
-        <li className="text-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
+        <li className="text-xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
           Projects
         </li>
-        <li className="text-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
+        <li className="text-xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
           Skills
         </li>
-        <li className="text-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
+        <li className="text-xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
           Experience
         </li>
-        <li className="text-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
+        <li className="text-xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
           Contact
         </li>
       </ul>
