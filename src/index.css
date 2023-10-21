@@ -6,7 +6,7 @@
 
 @layer base {
     body {
-        @apply bg-[#242628];
+        @apply bg-[#121212];
         @apply font-[Montserrat];
         @apply mb-[80px];
     }

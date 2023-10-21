@@ -4,12 +4,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        "darkgrey": "#121212",
         "charcoal": "#242628",
         "putty": "#e2e4dd",
-        "blue": "#114adc",
+        "blue": "#556b2f",
       },
       backgroundImage: {
-        "hero-pattern": "src/assets/blue-circles.png",
+        "hero-pattern": "url('src/assets/blue-circles.png)",
       },
     },
   },

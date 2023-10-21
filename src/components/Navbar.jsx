@@ -13,14 +13,16 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className="fixed w-full h-[80px] px-5 lg:px-20 flex justify-between items-center bg-charcoal text-putty font-normal">
+    <div className="fixed w-full h-[80px] px-5 lg:px-20 flex justify-between items-center bg-darkgrey text-putty font-normal">
       <div>
         <img src={Logo} alt="my logo" />
       </div>
       {/* Menu */}
 
       <ul className="hidden md:flex">
-        <li className="text-xl">Home</li>
+        <li className="text-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
+          Home
+        </li>
         <li className="text-xl">Projects</li>
         <li className="text-xl">Skills</li>
         <li className="text-xl">Experience</li>
