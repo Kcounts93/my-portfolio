@@ -7,87 +7,143 @@ import {
   FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-  const handleClick = () => setNav(!nav);
+  const toggleNav = () => setNav(!nav);
+
+  const navVariants = {
+    hidden: {
+      opacity: 0,
+      x: -100,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.3,
+      },
+    },
+  };
+
+  const listItemVariants = {
+    hover: {
+      scale: 1.1,
+      color: "#114adc", // Change to your desired color
+    },
+    rest: {
+      scale: 1,
+      color: "inherit",
+    },
+  };
 
   return (
-    <div className="fixed w-full h-[80px] px-5 lg:px-20 flex justify-between items-center bg-darkgrey text-putty font-normal">
+    <motion.div
+      className="fixed w-full h-[80px] px-5 lg:px-20 flex justify-between items-center bg-darkgrey text-putty font-normal"
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -100 }}
+    >
       <div>
         <img src={Logo} alt="my logo" />
       </div>
-      {/* Menu */}
-
+      {/* Hamburger */}
+      <div onClick={toggleNav} className="md:hidden z-10 text-[2rem]">
+        {nav ? <FaTimes /> : <FaBars />}
+      </div>
+      <AnimatePresence>
+        {nav && (
+          <motion.div
+            className="fixed top-0 right-0 w-full md:w-1/4 h-full flex flex-col items-center justify-center bg-charcoal"
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            variants={navVariants}
+          >
+            <ul className="text-5xl py-4 text-center">
+              <motion.li
+                className="mb-4"
+                variants={listItemVariants}
+                whileHover="hover"
+                whileTap="hover"
+              >
+                Home
+              </motion.li>
+              <motion.li
+                className="mb-4"
+                variants={listItemVariants}
+                whileHover="hover"
+                whileTap="hover"
+              >
+                Projects
+              </motion.li>
+              <motion.li
+                className="mb-4"
+                variants={listItemVariants}
+                whileHover="hover"
+                whileTap="hover"
+              >
+                Skills
+              </motion.li>
+              <motion.li
+                className="mb-4"
+                variants={listItemVariants}
+                whileHover="hover"
+                whileTap="hover"
+              >
+                Experience
+              </motion.li>
+              <motion.li
+                className="mb-4"
+                variants={listItemVariants}
+                whileHover="hover"
+                whileTap="hover"
+              >
+                Contact
+              </motion.li>
+            </ul>
+            <ul className="flex">
+              <li className="">
+                <a
+                  href="https://www.linkedin.com/in/kaylacounts/"
+                  target="blank"
+                >
+                  <FaLinkedinIn className="text-[2rem]" />
+                </a>
+              </li>
+              <li className="">
+                <a href="https://github.com/Kcounts93" target="blank">
+                  <FaGithub className="text-[2rem]" />
+                </a>
+              </li>
+              <li className="">
+                <a href="https://www.instagram.com/kaylaranae.psd/">
+                  <FaInstagram className="text-[2rem]" />
+                </a>
+              </li>
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
       <ul className="hidden md:flex">
         <li className="text-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
           Home
         </li>
-        <li className="text-xl">Projects</li>
-        <li className="text-xl">Skills</li>
-        <li className="text-xl">Experience</li>
-        <li className="text-xl">Contact</li>
+        <li className="text-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
+          Projects
+        </li>
+        <li className="text-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
+          Skills
+        </li>
+        <li className="text-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
+          Experience
+        </li>
+        <li className="text-xl transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
+          Contact
+        </li>
       </ul>
-      {/* Hamburger */}
-      <div onClick={handleClick} className="md:hidden z-10 text-[2rem]">
-        {!nav ? <FaBars /> : <FaTimes />}
-      </div>
-      {/* Mobile Menu */}
-      <div
-        className={
-          !nav
-            ? "hidden"
-            : "absolute top-0 right-0 w-25 flex flex-row justify-end mt-5 px-5 ml-10 bg-charcoal"
-        }
-      >
-        <div className="flex flex-col mt-5">
-          <ul>
-            <li className="py-4 text-3xl">Home</li>
-            <li className="py-4 text-3xl">Projects</li>
-            <li className="py-4 text-3xl">Skills</li>
-            <li className="py-4 text-3xl">Experience</li>
-            <li className="py-4 text-3xl">Contact</li>
-          </ul>
-          <ul className="flex">
-            <li className="py-2">
-              <a href="https://www.linkedin.com/in/kaylacounts/" target="blank">
-                <FaLinkedinIn className="text-[2rem]" />
-              </a>
-            </li>
-            <li className="py-2">
-              <a href="https://github.com/Kcounts93" target="blank">
-                <FaGithub className="text-[2rem]" />
-              </a>
-            </li>
-            <li className="py-2">
-              <a href="https://www.instagram.com/kaylaranae.psd/">
-                <FaInstagram className="text-[2rem]" />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      {/* Social Icons */}
-      <div className="hidden lg:flex fixed flex-col top-[50%] right-0 pr-5">
-        <ul>
-          <li className="py-2">
-            <a href="https://www.linkedin.com/in/kaylacounts/" target="blank">
-              <FaLinkedinIn className="text-[2rem]" />
-            </a>
-          </li>
-          <li className="py-2">
-            <a href="https://github.com/Kcounts93" target="blank">
-              <FaGithub className="text-[2rem]" />
-            </a>
-          </li>
-          <li className="py-2">
-            <a href="https://www.instagram.com/kaylaranae.psd/">
-              <FaInstagram className="text-[2rem]" />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    </motion.div>
   );
 };
 
