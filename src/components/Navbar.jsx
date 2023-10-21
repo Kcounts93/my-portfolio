@@ -40,7 +40,7 @@ const Navbar = () => {
 
   return (
     <motion.div
-      className="fixed w-full h-[80px] px-5 lg:px-20 flex justify-between items-center bg-darkgrey text-putty font-normal"
+      className="fixed w-full h-20 px-5 lg:px-20 flex justify-between items-center bg-darkgrey text-putty font-normal"
       initial={{ opacity: 0, y: -100 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -100 }}
@@ -49,9 +49,9 @@ const Navbar = () => {
         <img src={Logo} alt="my logo" />
       </div>
       {/* Hamburger */}
-      <div onClick={toggleNav} className="md:hidden z-10 text-[2rem]">
+      <div onClick={toggleNav} className="md:hidden z-10 text-2xl">
         {nav ? (
-          <FaTimes className="transition ease-in-out delay-50 hover:rotate-180 hover:scale-125 duration-300" />
+          <FaTimes className="transition-transform hover:rotate-180 hover:scale-125 duration-300" />
         ) : (
           <FaBars />
         )}
@@ -108,22 +108,22 @@ const Navbar = () => {
               </motion.li>
             </ul>
             <ul className="flex">
-              <li className="">
+              <li>
                 <a
                   href="https://www.linkedin.com/in/kaylacounts/"
                   target="blank"
                 >
-                  <FaLinkedinIn className="text-[2rem] transition ease-in-out delay-50 hover:scale-150 duration-300" />
+                  <FaLinkedinIn className="text-2xl transition-transform hover:scale-150 duration-300" />
                 </a>
               </li>
-              <li className="">
+              <li>
                 <a href="https://github.com/Kcounts93" target="blank">
-                  <FaGithub className="text-[2rem] transition ease-in-out delay-50 hover:scale-150 duration-300" />
+                  <FaGithub className="text-2xl transition-transform hover:scale-150 duration-300" />
                 </a>
               </li>
-              <li className="">
+              <li>
                 <a href="https://www.instagram.com/kaylaranae.psd/">
-                  <FaInstagram className="text-[2rem] transition ease-in-out delay-50 hover:scale-150 duration-300" />
+                  <FaInstagram className="text-2xl transition-transform hover:scale-150 duration-300" />
                 </a>
               </li>
             </ul>
@@ -131,19 +131,19 @@ const Navbar = () => {
         )}
       </AnimatePresence>
       <ul className="hidden md:flex">
-        <li className="text-xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
+        <li className="text-xl transition-transform hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
           Home
         </li>
-        <li className="text-xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
+        <li className="text-xl transition-transform hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
           Projects
         </li>
-        <li className="text-xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
+        <li className="text-xl transition-transform hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
           Skills
         </li>
-        <li className="text-xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
+        <li className="text-xl transition-transform hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
           Experience
         </li>
-        <li className="text-xl transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
+        <li className="text-xl transition-transform hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
           Contact
         </li>
       </ul>
