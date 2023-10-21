@@ -1,0 +1,199 @@
+import React, { useState, useEffect } from "react";
+import Project1 from "../assets/project_1.jpeg";
+
+const Projects = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [projects, setProjects] = useState([
+    {
+      id: 1,
+      title: "How to center an element using JavaScript and jQuery",
+      subtitle: "Snippet",
+      date: "10th Oct 2022",
+      categories: ["JavaScript"],
+      image: Project1,
+      projectLink: "https://example.com/project-link",
+      liveLink: "https://example.com/live-link",
+      featured: true, // Featured project
+    },
+    {
+      id: 2,
+      title: "How to center an element using JavaScript and jQuery",
+      subtitle: "Snippet",
+      date: "10th Oct 2022",
+      categories: ["JavaScript"],
+      image: Project1,
+      projectLink: "https://example.com/project-link",
+      liveLink: "https://example.com/live-link",
+      featured: true, // Featured project
+    },
+    {
+      id: 3,
+      title: "How to center an element using JavaScript and jQuery",
+      subtitle: "Snippet",
+      date: "10th Oct 2022",
+      categories: ["JavaScript"],
+      image: Project1,
+      projectLink: "https://example.com/project-link",
+      liveLink: "https://example.com/live-link",
+      featured: true, // Featured project
+    },
+    {
+      id: 4,
+      title: "How to center an element using JavaScript and jQuery",
+      subtitle: "Snippet",
+      date: "10th Oct 2022",
+      categories: ["JavaScript"],
+      image: Project1,
+      projectLink: "https://example.com/project-link",
+      liveLink: "https://example.com/live-link",
+      featured: false, // Featured project
+    },
+    // Add more project objects here as needed
+  ]);
+
+  const featuredProjects = projects.filter((project) => project.featured);
+  const allProjects = projects;
+  const [activeTab, setActiveTab] = useState("featured");
+  const [fadeAllProjects, setFadeAllProjects] = useState(false);
+
+  useEffect(() => {
+    setFadeAllProjects(false);
+    setTimeout(() => {
+      setFadeAllProjects(true);
+    }, 100);
+  }, [activeTab]);
+
+  const projectsToShow =
+    activeTab === "featured" ? featuredProjects : allProjects;
+
+  return (
+    <div name="project" className="w-full px-5 lg:px-20 mt-20 mb-20 flex-row">
+      <div className="flex justify-between text-heading-section mb-10">
+        <h2 className="sm:text-[2.2rem] md:text-[3.5rem] mb-2 font-light">
+          Projects
+        </h2>
+        <div className="flex justify-end mb-4 mx-5">
+          <button
+            onClick={() => setActiveTab("featured")}
+            className={`mr-4 tab-button ${
+              activeTab === "featured" ? "active underline" : ""
+            }`}
+          >
+            Featured
+          </button>
+          <button
+            onClick={() => setActiveTab("all")}
+            className={`tab-button ${
+              activeTab === "all" ? "active underline" : ""
+            }`}
+          >
+            All Projects
+          </button>
+        </div>
+      </div>
+      <div
+        className={`flex flex-wrap project-list ${
+          fadeAllProjects ? "fade-in" : ""
+        }`}
+      >
+        {projectsToShow.map((project) => (
+          <div
+            key={project.id}
+            onClick={() => setSelectedProject(project)}
+            className="w-full sm:w-1/2 lg:w-1/3 p-2"
+          >
+            {/* Project card content */}
+            <div className="rounded-xl bg-gradient-to-br from-cyan-400 to-blue-800 p-0.5 shadow-xl transition">
+              {/* Project details */}
+              <div className="flex-col justify-center align-middle rounded-[10px] bg-darkgrey p-4 sm:p-6">
+                <img className="mb-5" src={project.image} alt={project.title} />
+                <time className="text-md">{project.date}</time>
+                <h3 className="mt-0.5 text-xl font-medium">{project.title}</h3>
+                <div className="mt-4 flex flex-wrap gap-1">
+                  {project.categories.map((category, index) => (
+                    <span
+                      key={index}
+                      className="whitespace-nowrap rounded-full bg-charcoal px-2.5 py-0.5 text-s text-cyan-500"
+                    >
+                      {category}
+                    </span>
+                  ))}
+                </div>
+                <div className="mt-4">
+                  <a
+                    href={project.projectLink}
+                    className="text-blue-500 text-sm hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Project Link
+                  </a>
+                  <span className="mx-2">•</span>
+                  <a
+                    href={project.liveLink}
+                    className="text-blue-500 text-sm hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Live Link
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      {selectedProject && (
+        <div className="selected-project">
+          {/* Project details */}
+          <div className="rounded-[10px] bg-darkgrey p-4 sm:p-6">
+            <img src={selectedProject.image} alt={selectedProject.title} />
+            <time className="block text-xs">{selectedProject.date}</time>
+            <a href={selectedProject.projectLink} target="_blank">
+              <h3 className="mt-0.5 text-lg font-medium">
+                {selectedProject.title}
+              </h3>
+            </a>
+            <div className="mt-4 flex flex-wrap gap-1">
+              {selectedProject.categories.map((category, index) => (
+                <span
+                  key={index}
+                  className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600"
+                >
+                  {category}
+                </span>
+              ))}
+            </div>
+            <div className="mt-4">
+              <a
+                href={selectedProject.projectLink}
+                className="text-blue-500 text-sm hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Project Link
+              </a>
+              <span className="mx-2">•</span>
+              <a
+                href={selectedProject.liveLink}
+                className="text-blue-500 text-sm hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Live Link
+              </a>
+            </div>
+          </div>
+          <button
+            onClick={() => setSelectedProject(null)}
+            className="close-button"
+          >
+            Close
+          </button>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Projects;

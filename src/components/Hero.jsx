@@ -18,7 +18,7 @@ const Hero = () => {
           <h6 className="text-2xl mb-2 font-light">
             Hello, my name is Kayla Counts
           </h6>
-          <h1 className="text-3xl sm:text-3xl md:text-5xl font-light">
+          <h1 className="text-xl sm:text-2xl md:text-5xl leading-normal font-light">
             I specialize in crafting visually captivating, responsive web
             applications, bringing four years of design and development
             expertise to everything I do.
@@ -29,11 +29,13 @@ const Hero = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="flex items-center mt-5 px-5 py-3 border border-putty bg-putty text-charcoal font-bold hover:bg-charcoal hover duration-300">
-            Contact me
-            <span className="duration-300">
-              <FaArrowRight className="ml-2" />
-            </span>
+          <button className="flex items-center mt-5 p-0.5 rounded bg-gradient-to-br from-cyan-400 via-blue-500 to-blue-800 transition">
+            <div class="rounded bg-darkgrey px-5 py-3 flex items-center">
+              Contact me
+              <span className="duration-300">
+                <FaArrowRight className="ml-2" />
+              </span>
+            </div>
           </button>
         </a>
       </div>

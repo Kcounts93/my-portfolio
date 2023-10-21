@@ -131,7 +131,7 @@ const Navbar = () => {
         )}
       </AnimatePresence>
       <ul className="hidden md:flex">
-        <li className="text-xl transition-transform hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
+        <li className="text-xl transition-transform hover:-translate-y-1 hover:scale-110 hover:bg-gradient-to-br hover:from-cyan-400 hover:to-blue-800 hover:bg-clip-text hover:text-transparent duration-300">
           Home
         </li>
         <li className="text-xl transition-transform hover:-translate-y-1 hover:scale-110 hover:text-blue duration-300">
