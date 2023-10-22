@@ -1,25 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Triangle1 from "../assets/scroll1.svg";
 import Triangle2 from "../assets/scroll2.svg";
 import Triangle3 from "../assets/scroll3.svg";
 import { FaArrowRight } from "react-icons/fa";
-import { motion } from "framer-motion";
 
 const Hero = () => {
-  const fadeInOut = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  };
+  const [currentTriangle, setCurrentTriangle] = useState(1);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTriangle((prevTriangle) => (prevTriangle % 3) + 1);
+    }, 350); // Change the duration as needed
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
 
   return (
     <div name="home" className="w-full h-screen px-20">
       <div className="max-w-full h-full flex flex-col justify-center items-start">
         <div className="md:w-3/4 xl:w-3/4 mb-6">
-          <h6 className="text-2xl mb-2 font-light">
+          <h6 className="text-2xl sm:text-xl mb-2 font-light">
             Hello, my name is Kayla Counts
           </h6>
-          <h1 className="sm:text-2xl md:text-5xl font-light leading-10">
-            I specialize in crafting visually captivating, responsive web
+          <h1 className="sm:text-3xl sm:leading-loose md:text-4xl md:leading-relaxed lg:text-5xl lg:leading-relaxed font-light">
+            I specialize in crafting visually pleasing, responsive web
             applications, bringing four years of design and development
             expertise to everything I do.
           </h1>
@@ -37,31 +43,38 @@ const Hero = () => {
           </button>
         </a>
       </div>
-      <div className="flex flex-col mt-[-6rem]">
-        <motion.img
-          initial="hidden"
-          animate="visible"
-          variants={fadeInOut}
-          className="h-4"
-          src={Triangle1}
-          alt="arrow down 1"
-        />
-        <motion.img
-          initial="hidden"
-          animate="visible"
-          variants={fadeInOut}
-          className="h-4"
-          src={Triangle2}
-          alt="arrow down 2"
-        />
-        <motion.img
-          initial="hidden"
-          animate="visible"
-          variants={fadeInOut}
-          className="h-4"
-          src={Triangle3}
-          alt="arrow down 3"
-        />
+      <div className="flex justify-center mt-[-6rem] ">
+        <div className="pointer-container">
+          <div className="pointer-container-2 w-8 border rounded-full py-2 px-2">
+            <div className="h-4">
+              <img
+                className={`h-4 ${
+                  currentTriangle === 1 ? "fade-in" : "hidden"
+                }`}
+                src={Triangle1}
+                alt="arrow down 1"
+              />
+            </div>
+            <div className="h-4">
+              <img
+                className={`h-4 ${
+                  currentTriangle === 2 ? "fade-in" : "hidden"
+                }`}
+                src={Triangle2}
+                alt="arrow down 2"
+              />
+            </div>
+            <div className="h-4">
+              <img
+                className={`h-4 ${
+                  currentTriangle === 3 ? "fade-in" : "hidden"
+                }`}
+                src={Triangle3}
+                alt="arrow down 3"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
