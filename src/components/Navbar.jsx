@@ -39,7 +39,7 @@ const Navbar = () => {
 
   return (
     <motion.div
-      className="fixed w-full h-20 px-5 lg:px-20 flex justify-between items-center bg-darkgrey text-putty font-normal"
+      className="fixed z-10 w-full h-20 px-5 lg:px-20 flex justify-between items-center bg-darkgrey text-putty font-normal"
       initial={{ opacity: 0, y: -100 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -100 }}

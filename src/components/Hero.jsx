@@ -29,13 +29,11 @@ const Hero = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="flex items-center mt-5 p-0.5 rounded bg-gradient-to-br from-cyan-400 via-blue-500 to-blue-800 transition">
-            <div class="rounded bg-darkgrey px-5 py-3 flex items-center">
-              Contact me
-              <span className="duration-300">
-                <FaArrowRight className="ml-2" />
-              </span>
-            </div>
+          <button className="flex items-center mt-5 px-5 py-3 border border-putty bg-putty text-charcoal text-bold hover:bg-charcoal hover:text-putty duration-300">
+            Contact me
+            <span className="duration-300">
+              <FaArrowRight className="ml-2" />
+            </span>
           </button>
         </a>
       </div>

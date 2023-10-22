@@ -92,7 +92,7 @@ const Projects = () => {
         </div>
       </div>
       <div
-        className={`flex flex-wrap project-list ${
+        className={`flex flex-wrap project-list sm:w-full ${
           fadeAllProjects ? "fade-in" : ""
         }`}
       >
@@ -100,13 +100,13 @@ const Projects = () => {
           <div
             key={project.id}
             onClick={() => setSelectedProject(project)}
-            className="w-full sm:w-1/2 lg:w-1/3 p-2 flex flex-col"
+            className="w-full sm:w-1/2 sm:h-[400px] lg:w-1/3 lg:h-[500px]   p-2 flex flex-col"
           >
             {/* Project card content */}
-            <div className="mx-3 rounded-xl bg-gradient-to-br from-putty to-charcoal p-0.5 shadow-xl transition hover:scale-105 duration-300">
+            <div className="mx-3 h-full rounded-xl bg-gradient-to-br from-putty to-charcoal p-0.5 shadow-xl transition hover:scale-105 duration-300">
               {/* Project details */}
-              <div className="flex-col justify-center align-middle rounded-[10px] bg-darkgrey p-4 sm:p-6 flex-grow">
-                <div className="">
+              <div className="flex-col h-full justify-center align-middle rounded-[10px] bg-darkgrey p-4 sm:p-6 flex-grow">
+                <div className="overflow-hidden">
                   <img
                     className="mb-5"
                     src={project.image}
