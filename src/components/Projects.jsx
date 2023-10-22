@@ -6,12 +6,13 @@ import cursor from "../assets/cursor.png";
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  // eslint-disable-next-line
   const [projects, setProjects] = useState([
     {
       id: 1,
       title: "On the Rocks Mixology Website",
       subtitle: "Snippet",
-      categories: ["Bootstrap, HTML, CSS"],
+      categories: ["Bootstrap", "HTML", "CSS", "SASS", "Javascript"],
       image: otr,
       projectLink: "https://example.com/project-link",
       liveLink: "https://ontherocks.counts2six.com/",
@@ -21,7 +22,7 @@ const Projects = () => {
       id: 2,
       title: "Cursor.io Landing Page",
       subtitle: "Snippet",
-      categories: ["JavaScript, react"],
+      categories: ["JavaScript", "React"],
       image: cursor,
       projectLink: "https://example.com/project-link",
       liveLink: "https://example.com/live-link",
@@ -69,9 +70,7 @@ const Projects = () => {
   return (
     <div name="project" className="w-full px-5 lg:px-20 mt-20 mb-20 flex-row">
       <div className="flex justify-between text-heading-section mb-10">
-        <h2 className="sm:text-[2.2rem] md:text-[3.5rem] mb-5 font-light">
-          Projects
-        </h2>
+        <h2 className="text-[3.5rem] mb-5 font-light">Projects</h2>
         <div className="flex justify-end mb-4 mx-5">
           <button
             onClick={() => setActiveTab("featured")}
@@ -92,7 +91,7 @@ const Projects = () => {
         </div>
       </div>
       <div
-        className={`flex flex-wrap project-list sm:w-full ${
+        className={`flex flex-wrap project-list ${
           fadeAllProjects ? "fade-in" : ""
         }`}
       >
@@ -155,7 +154,11 @@ const Projects = () => {
           <div className="rounded-[10px] bg-darkgrey p-4 sm:p-6">
             <img src={selectedProject.image} alt={selectedProject.title} />
             <time className="block text-xs">{selectedProject.date}</time>
-            <a href={selectedProject.projectLink} target="_blank">
+            <a
+              href={selectedProject.projectLink}
+              target="_blank"
+              rel="noreferrer"
+            >
               <h3 className="mt-0.5 text-lg font-medium">
                 {selectedProject.title}
               </h3>
