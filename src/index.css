@@ -8,7 +8,6 @@
   body {
     @apply bg-[#121212];
     @apply font-[Montserrat];
-    @apply mb-[80px];
     @apply text-putty;
   }
   li {
