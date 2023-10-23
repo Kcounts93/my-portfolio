@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaCalendarAlt } from "react-icons/fa";
+import { FaCalendarAlt, FaArrowRight } from "react-icons/fa";
 
 const Experience = () => {
   const education = [
@@ -77,7 +77,7 @@ const Experience = () => {
       <div className="text-heading-section mb-10">
         <h2 className="text-[3.5rem] mb-2 font-light">Experience</h2>
         <div className="flex sm:flex-col lg:flex-row sm:flex-wrap md:flex-wrap lg:flex-nowrap">
-          <div className=" mb-5 sm:mb-10 flex items-center pr-11 lg:w-3/5">
+          <div className="flex sm:mb-10 md:mb-10 lg:mb-0 lg:mt-10 flex-col justify-center pr-11 lg:w-3/5">
             <p className="text-xl leading-10">
               My journey started with an A.A.S in Graphic/Web Design, where I
               honed my creative and design skills. I was exposed to HTML, CSS,
@@ -96,22 +96,42 @@ const Experience = () => {
               curiosity. I look forward to contributing my passion for
               development to collaborative projects and teams.
             </p>
+            <a
+              href="https://www.linkedin.com/in/kaylacounts/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="flex items-center mt-10 px-5 py-3 border border-putty bg-charcoal text-bold hover:bg-putty hover:text-charcoal duration-300">
+                View resume
+                <span className="duration-300">
+                  <FaArrowRight className="ml-2" />
+                </span>
+              </button>
+            </a>
           </div>
           {/* education */}
-          <div className="lg:w-2/5">
-            <h3 className="text-3xl mb-2 font-light pl-3">Education</h3>
-            <ul className="sm:mt-10 lg:mt-0">
-              {education.map((item, index) => (
-                <li key={index} className="mb-4 last:mb-0">
-                  <div className="text-gray-800 ">{item.year}</div>
-                  <div className="text-lg font-semibold text-gray-900">
-                    {item.degree}
-                  </div>
-                  <div className="text-gray-700 ">{item.school}</div>
-                  <p className="mt-2 text-gray-600">{item.description}</p>
-                </li>
-              ))}
-            </ul>
+          <div className="lg:w-2/5 ">
+            <div className="p-3">
+              <h3 className="text-3xl mb-2 font-light pl-3">Education</h3>
+              <ul className="sm:mt-10 lg:mt-0 cursor-default ">
+                {education.map((item, index) => (
+                  <li key={index} className="mb-4 last:mb-0 cursor-default">
+                    <div className="text-md text-light text-darkputty">
+                      {item.year}
+                    </div>
+                    <div className="text-xl font-semibold cursor-default">
+                      {item.degree}
+                    </div>
+                    <div className="font-medium cursor-default">
+                      {item.school}
+                    </div>
+                    <p className="mt-2 text-darkputty cursor-default">
+                      {item.description}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -132,17 +152,15 @@ const Experience = () => {
                   <div className="z-10 flex items-center justify-center w-6 h-6 bg-charcoal rounded-full ring-0 ring-putty dark:bg-charcoal sm:ring-8 dark:ring-charcoal shrink-0">
                     <FaCalendarAlt className="text-putty" />
                   </div>
-                  <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
+                  <div className="hidden sm:flex w-full bg-putty h-0.5 dark:bg-charcoal"></div>
                 </div>
                 <div className="mt-3 sm:pr-8">
                   <h3 className="text-lg font-semibold ">{experience.title}</h3>
-                  <h3 className="text-lg font-semibold">
-                    {experience.company}
-                  </h3>
-                  <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                  <h3 className="text-lg font-medium">{experience.company}</h3>
+                  <time className="block mb-2 text-md font-semibold leading-none text-darkputty">
                     {experience.date}
                   </time>
-                  <p className="text-base font-normal text-gray-500 dark:text-gray-400">
+                  <p className="text-base font-normal text-darkputty">
                     {experience.description}
                   </p>
                 </div>

@@ -8,6 +8,7 @@ module.exports = {
         "charcoal": "#242628",
         "putty": "#e2e4dd",
         "blue": "#114adc",
+        "darkputty": "#BEBFBA",
       },
       backgroundImage: {
         "hero-pattern": "url('src/assets/blue-circles.png)",
