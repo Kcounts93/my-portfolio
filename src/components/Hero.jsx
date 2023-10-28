@@ -21,10 +21,10 @@ const Hero = () => {
     <div name="home" className="w-full h-screen px-20">
       <div className="max-w-full h-full flex flex-col justify-center items-start">
         <div className="md:w-3/4 xl:w-3/4 mb-6">
-          <h6 className="text-2xl sm:text-xl mb-2 font-light">
+          <h6 className="md:text-xl lg:text-xl mb-2 font-light">
             Hello, my name is Kayla Counts
           </h6>
-          <h1 className="sm:text-3xl sm:leading-loose md:text-4xl md:leading-relaxed lg:text-5xl lg:leading-relaxed font-light">
+          <h1 className="md:text-4xl lg:text-4xl md:leading-relaxed lg:leading-relaxed font-light">
             I specialize in crafting visually pleasing, responsive web
             applications, bringing four years of design and development
             expertise to everything I do.

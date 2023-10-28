@@ -64,7 +64,7 @@ const Navbar = () => {
             exit="hidden"
             variants={navVariants}
           >
-            <ul className="text-5xl py-4 text-center">
+            <ul className="text-4xl py-4 text-center font-medium">
               <motion.li
                 className="mb-4"
                 variants={listItemVariants}
@@ -130,19 +130,19 @@ const Navbar = () => {
         )}
       </AnimatePresence>
       <ul className="hidden md:flex">
-        <li className="text-xl transition-transform hover:-translate-y-1 hover:scale-125 duration-300">
+        <li className="text-md transition-transform hover:-translate-y-1 hover:scale-125 duration-300">
           Home
         </li>
-        <li className="text-xl transition-transform hover:-translate-y-1 hover:scale-125 duration-300">
+        <li className="text-md transition-transform hover:-translate-y-1 hover:scale-125 duration-300">
           Projects
         </li>
-        <li className="text-xl transition-transform hover:-translate-y-1 hover:scale-125 duration-300">
+        <li className="text-md transition-transform hover:-translate-y-1 hover:scale-125 duration-300">
           Skills
         </li>
-        <li className="text-xl transition-transform hover:-translate-y-1 hover:scale-125 duration-300">
+        <li className="text-md transition-transform hover:-translate-y-1 hover:scale-125 duration-300">
           Experience
         </li>
-        <li className="text-xl transition-transform hover:-translate-y-1 hover:scale-125 duration-300">
+        <li className="text-md transition-transform hover:-translate-y-1 hover:scale-125 duration-300">
           Contact
         </li>
       </ul>

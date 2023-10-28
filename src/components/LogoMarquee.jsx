@@ -12,7 +12,7 @@ import { DiMongodb } from "react-icons/di";
 import { SiGreensock } from "react-icons/si";
 import Marquee from "react-fast-marquee";
 
-const Skills = () => {
+const LogoMarquee = () => {
   return (
     <div name="skills" className="w-full my-20">
       <div>
@@ -50,4 +50,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default LogoMarquee;

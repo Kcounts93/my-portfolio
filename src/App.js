@@ -1,7 +1,7 @@
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
-import Skills from "./components/Skills";
+import LogoMarquee from "./components/LogoMarquee";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
@@ -13,9 +13,9 @@ function App() {
       <Navbar />
       <Hero />
       <Projects />
-      <Skills />
-      <Experience />
       <About />
+      <LogoMarquee />
+      <Experience />
       <Contact />
       <Footer />
     </div>

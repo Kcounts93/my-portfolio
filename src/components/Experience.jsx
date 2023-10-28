@@ -1,8 +1,31 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaCalendarAlt, FaArrowRight } from "react-icons/fa";
+import { FaCalendarAlt, FaCaretRight } from "react-icons/fa";
 
 const Experience = () => {
+  const softSkills = [
+    "Communication",
+    "Teamwork",
+    "Problem Solving",
+    "Adaptability",
+    "Time Management",
+    "Resourceful",
+    "Analytical",
+  ];
+
+  const hardSkills = [
+    "HTML5",
+    "CSS3",
+    "JavaScript (ES6+)",
+    "React.js",
+    "Responsive Web Design",
+    "Version Control (Git)",
+    "Front-End Build Tools (Webpack, Babel)",
+    "CSS Preprocessors (e.g., SASS)",
+    "RESTful APIs",
+    "UI/UX Design Fundamentals",
+  ];
+
   const education = [
     {
       school: "Western Governors University",
@@ -73,49 +96,52 @@ const Experience = () => {
   ];
 
   return (
-    <div name="experience" className="w-full px-5 lg:px-20 mt-20 mb-20">
+    <div name="experience" className="w-full px-5 lg:px-20 mb-10">
       <div className="text-heading-section mb-10">
-        <h2 className="text-[3.5rem] mb-2 font-light">Experience</h2>
-        <div className="flex sm:flex-col lg:flex-row sm:flex-wrap md:flex-wrap lg:flex-nowrap">
-          <div className="flex sm:mb-10 md:mb-10 lg:mb-0 lg:mt-10 flex-col justify-center pr-11 lg:w-3/5">
-            <p className="text-xl leading-10">
-              My journey started with an A.A.S in Graphic/Web Design, where I
-              honed my creative and design skills. I was exposed to HTML, CSS,
-              and vanilla Javascript and knew from then on I wanted to be a
-              developer.
-              <br />
-              <br />
-              In my professional roles, I've had the opportunity to put these
-              design and development skills into action giving me a diverse
-              background. I have edited podcasts, videos, maintained a
-              custom-themed WordPress website, building websites and creating
-              100s of landing pages for enterprise level clients.
-              <br />
-              <br />
-              I'm driven by a relentless pursuit of growth, innovation, and
-              curiosity. I look forward to contributing my passion for
-              development to collaborative projects and teams.
-            </p>
-            <a
-              href="https://www.linkedin.com/in/kaylacounts/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="flex items-center mt-10 px-5 py-3 border border-putty bg-charcoal text-bold hover:bg-putty hover:text-charcoal duration-300">
-                View resume
-                <span className="duration-300">
-                  <FaArrowRight className="ml-2" />
-                </span>
-              </button>
-            </a>
+        <div className="flex flex-col sm:flex-row">
+          <div className="sm:w-full mb-10 flex-col pr-11 lg:w-1/2">
+            <h3 className="text-3xl mb-2 font-light sm:mt-10">Skills</h3>
+            <div className="flex flex-row md:flex-row space-y-5 md:space-y-0 mt-10">
+              <div className="w-full md:w-1/2 md:pr-5">
+                <h2 className="text-xl font-semibold">Soft Skills</h2>
+                <ul className="list-none ml-5 flex-row">
+                  {softSkills.map((skill, index) => (
+                    <li
+                      key={index}
+                      className="mb-2 px-0 text-darkputty cursor-default flex flex-row items-center"
+                    >
+                      <FaCaretRight className="mr-5 px-0" />
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="w-full md:w-1/2 pl-5">
+                <h2 className="text-xl font-semibold">Hard Skills</h2>
+                <ul className="list-none ml-5 flex-row">
+                  {hardSkills.map((skill, index) => (
+                    <li
+                      key={index}
+                      className="mb-2 px-0 text-darkputty cursor-default flex flex-row items-center"
+                    >
+                      <FaCaretRight className="mr-5 px-0" />
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
           {/* education */}
-          <div className="lg:w-2/5 ">
-            <div className="p-3">
-              <h3 className="text-3xl mb-2 font-light pl-3">Education</h3>
-              <ul className="sm:mt-10 lg:mt-0 cursor-default ">
+          <div className="lg:w-1/2">
+            <div className="">
+              <h3 className="text-3xl mb-2 font-light sm:mt-10">Education</h3>
+              <ul className="sm:mt-10 md:mt-10 cursor-default">
                 {education.map((item, index) => (
-                  <li key={index} className="mb-4 last:mb-0 cursor-default">
+                  <li
+                    key={index}
+                    className="pl-0 mb-4 last:mb-0 cursor-default"
+                  >
                     <div className="text-md text-light text-darkputty">
                       {item.year}
                     </div>
@@ -136,6 +162,7 @@ const Experience = () => {
         </div>
       </div>
       {/* timeline */}
+      <h3 className="text-3xl mb-2 font-light sm:mt-10">Employment</h3>
       <div className="timeline-container flex justify-center align-top">
         <ol className="items-start mt-10 sm:flex sm:flex-wrap md:flex-wrap lg:flex-nowrap">
           <AnimatePresence>
@@ -146,7 +173,7 @@ const Experience = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -30 }}
                 transition={{ duration: 0.5 }}
-                className="relative mb-6 sm:mb-0 sm:mt-5"
+                className="relative mx-0 px-0 mb-6 sm:mb-0 sm:mt-5"
               >
                 <div className="flex items-center">
                   <div className="z-10 flex items-center justify-center w-6 h-6 bg-charcoal rounded-full ring-0 ring-putty dark:bg-charcoal sm:ring-8 dark:ring-charcoal shrink-0">
@@ -155,12 +182,12 @@ const Experience = () => {
                   <div className="hidden sm:flex w-full bg-putty h-0.5 dark:bg-charcoal"></div>
                 </div>
                 <div className="mt-3 sm:pr-8">
-                  <h3 className="text-lg font-semibold ">{experience.title}</h3>
-                  <h3 className="text-lg font-medium">{experience.company}</h3>
+                  <h3 className="text-md font-semibold ">{experience.title}</h3>
+                  <h3 className="text-md font-medium">{experience.company}</h3>
                   <time className="block mb-2 text-md font-semibold leading-none text-darkputty">
                     {experience.date}
                   </time>
-                  <p className="text-base font-normal text-darkputty">
+                  <p className="font-normal text-darkputty">
                     {experience.description}
                   </p>
                 </div>

@@ -12,7 +12,7 @@ const Projects = () => {
       id: 1,
       title: "On the Rocks Mixology Website",
       subtitle: "Snippet",
-      categories: ["Bootstrap", "HTML", "CSS", "SASS", "Javascript"],
+      categories: ["Bootstrap", "SASS", "Javascript"],
       image: otr,
       projectLink: "https://example.com/project-link",
       liveLink: "https://ontherocks.counts2six.com/",
@@ -40,7 +40,29 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: "How to center an element using JavaScript and jQuery",
+      title: "Using JavaScript and jQuery",
+      subtitle: "Snippet",
+      date: "10th Oct 2022",
+      categories: ["JavaScript"],
+      image: Project1,
+      projectLink: "https://example.com/project-link",
+      liveLink: "https://example.com/live-link",
+      featured: false, // Featured project
+    },
+    {
+      id: 4,
+      title: "Using JavaScript and jQuery",
+      subtitle: "Snippet",
+      date: "10th Oct 2022",
+      categories: ["JavaScript"],
+      image: Project1,
+      projectLink: "https://example.com/project-link",
+      liveLink: "https://example.com/live-link",
+      featured: false, // Featured project
+    },
+    {
+      id: 4,
+      title: "Using JavaScript and jQuery",
       subtitle: "Snippet",
       date: "10th Oct 2022",
       categories: ["JavaScript"],
@@ -68,9 +90,9 @@ const Projects = () => {
     activeTab === "featured" ? featuredProjects : allProjects;
 
   return (
-    <div name="project" className="w-full px-5 lg:px-20 mt-20 mb-20 flex-row">
-      <div className="flex justify-between text-heading-section mb-10">
-        <h2 className="text-[3.5rem] mb-5 font-light">Projects</h2>
+    <div name="project" className="w-full px-5 lg:px-20 mt-20 mb-10 flex-row">
+      <div className="flex justify-between text-heading-section mb-10 flex-wrap">
+        <h2 className="text-4xl mb-5 font-light">Projects</h2>
         <div className="flex justify-end mb-4 mx-5">
           <button
             onClick={() => setActiveTab("featured")}
@@ -99,12 +121,12 @@ const Projects = () => {
           <div
             key={project.id}
             onClick={() => setSelectedProject(project)}
-            className="w-full sm:w-1/2 sm:h-[400px] lg:w-1/3 lg:h-[500px]   p-2 flex flex-col"
+            className="w-full sm:w-1/2 sm:h-[400px] lg:w-1/3 lg:h-[500px] p-2 flex flex-col"
           >
             {/* Project card content */}
             <div className="mx-3 h-full rounded-xl bg-gradient-to-br from-putty to-charcoal p-0.5 shadow-xl transition hover:scale-105 duration-300">
               {/* Project details */}
-              <div className="flex-col h-full justify-center align-middle rounded-[10px] bg-darkgrey p-4 sm:p-6 flex-grow">
+              <div className="flex-col h-full justify-center align-middle rounded-[10px] bg-darkgrey p-4 sm:p-6  flex-grow">
                 <div className="overflow-hidden">
                   <img
                     className="mb-5"
