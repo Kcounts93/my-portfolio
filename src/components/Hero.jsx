@@ -3,7 +3,7 @@ import { motion, useAnimation } from "framer-motion";
 import Triangle1 from "../assets/scroll1.svg";
 import Triangle2 from "../assets/scroll2.svg";
 import Triangle3 from "../assets/scroll3.svg";
-import { FaArrowRight } from "react-icons/fa";
+import { FiArrowRight } from "react-icons/fi";
 
 const Hero = () => {
   const [currentTriangle, setCurrentTriangle] = useState(1);
@@ -31,7 +31,7 @@ const Hero = () => {
           <h6 className="md:text-xl lg:text-xl mb-2 font-light">
             Hello, my name is Kayla Counts
           </h6>
-          <h1 className="md:text-4xl lg:text-4xl md:leading-relaxed lg:leading-relaxed font-light">
+          <h1 className="sm:text-lg md:text-4xl lg:text-4xl sm:leading-relaxed md:leading-relaxed lg:leading-relaxed font-light">
             I specialize in crafting visually pleasing, responsive web
             applications, bringing a combined four years of design and
             development expertise to my work.
@@ -45,7 +45,7 @@ const Hero = () => {
           <button className="flex items-center mt-5 px-5 py-3 border border-putty bg-putty text-charcoal text-bold hover:bg-charcoal hover:text-putty duration-300">
             Contact me
             <span className="duration-300">
-              <FaArrowRight className="ml-2" />
+              <FiArrowRight className="ml-2" />
             </span>
           </button>
         </a>

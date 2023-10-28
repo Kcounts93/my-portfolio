@@ -91,12 +91,12 @@ const Projects = () => {
 
   return (
     <div name="project" className="w-full px-5 lg:px-20 mt-20 mb-10 flex-row">
-      <div className="flex justify-between text-heading-section mb-10 flex-wrap">
+      <div className="flex justify-between text-heading-section mb-10">
         <h2 className="text-4xl mb-5 font-light">Projects</h2>
         <div className="flex justify-end mb-4 mx-5">
           <button
             onClick={() => setActiveTab("featured")}
-            className={`mr-4 tab-button font-light text-lg ${
+            className={`mr-4 tab-button font-light sm:text-md md:text-lg ${
               activeTab === "featured" ? "active underline" : ""
             }`}
           >
@@ -104,7 +104,7 @@ const Projects = () => {
           </button>
           <button
             onClick={() => setActiveTab("all")}
-            className={`tab-button font-light text-lg ${
+            className={`tab-button font-light sm:text-md md:text-lg ${
               activeTab === "all" ? "active underline" : ""
             }`}
           >

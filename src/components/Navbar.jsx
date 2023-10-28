@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 import Logo from "../assets/KC.svg";
-import {
-  FaBars,
-  FaTimes,
-  FaGithub,
-  FaLinkedinIn,
-  FaInstagram,
-} from "react-icons/fa";
+import { FiMenu, FiX, FiGithub, FiLinkedin, FiInstagram } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
@@ -50,9 +44,9 @@ const Navbar = () => {
       {/* Hamburger */}
       <div onClick={toggleNav} className="md:hidden z-10 text-2xl">
         {nav ? (
-          <FaTimes className="transition-transform hover:rotate-180 hover:scale-125 duration-300" />
+          <FiX className="transition-transform hover:rotate-180 hover:scale-125 duration-300" />
         ) : (
-          <FaBars />
+          <FiMenu />
         )}
       </div>
       <AnimatePresence>
@@ -112,17 +106,17 @@ const Navbar = () => {
                   href="https://www.linkedin.com/in/kaylacounts/"
                   target="blank"
                 >
-                  <FaLinkedinIn className="text-2xl transition-transform hover:scale-150 duration-300" />
+                  <FiLinkedin className="text-2xl transition-transform hover:scale-150 duration-300" />
                 </a>
               </li>
               <li>
                 <a href="https://github.com/Kcounts93" target="blank">
-                  <FaGithub className="text-2xl transition-transform hover:scale-150 duration-300" />
+                  <FiGithub className="text-2xl transition-transform hover:scale-150 duration-300" />
                 </a>
               </li>
               <li>
                 <a href="https://www.instagram.com/kaylaranae.psd/">
-                  <FaInstagram className="text-2xl transition-transform hover:scale-150 duration-300" />
+                  <FiInstagram className="text-2xl transition-transform hover:scale-150 duration-300" />
                 </a>
               </li>
             </ul>

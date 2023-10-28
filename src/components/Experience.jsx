@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaCalendarAlt, FaCaretRight } from "react-icons/fa";
+import { FiChevronRight, FiCalendar } from "react-icons/fi";
 
 const Experience = () => {
   const softSkills = [
@@ -110,7 +110,7 @@ const Experience = () => {
                       key={index}
                       className="mb-2 px-0 text-darkputty cursor-default flex flex-row items-center"
                     >
-                      <FaCaretRight className="mr-5 px-0" />
+                      <FiChevronRight className="mr-5 px-0" />
                       {skill}
                     </li>
                   ))}
@@ -124,7 +124,7 @@ const Experience = () => {
                       key={index}
                       className="mb-2 px-0 text-darkputty cursor-default flex flex-row items-center"
                     >
-                      <FaCaretRight className="mr-5 px-0" />
+                      <FiChevronRight className="mr-5 px-0" />
                       {skill}
                     </li>
                   ))}
@@ -176,12 +176,12 @@ const Experience = () => {
                 className="relative mx-0 px-0 mb-6 sm:mb-0 sm:mt-5"
               >
                 <div className="flex items-center">
-                  <div className="z-10 flex items-center justify-center w-6 h-6 bg-charcoal rounded-full ring-0 ring-putty dark:bg-charcoal sm:ring-8 dark:ring-charcoal shrink-0">
-                    <FaCalendarAlt className="text-putty" />
+                  <div className="flex items-center justify-center w-6 h-6 bg-charcoal rounded-full ring-0 ring-putty dark:bg-charcoal sm:ring-8 dark:ring-charcoal shrink-0">
+                    <FiCalendar className="text-putty" />
                   </div>
                   <div className="hidden sm:flex w-full bg-putty h-0.5 dark:bg-charcoal"></div>
                 </div>
-                <div className="mt-3 sm:pr-8">
+                <div className="mt-3 mr-5">
                   <h3 className="text-md font-semibold ">{experience.title}</h3>
                   <h3 className="text-md font-medium">{experience.company}</h3>
                   <time className="block mb-2 text-md font-semibold leading-none text-darkputty">
