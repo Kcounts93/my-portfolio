@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
 import Triangle1 from "../assets/scroll1.svg";
 import Triangle2 from "../assets/scroll2.svg";
 import Triangle3 from "../assets/scroll3.svg";
@@ -6,30 +7,36 @@ import { FaArrowRight } from "react-icons/fa";
 
 const Hero = () => {
   const [currentTriangle, setCurrentTriangle] = useState(1);
+  const textAnimation = useAnimation();
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTriangle((prevTriangle) => (prevTriangle % 3) + 1);
     }, 350); // Change the duration as needed
 
+    textAnimation.start({ opacity: 1, x: 0, transition: { duration: 1 } }); // Animation for text
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [textAnimation]);
 
   return (
     <div name="home" className="w-full h-screen px-20">
       <div className="max-w-full h-full flex flex-col justify-center items-start">
-        <div className="md:w-3/4 xl:w-3/4 mb-6">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={textAnimation}
+          className="md:w-3/4 xl:w-3/4 mb-6"
+        >
           <h6 className="md:text-xl lg:text-xl mb-2 font-light">
             Hello, my name is Kayla Counts
           </h6>
           <h1 className="md:text-4xl lg:text-4xl md:leading-relaxed lg:leading-relaxed font-light">
             I specialize in crafting visually pleasing, responsive web
-            applications, bringing four years of design and development
-            expertise to everything I do.
+            applications, bringing a combined four years of design and
+            development expertise to my work.
           </h1>
-        </div>
+        </motion.div>
         <a
           href="https://www.linkedin.com/in/kaylacounts/"
           target="_blank"

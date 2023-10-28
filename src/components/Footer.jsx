@@ -12,13 +12,13 @@ const Footer = () => {
         <div className="text-center md:text-center mb-4 md:mb-0">
           <h3 className="text-lg font-medium mb-2">Connect with Me</h3>
           <div className="flex space-x-4">
-            <a href="#" className="text-blue-400 hover:underline">
+            <a href="#linkedin" className="text-blue-400 hover:underline">
               LinkedIn
             </a>
-            <a href="#" className="text-blue-400 hover:underline">
+            <a href="#github" className="text-blue-400 hover:underline">
               GitHub
             </a>
-            <a href="#" className="text-blue-400 hover:underline">
+            <a href="#insta" className="text-blue-400 hover:underline">
               Instagram
             </a>
           </div>
