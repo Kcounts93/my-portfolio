@@ -8,13 +8,14 @@ import {
   FaBootstrap,
   FaCloud,
 } from "react-icons/fa6";
+import { FiFramer } from "react-icons/fi";
 import { DiMongodb } from "react-icons/di";
 import { SiGreensock } from "react-icons/si";
 import Marquee from "react-fast-marquee";
 
 const LogoMarquee = () => {
   return (
-    <div name="skills" className="w-full my-20">
+    <div name="skills" className="w-full my-10">
       <div>
         <Marquee direction="right" speed={90} delay={5}>
           <div className="image_wrapper">
@@ -43,6 +44,9 @@ const LogoMarquee = () => {
           </div>
           <div className="image_wrapper">
             <SiGreensock className="text-putty text-6xl" />
+          </div>
+          <div className="image_wrapper">
+            <FiFramer className="text-putty text-6xl" />
           </div>
         </Marquee>
       </div>

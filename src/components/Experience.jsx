@@ -3,60 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FiChevronRight, FiCalendar } from "react-icons/fi";
 
 const Experience = () => {
-  const softSkills = [
-    "Communication",
-    "Teamwork",
-    "Problem Solving",
-    "Adaptability",
-    "Time Management",
-    "Resourceful",
-    "Analytical",
-  ];
-
-  const hardSkills = [
-    "HTML5",
-    "CSS3",
-    "JavaScript (ES6+)",
-    "React.js",
-    "Responsive Web Design",
-    "Version Control (Git)",
-    "Front-End Build Tools (Webpack, Babel)",
-    "CSS Preprocessors (e.g., SASS)",
-    "RESTful APIs",
-    "UI/UX Design Fundamentals",
-  ];
-
-  const education = [
-    {
-      school: "Western Governors University",
-      degree: "Bachelors Science in Software Engineering",
-      year: "2023 - Present",
-      description:
-        "Degree track specializing in C# development, software engineering principles, web and desktop application development, database management, and software security.",
-    },
-    {
-      school: "NuCamp Coding Bootcamp",
-      degree: "Cerificate in Full Stack Web & Mobile Development",
-      year: "2022 - 2023",
-      description:
-        "Relevant coursework: Node.js, Express, MongoDB, Firebase, Cloud Firestore",
-    },
-    {
-      school: "NuCamp Coding Bootcamp",
-      degree: "Cerificate in Front End Web & Mobile Development",
-      year: "2022 - 2023",
-      description:
-        "Skills & Technologies developed: Bootstrap, React, React Native, Git, Redux, Google Cloud Platform",
-    },
-    {
-      school: "North Idaho College",
-      degree: "A.A.S in Graphic/Web Design",
-      year: "2020 - 2022",
-      description:
-        "Developed design skills in Adobe Creative Suite and UI/UX principles.",
-    },
-  ];
-
   const experiences = [
     {
       title: "Web Designer/Video Editor",
@@ -96,75 +42,11 @@ const Experience = () => {
   ];
 
   return (
-    <div name="experience" className="w-full px-5 lg:px-20 mb-10">
-      <div className="text-heading-section mb-10">
-        <div className="flex flex-col sm:flex-row">
-          <div className="sm:w-full mb-10 flex-col pr-11 lg:w-1/2">
-            <h3 className="text-3xl mb-2 font-light sm:mt-10">Skills</h3>
-            <div className="flex flex-row md:flex-row space-y-5 md:space-y-0 mt-10">
-              <div className="w-full md:w-1/2 md:pr-5">
-                <h2 className="text-xl font-semibold">Soft Skills</h2>
-                <ul className="list-none ml-5 flex-row">
-                  {softSkills.map((skill, index) => (
-                    <li
-                      key={index}
-                      className="mb-2 px-0 text-darkputty cursor-default flex flex-row items-center"
-                    >
-                      <FiChevronRight className="mr-5 px-0" />
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="w-full md:w-1/2 pl-5">
-                <h2 className="text-xl font-semibold">Hard Skills</h2>
-                <ul className="list-none ml-5 flex-row">
-                  {hardSkills.map((skill, index) => (
-                    <li
-                      key={index}
-                      className="mb-2 px-0 text-darkputty cursor-default flex flex-row items-center"
-                    >
-                      <FiChevronRight className="mr-5 px-0" />
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-          {/* education */}
-          <div className="lg:w-1/2">
-            <div className="">
-              <h3 className="text-3xl mb-2 font-light sm:mt-10">Education</h3>
-              <ul className="sm:mt-10 md:mt-10 cursor-default">
-                {education.map((item, index) => (
-                  <li
-                    key={index}
-                    className="pl-0 mb-4 last:mb-0 cursor-default"
-                  >
-                    <div className="text-md text-light text-darkputty">
-                      {item.year}
-                    </div>
-                    <div className="text-xl font-semibold cursor-default">
-                      {item.degree}
-                    </div>
-                    <div className="font-medium cursor-default">
-                      {item.school}
-                    </div>
-                    <p className="mt-2 text-darkputty cursor-default">
-                      {item.description}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div name="experience" className="w-full px-5 lg:px-20 mb-5">
       {/* timeline */}
-      <h3 className="text-3xl mb-2 font-light sm:mt-10">Employment</h3>
+      <h3 className="sm:mt-5 text-lg font-medium mb-3">Employment</h3>
       <div className="timeline-container flex justify-center align-top">
-        <ol className="items-start mt-10 sm:flex sm:flex-wrap md:flex-wrap lg:flex-nowrap">
+        <ol className="items-start mt-3 sm:flex sm:flex-wrap md:flex-wrap lg:flex-nowrap">
           <AnimatePresence>
             {experiences.map((experience, index) => (
               <motion.li
@@ -182,12 +64,16 @@ const Experience = () => {
                   <div className="hidden sm:flex w-full bg-putty h-0.5 dark:bg-charcoal"></div>
                 </div>
                 <div className="mt-3 mr-5">
-                  <h3 className="text-md font-semibold ">{experience.title}</h3>
-                  <h3 className="text-md font-medium">{experience.company}</h3>
-                  <time className="block mb-2 text-md font-semibold leading-none text-darkputty">
+                  <time className="block mb-2 text-sm font-medium leading-none text-darkputty">
                     {experience.date}
                   </time>
-                  <p className="font-normal text-darkputty">
+                  <h3 className="text-sm font-medium text-darkputty">
+                    {experience.title}
+                  </h3>
+                  <h3 className="text-sm font-medium my-1 text-darkputty">
+                    {experience.company}
+                  </h3>
+                  <p className="font-medium text-sm text-darkputty">
                     {experience.description}
                   </p>
                 </div>
