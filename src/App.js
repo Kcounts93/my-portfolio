@@ -6,6 +6,7 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import HorizontalScroll from "./components/HorizontalScroll";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Projects />
       <LogoMarquee />
       <About />
+      <HorizontalScroll />
       <Experience />
       <Contact />
       <Footer />

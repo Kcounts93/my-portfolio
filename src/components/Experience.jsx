@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FiChevronRight, FiCalendar } from "react-icons/fi";
+import { FiCalendar } from "react-icons/fi";
 
 const Experience = () => {
   const experiences = [

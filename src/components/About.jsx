@@ -145,14 +145,14 @@ const About = () => {
         </motion.div>
 
         {/* Right Section */}
-        <div className="sm:hidden md:block md:w-2/5 md:px-10">
+        <div className="w-full md:w-2/5 md:px-10">
           <img
-            className="rounded w-80 opacity-90"
+            className="rounded w-40 md:w-80 opacity-90 sm:hidden md:block"
             src={me}
             alt="portfolio me"
           />
           <img
-            className="rounded w-80 opacity-90 ml-20 mt-10"
+            className="rounded w-40 md:w-80 opacity-90 ml-20 mt-10 sm:hidden md:block"
             src={hikingImg}
             alt="portfolio me"
           />
