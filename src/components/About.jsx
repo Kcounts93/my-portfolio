@@ -65,13 +65,13 @@ const About = () => {
       <div className="text-heading-section mb-6">
         <h2 className="text-4xl mb-2 font-medium">About me</h2>
       </div>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap flex-col-reverse md:flex-row">
         {/* Left Section */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="w-full md:w-3/5 mb-6 md:mb-0"
+          className="w-full lg:w-1/2 mb-6 md:mb-0"
         >
           <p className="mb-6 leading-loose font-medium text-darkputty">
             I grew up on the Oregon Coast, filled with memories of going to the
@@ -145,17 +145,21 @@ const About = () => {
         </motion.div>
 
         {/* Right Section */}
-        <div className="w-full md:w-2/5 md:px-10">
-          <img
-            className="rounded w-40 md:w-80 opacity-90 sm:hidden md:block"
-            src={me}
-            alt="portfolio me"
-          />
-          <img
-            className="rounded w-40 md:w-80 opacity-90 ml-20 mt-10 sm:hidden md:block"
-            src={hikingImg}
-            alt="portfolio me"
-          />
+        <div className="w-full lg:w-1/2 hidden lg:flex flex-col justify-center items-center px-10">
+          <div className="">
+            <img
+              className="rounded w-40 md:w-80 opacity-90"
+              src={me}
+              alt="portfolio me"
+            />
+          </div>
+          <div className="w-50">
+            <img
+              className="rounded w-40 md:w-80 opacity-90 ml-20 mt-10"
+              src={hikingImg}
+              alt="portfolio me"
+            />
+          </div>
         </div>
       </div>
     </div>

@@ -37,12 +37,20 @@
   margin: 0px 5rem;
 }
 
-/* Scrollbar */
-/* width */
-::-webkit-scrollbar {
-  width: 1rem;
+.scroll-container {
+  overflow-x: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
 }
 
+/* Webkit (Chrome, Safari) */
+.scroll-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+/* Apply global styles after the specific container styles */
 /* Track */
 ::-webkit-scrollbar-track {
   background: #121212;

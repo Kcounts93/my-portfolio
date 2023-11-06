@@ -2,11 +2,10 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 import LogoMarquee from "./components/LogoMarquee";
-import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import HorizontalScroll from "./components/HorizontalScroll";
+import Experience from "./components/Experience";
 
 function App() {
   return (
@@ -16,7 +15,6 @@ function App() {
       <Projects />
       <LogoMarquee />
       <About />
-      <HorizontalScroll />
       <Experience />
       <Contact />
       <Footer />

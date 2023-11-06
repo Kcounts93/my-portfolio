@@ -1,6 +1,5 @@
-import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { FiCalendar } from "react-icons/fi";
+import React, { useRef, useEffect } from "react";
+import { FiCalendar, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 const Experience = () => {
   const experiences = [
@@ -13,14 +12,14 @@ const Experience = () => {
     },
     {
       title: "Marketing & Social Media Intern",
-      company: "EML Radio - Full time",
+      company: "The Jacklin Arts Center",
       date: "Jan 2022 - Apr 2022",
       description:
         "Leveraged technical skills in WordPress, CSS, HTML, and Adobe Premiere to edit podcasts, videos and make edits to a custom themed website hosted in WordPress",
     },
     {
       title: "Server/Bartender",
-      company: "Moontime",
+      company: "Moon Time Couer d'Alene",
       date: "May 2020 - Jun 2022",
       description:
         "Leveraged technical skills in WordPress, CSS, HTML, and Adobe Premiere to edit podcasts, videos and make edits to a custom themed website hosted in WordPress",
@@ -41,47 +40,85 @@ const Experience = () => {
     },
   ];
 
+  const sliderRef = useRef(null);
+  const scrollAmount = 350; // Adjust the scroll amount as needed
+
+  const handleSlide = (direction) => {
+    const slider = sliderRef.current;
+    const startScrollLeft = slider.scrollLeft;
+    const targetScrollLeft =
+      direction === "left"
+        ? startScrollLeft - scrollAmount
+        : startScrollLeft + scrollAmount;
+    const duration = 500; // Adjust the duration as needed
+    const startTime = performance.now();
+
+    function step(currentTime) {
+      const progress = (currentTime - startTime) / duration;
+      if (progress < 1) {
+        const newScrollLeft =
+          startScrollLeft + (targetScrollLeft - startScrollLeft) * progress;
+        slider.scrollLeft = newScrollLeft;
+        requestAnimationFrame(step);
+      } else {
+        slider.scrollLeft = targetScrollLeft;
+      }
+    }
+
+    requestAnimationFrame(step);
+  };
+
+  useEffect(() => {
+    // Set the initial scroll position when the component mounts
+    const initialScrollPosition = 700; // Adjust this value as needed
+    const slider = sliderRef.current;
+    slider.scrollLeft = initialScrollPosition;
+  }, []);
+
   return (
-    <div name="experience" className="w-full px-5 lg:px-20 mb-5">
-      {/* timeline */}
-      <h3 className="sm:mt-5 text-lg font-medium mb-3">Employment</h3>
-      <div className="timeline-container flex justify-center align-top">
-        <ol className="items-start mt-3 sm:flex sm:flex-wrap md:flex-wrap lg:flex-nowrap">
-          <AnimatePresence>
-            {experiences.map((experience, index) => (
-              <motion.li
-                key={index}
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -30 }}
-                transition={{ duration: 0.5 }}
-                className="relative mx-0 px-0 mb-6 sm:mb-0 sm:mt-5"
-              >
-                <div className="flex items-center">
-                  <div className="flex items-center justify-center w-6 h-6 bg-charcoal rounded-full ring-0 ring-putty dark:bg-charcoal sm:ring-8 dark:ring-charcoal shrink-0">
-                    <FiCalendar className="text-putty" />
-                  </div>
-                  <div className="hidden sm:flex w-full bg-putty h-0.5 dark:bg-charcoal"></div>
-                </div>
-                <div className="mt-3 mr-5">
-                  <time className="block mb-2 text-sm font-medium leading-none text-darkputty">
-                    {experience.date}
-                  </time>
-                  <h3 className="text-sm font-medium text-darkputty">
-                    {experience.title}
-                  </h3>
-                  <h3 className="text-sm font-medium my-1 text-darkputty">
-                    {experience.company}
-                  </h3>
-                  <p className="font-medium text-sm text-darkputty">
-                    {experience.description}
-                  </p>
-                </div>
-              </motion.li>
-            ))}
-          </AnimatePresence>
-        </ol>
+    <div className="relative flex items-center">
+      <FiChevronLeft
+        onClick={() => handleSlide("left")}
+        size={50}
+        className="hover:opacity-60 duration-300 mr-1 block xl:hidden"
+      />
+      <div
+        ref={sliderRef}
+        className="py-5 overflow-x-scroll overflow-hidden flex flex-nowrap scroll-container"
+      >
+        {experiences.map((experience, index) => (
+          <div
+            key={index}
+            className="inline-block cursor-pointer hover:scale-105 ease-in-out duration-300 w-[350px] p-5"
+          >
+            <div className="flex items-center">
+              <div className="flex items-center justify-center w-6 h-6 bg-charcoal rounded-full ring-0 ring-putty dark:bg-charcoal sm:ring-8 dark:ring-charcoal shrink-0">
+                <FiCalendar className="text-putty" />
+              </div>
+              <div className="w-full hidden sm:flex bg-putty h-0.5 dark:bg-charcoal"></div>
+            </div>
+            <div className="mt-3 flex flex-col">
+              <time className="block mb-2 text-md font-medium leading-none text-darkputty whitespace-nowrap">
+                {experience.date}
+              </time>
+              <h3 className="text-md font-medium text-darkputty whitespace-nowrap">
+                {experience.title}
+              </h3>
+              <h3 className="text-md font-medium my-1 text-darkputty whitespace-nowrap">
+                {experience.company}
+              </h3>
+              <p className="flex-1 font-medium text-sm text-darkputty pr-4">
+                {experience.description}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
+      <FiChevronRight
+        onClick={() => handleSlide("right")}
+        size={50}
+        className="hover:opacity-60 duration-300 ml-1 xl:hidden"
+      />
     </div>
   );
 };
