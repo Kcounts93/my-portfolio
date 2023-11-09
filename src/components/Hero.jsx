@@ -21,17 +21,17 @@ const Hero = () => {
   }, [textAnimation]);
 
   return (
-    <div name="home" className="w-full h-screen px-20">
+    <div name="home" className="w-full h-screen px-10 md:px-20 lg:px-20">
       <div className="max-w-full h-full flex flex-col justify-center items-start">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={textAnimation}
           className="md:w-3/4 xl:w-3/4 mb-6"
         >
-          <h6 className="md:text-xl lg:text-xl mb-2 font-light">
+          <h2 className="text-md md:text-xl lg:text-xl mb-2 font-light">
             Hello, my name is Kayla Counts
-          </h6>
-          <h1 className="sm:text-lg md:text-4xl lg:text-4xl sm:leading-relaxed md:leading-relaxed lg:leading-relaxed font-light">
+          </h2>
+          <h1 className="text-xl leading-relaxed md:text-4xl lg:text-4xl md:leading-relaxed lg:leading-relaxed font-light">
             I specialize in crafting visually pleasing, responsive web
             applications, bringing a combined four years of design and
             development expertise to my work.
@@ -42,7 +42,7 @@ const Hero = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="flex items-center mt-5 px-5 py-3 border border-putty bg-putty text-charcoal text-bold hover:bg-charcoal hover:text-putty duration-300">
+          <button className="flex items-center mt-5 px-5 py-3 border border-putty bg-putty text-charcoal text-bold hover:bg-charcoal hover:text-putty active:scale-90 duration-300">
             Contact me
             <span className="duration-300">
               <FiArrowRight className="ml-2" />

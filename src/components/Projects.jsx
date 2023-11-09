@@ -90,13 +90,16 @@ const Projects = () => {
     activeTab === "featured" ? featuredProjects : allProjects;
 
   return (
-    <div name="project" className="w-full px-5 lg:px-20 mt-20 mb-10 flex-row">
+    <div
+      name="projects"
+      className="w-full px-5 md:px-10 lg:px-20 mt-20 mb-10 flex-row"
+    >
       <div className="flex justify-between text-heading-section mb-10">
         <h2 className="text-4xl mb-5 font-light">Projects</h2>
         <div className="flex justify-end mb-4 mx-5">
           <button
             onClick={() => setActiveTab("featured")}
-            className={`mr-4 tab-button font-light sm:text-md md:text-lg ${
+            className={`mr-4 tab-button font-light text-sm md:text-lg ${
               activeTab === "featured" ? "active underline" : ""
             }`}
           >
@@ -104,7 +107,7 @@ const Projects = () => {
           </button>
           <button
             onClick={() => setActiveTab("all")}
-            className={`tab-button font-light sm:text-md md:text-lg ${
+            className={`tab-button font-light text-sm md:text-lg ${
               activeTab === "all" ? "active underline" : ""
             }`}
           >
@@ -121,7 +124,7 @@ const Projects = () => {
           <div
             key={project.id}
             onClick={() => setSelectedProject(project)}
-            className="w-full sm:w-1/2 lg:w-1/3 sm:h-[450px] p-2 flex flex-col"
+            className="w-full mt-2 sm:w-1/2 lg:w-1/3 sm:h-[450px] p-2 flex flex-col"
           >
             {/* Project card content */}
             <div className="mx-3 h-full rounded-xl bg-gradient-to-br from-putty to-charcoal p-0.5 shadow-xl transition hover:scale-105 duration-300">

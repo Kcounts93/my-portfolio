@@ -61,9 +61,9 @@ const About = () => {
   ];
 
   return (
-    <div name="about" className="w-full px-5 lg:px-20 mt-10 mb-5">
-      <div className="text-heading-section mb-6">
-        <h2 className="text-4xl mb-2 font-medium">About me</h2>
+    <div name="about" className="w-full px-5 md:px-10 lg:px-20 mt-10 mb-5">
+      <div className="text-heading-section mb-5">
+        <h2 className="text-4xl mb-5 font-light">About me</h2>
       </div>
       <div className="flex flex-wrap flex-col-reverse md:flex-row">
         {/* Left Section */}
@@ -73,7 +73,7 @@ const About = () => {
           transition={{ duration: 0.5 }}
           className="w-full lg:w-1/2 mb-6 md:mb-0"
         >
-          <p className="mb-6 leading-loose font-medium text-darkputty">
+          <p className="my-6 leading-loose font-medium text-darkputty">
             I grew up on the Oregon Coast, filled with memories of going to the
             beach and exploring tide pools with my family. I settled in Coeur
             d'Alene shortly after graduating high school in Spirit Lake to
