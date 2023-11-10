@@ -124,7 +124,7 @@ const Projects = () => {
           <div
             key={project.id}
             onClick={() => setSelectedProject(project)}
-            className="w-full mt-2 sm:w-1/2 lg:w-1/3 sm:h-[450px] p-2 flex flex-col"
+            className="w-full sm:w-1/2 lg:w-1/3 sm:h-[450px] md:h-[400px] lg:h-[425px] p-2 flex flex-col"
           >
             {/* Project card content */}
             <div className="mx-3 h-full rounded-xl bg-gradient-to-br from-putty to-charcoal p-0.5 shadow-xl transition hover:scale-105 duration-300">
@@ -149,7 +149,7 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                <div className="mt-4">
+                <div className="my-4">
                   <a
                     href={project.projectLink}
                     className="text-blue-500 text-sm hover:underline"

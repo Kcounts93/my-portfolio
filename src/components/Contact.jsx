@@ -54,10 +54,10 @@ const Contact = () => {
       <div className="flex flex-row">
         <div className="w-1/2">
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod iure
-            tempora aperiam? Excepturi delectus distinctio facere quibusdam,
-            voluptas aliquid rerum quod ratione culpa perspiciatis eum
-            voluptatum magnam unde iure officia!
+            I'd love to hear from you. My inbox is always open and I'm eager to
+            connect with fellow professionals, recruiters, and potential
+            employers. Reach out at kcounts0211@gmail.com or drop me a message
+            through the form below, and I'll get back to you promptly.
           </p>
         </div>
         <div className="w-1/2">
