@@ -47,7 +47,10 @@ const Contact = () => {
   };
 
   return (
-    <div name="contact" className="w-full px-5 md:px-10 lg:px-20 mt-20 mb-20">
+    <div
+      name="contact"
+      className="container mx-auto px-5 md:px-10 lg:px-20 mt-20 mb-20"
+    >
       <div className="text-heading-section mb-10">
         <h2 className="text-4xl mb-2 font-medium">Contact</h2>
       </div>

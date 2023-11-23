@@ -21,7 +21,7 @@ const Skills = () => {
 
   return (
     <div
-      name="about"
+      name="skills"
       className="container mx-auto px-5 md:px-10 lg:px-20 mt-10 mb-5"
     >
       <div className="text-heading-section mb-5">

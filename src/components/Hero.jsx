@@ -21,7 +21,10 @@ const Hero = () => {
   }, [textAnimation]);
 
   return (
-    <div name="home" className="w-full h-screen px-10 md:px-20 lg:px-20">
+    <div
+      name="home"
+      className="container mx-auto h-screen px-10 md:px-20 lg:px-20"
+    >
       <div className="max-w-full h-full flex flex-col justify-center items-start">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
