@@ -4,21 +4,21 @@ import { motion } from "framer-motion";
 
 const TimelineEntry = ({ title, subtitle, date, description, icon: Icon }) => (
   <motion.div
-    className="flex flex-col md:flex-row items-center text-center md:text-left mb-5"
+    className="flex flex-col md:flex-row items-start md:items-center text-left mb-5"
     whileHover={{ scale: 1.05 }}
     transition={{ type: "spring", stiffness: 300 }}
   >
     <div className="flex-shrink-0">
-      <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-500 text-white">
+      <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-500 text-putty">
         <Icon className="text-xl" />
       </div>
     </div>
     <div className="md:flex-grow md:ml-4 mt-2 md:mt-0">
-      <h3 className="text-lg font-bold">{title}</h3>
-      <h4 className="font-medium text-gray-500">
+      <h3 className="text-lg font-medium">{title}</h3>
+      <h4 className="font-medium text-darkputty">
         {subtitle} - {date}
       </h4>
-      <p className="text-md mt-1">{description}</p>
+      <p className="text-md mt-1 text-darkputty">{description}</p>
     </div>
   </motion.div>
 );
@@ -93,18 +93,15 @@ const Qualifications = () => {
 
   return (
     <motion.div
-      className="container mx-auto p-4 w-full px-5 md:px-10 lg:px-20 mt-10 mb-5"
+      className="container mx-auto px-5 md:px-10 lg:px-20 mt-10"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
     >
-      <div className="text-heading-section mb-5">
-        <h2 className="text-4xl mb-5 font-light">Qualifications</h2>
-      </div>
-      <div className="md:flex">
-        <div className="md:w-1/2 pr-4">
-          <h2 className="text-2xl font-bold mb-4">Education</h2>
+      <div className="md:flex px-5">
+        <div className="md:w-1/2 pr-4 mb-20">
+          <h2 className="text-2xl font-light mb-5">Education</h2>
           {education.map((edu, idx) => (
             <TimelineEntry
               key={idx}
@@ -117,7 +114,7 @@ const Qualifications = () => {
           ))}
         </div>
         <div className="md:w-1/2 pl-4">
-          <h2 className="text-2xl font-bold mb-4">Experience</h2>
+          <h2 className="text-2xl font-light mb-5">Experience</h2>
           {experiences.map((exp, idx) => (
             <TimelineEntry
               key={idx}

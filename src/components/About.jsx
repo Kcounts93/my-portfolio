@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FiCheck } from "react-icons/fi";
 import me from "../assets/me.png";
+import { FaCode, FaLaptopCode, FaPaintBrush } from "react-icons/fa";
 
 const About = () => {
   return (
@@ -12,32 +13,33 @@ const About = () => {
       <div className="text-heading-section mb-7">
         <h2 className="text-4xl mb-5 font-light">About me</h2>
       </div>
-      <div className="flex flex-wrap flex-col-reverse md:flex-row">
+      <div className="flex flex-wrap flex-col md:flex-row items-center">
         {/* Left Section */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="w-full lg:w-1/2 mb-6 md:mb-0 px-4"
+          className="w-full lg:w-1/2 mb-6 md:mb-0"
         >
           <p className=" leading-loose font-medium text-darkputty">
-            I grew up on the Oregon Coast, filled with memories of going to the
-            beach and exploring tide pools with my family. I settled in Coeur
-            d'Alene shortly after graduating high school in Spirit Lake to
-            pursue a degree in criminal justice, but my empathy and creativity
-            led me to graphic and web design where I was exposed to HTML, CSS
-            and Javascript, which I quickly became passionate about. When I'm
-            not coding or working, you'll find me playing video games, cooking
-            or sharing coffee with my girlfriend. You'll also see me take part
-            in the usual PNW adventures like hiking with my Chihuahua, golfing
-            and snowboarding.
+            Hello! I'm Kayla Counts! I'm a dedicated and passionate front-end
+            developer. I specialize in creating interactive and user-friendly
+            web applications. I love exploring new technologies and bringing
+            creative ideas to life in my projects. When I'm not coding, I enjoy
+            longboarding with my chihuahua, snowboarding, hiking, playing
+            videogames.
           </p>
+          <div className="flex mt-5">
+            <FaCode className="text-2xl text-blue-600 hover:text-blue-800 mr-2 cursor-pointer" />
+            <FaLaptopCode className="text-2xl text-green-600 hover:text-green-800 mr-2 cursor-pointer" />
+            <FaPaintBrush className="text-2xl text-[#F87217] hover:text-yellow-800 cursor-pointer" />
+          </div>
         </motion.div>
 
         {/* Right Section */}
-        <div className="w-full lg:w-1/2 lg:flex flex-col-reverse justify-center items-center px-10">
+        <div className="w-full lg:w-1/2 flex justify-center items-center">
           <img
-            className="rounded w-40 md:w-80 opacity-90"
+            className="rounded w-40 md:w-80 opacity-90 mt-10"
             src={me}
             alt="portfolio me"
           />
