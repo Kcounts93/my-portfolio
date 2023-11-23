@@ -92,7 +92,7 @@ const Projects = () => {
   return (
     <div
       name="projects"
-      className="w-full px-5 md:px-10 lg:px-20 mt-20 mb-10 flex-row"
+      className="container mx-auto px-5 md:px-10 lg:px-20 mt-20 mb-10 flex-row"
     >
       <div className="flex justify-between text-heading-section mb-10">
         <h2 className="text-4xl mb-5 font-light">Projects</h2>
