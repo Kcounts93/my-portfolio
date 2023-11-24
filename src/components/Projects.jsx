@@ -5,8 +5,6 @@ import otr from "../assets/ontherocks.png";
 import cursor from "../assets/cursor.png";
 
 const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState(null);
-  // eslint-disable-next-line
   const [projects, setProjects] = useState([
     {
       id: 1,
@@ -99,19 +97,19 @@ const Projects = () => {
         <div className="flex justify-end mb-4 mx-5">
           <button
             onClick={() => setActiveTab("featured")}
-            className={`mr-4 tab-button font-light text-sm md:text-lg ${
-              activeTab === "featured" ? "active underline" : ""
+            className={` mr-4 tab-button font-light text-sm md:text-lg ${
+              activeTab === "featured" ? "active hover:none underline" : ""
             }`}
           >
             Featured
           </button>
           <button
             onClick={() => setActiveTab("all")}
-            className={`tab-button font-light text-sm md:text-lg ${
+            className={` tab-button font-light text-sm md:text-lg ${
               activeTab === "all" ? "active underline" : ""
             }`}
           >
-            All Projects
+            All projects
           </button>
         </div>
       </div>
@@ -123,7 +121,6 @@ const Projects = () => {
         {projectsToShow.map((project) => (
           <div
             key={project.id}
-            onClick={() => setSelectedProject(project)}
             className="w-full sm:w-1/2 lg:w-1/3 sm:h-[450px] md:h-[400px] lg:h-[425px] p-2 flex flex-col"
           >
             {/* Project card content */}
@@ -152,7 +149,7 @@ const Projects = () => {
                 <div className="my-4">
                   <a
                     href={project.projectLink}
-                    className="text-blue-500 text-sm hover:underline"
+                    className="hover:text-drap text-sm hover:underline"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -161,7 +158,7 @@ const Projects = () => {
                   <span className="mx-2">•</span>
                   <a
                     href={project.liveLink}
-                    className="text-blue-500 text-sm hover:underline"
+                    className="hover:text-drap text-sm hover:underline"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -173,59 +170,6 @@ const Projects = () => {
           </div>
         ))}
       </div>
-      {selectedProject && (
-        <div className="selected-project">
-          {/* Project details */}
-          <div className="rounded-[10px] bg-darkgrey p-4 sm:p-6">
-            <img src={selectedProject.image} alt={selectedProject.title} />
-            <time className="block text-xs">{selectedProject.date}</time>
-            <a
-              href={selectedProject.projectLink}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <h3 className="mt-0.5 text-lg font-medium">
-                {selectedProject.title}
-              </h3>
-            </a>
-            <div className="mt-4 flex flex-wrap gap-1">
-              {selectedProject.categories.map((category, index) => (
-                <span
-                  key={index}
-                  className="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600"
-                >
-                  {category}
-                </span>
-              ))}
-            </div>
-            <div className="mt-4">
-              <a
-                href={selectedProject.projectLink}
-                className="text-blue-500 text-sm hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Project Link
-              </a>
-              <span className="mx-2">•</span>
-              <a
-                href={selectedProject.liveLink}
-                className="text-blue-500 text-sm hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Live Link
-              </a>
-            </div>
-          </div>
-          <button
-            onClick={() => setSelectedProject(null)}
-            className="close-button"
-          >
-            Close
-          </button>
-        </div>
-      )}
     </div>
   );
 };

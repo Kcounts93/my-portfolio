@@ -44,7 +44,7 @@ const Navbar = () => {
       {/* Hamburger */}
       <div onClick={toggleNav} className="md:hidden z-10 text-2xl">
         {nav ? (
-          <FiX className="transition-transform hover:rotate-180 hover:scale-125 duration-300" />
+          <FiX className="transition-transform hover:rotate-180 hover:scale-125 text-drap duration-300" />
         ) : (
           <FiMenu />
         )}

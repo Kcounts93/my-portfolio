@@ -45,11 +45,9 @@ const Hero = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="flex items-center mt-5 px-5 py-3 border border-putty bg-putty text-charcoal text-bold hover:bg-charcoal hover:text-putty active:scale-90 duration-300">
+          <button className="flex rounded items-center mt-5 px-5 py-3 border border-putty bg-putty text-charcoal text-bold hover:bg-darkgrey hover:text-putty hover:border-drap hover:scale-105 active:scale-90 duration-500">
             Contact me
-            <span className="duration-300">
-              <FiArrowRight className="ml-2" />
-            </span>
+            <FiArrowRight className="ml-2" />
           </button>
         </a>
       </div>

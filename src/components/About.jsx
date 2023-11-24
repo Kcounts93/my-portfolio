@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FiCheck } from "react-icons/fi";
+
 import me from "../assets/me.png";
-import { FaCode, FaLaptopCode, FaPaintBrush } from "react-icons/fa";
+import { MdOutlineArrowForward } from "react-icons/md";
 
 const About = () => {
   return (
@@ -30,9 +30,18 @@ const About = () => {
             videogames.
           </p>
           <div className="flex mt-5">
-            <FaCode className="text-2xl text-blue-600 hover:text-blue-800 mr-2 cursor-pointer" />
-            <FaLaptopCode className="text-2xl text-green-600 hover:text-green-800 mr-2 cursor-pointer" />
-            <FaPaintBrush className="text-2xl text-[#F87217] hover:text-yellow-800 cursor-pointer" />
+            <a
+              href="https://www.linkedin.com/in/kaylacounts/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="flex rounded items-center mt-5 px-5 py-3 border border-putty text-putty text-bold hover:bg-darkgrey hover:text-putty hover:border-drap hover:scale-105 active:scale-90 duration-500">
+                Connect with me
+                <span className="duration-300">
+                  <MdOutlineArrowForward className="ml-2" />
+                </span>
+              </button>
+            </a>
           </div>
         </motion.div>
 
