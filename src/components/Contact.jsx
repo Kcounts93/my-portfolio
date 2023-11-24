@@ -47,94 +47,95 @@ const Contact = () => {
   };
 
   return (
-    <div
-      id="Contact"
-      className="container mx-auto px-5 md:px-10 lg:px-20 mt-20 mb-20"
-    >
-      <div className="text-heading-section mb-10">
-        <h2 className="text-4xl mb-2 font-medium">Contact</h2>
-      </div>
-      <div className="flex flex-row">
-        <div className="w-1/2">
-          <p>
-            I'd love to hear from you. My inbox is always open and I'm eager to
-            connect with fellow professionals, recruiters, and potential
-            employers. Reach out at kcounts0211@gmail.com or drop me a message
-            through the form below, and I'll get back to you promptly.
-          </p>
+    <div id="Contact" className="section">
+      <div className="container mx-auto px-5 md:px-10 lg:px-20 mt-20 mb-20">
+        <div className="text-heading-section mb-10">
+          <h2 className="text-4xl mb-2 font-medium">Contact</h2>
         </div>
-        <div className="w-1/2">
-          <div className="p-4 mx-auto rounded-lg shadow-md">
-            {submissionSuccess ? (
-              <div className="text-green-500 text-center mb-4">
-                Form submitted successfully!
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit}>
-                <div className="mb-4">
-                  <label htmlFor="name" className="block text-putty"></label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className={`w-full px-3 py-2 border ${
-                      errors.name ? "border-red-500" : "border-putty"
-                    } rounded bg-transparent`}
-                  />
-                  {errors.name && (
-                    <p className="text-red-500 text-sm mt-1">{errors.name}</p>
-                  )}
+        <div className="flex flex-row">
+          <div className="w-1/2">
+            <p>
+              I'd love to hear from you. My inbox is always open and I'm eager
+              to connect with fellow professionals, recruiters, and potential
+              employers. Reach out at kcounts0211@gmail.com or drop me a message
+              through the form below, and I'll get back to you promptly.
+            </p>
+          </div>
+          <div className="w-1/2">
+            <div className="p-4 mx-auto rounded-lg shadow-md">
+              {submissionSuccess ? (
+                <div className="text-green-500 text-center mb-4">
+                  Form submitted successfully!
                 </div>
+              ) : (
+                <form onSubmit={handleSubmit}>
+                  <div className="mb-4">
+                    <label htmlFor="name" className="block text-putty"></label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className={`w-full px-3 py-2 border ${
+                        errors.name ? "border-red-500" : "border-putty"
+                      } rounded bg-transparent`}
+                    />
+                    {errors.name && (
+                      <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+                    )}
+                  </div>
 
-                <div className="mb-4">
-                  <label htmlFor="email" className="block "></label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className={`w-full px-3 py-2 border bg-transparent ${
-                      errors.email ? "border-red-500" : "border-putty"
-                    } rounded bg-transparent`}
-                  />
-                  {errors.email && (
-                    <p className="text-red-500 text-sm mt-1">{errors.email}</p>
-                  )}
-                </div>
+                  <div className="mb-4">
+                    <label htmlFor="email" className="block "></label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className={`w-full px-3 py-2 border bg-transparent ${
+                        errors.email ? "border-red-500" : "border-putty"
+                      } rounded bg-transparent`}
+                    />
+                    {errors.email && (
+                      <p className="text-red-500 text-sm mt-1">
+                        {errors.email}
+                      </p>
+                    )}
+                  </div>
 
-                <div className="mb-4">
-                  <label htmlFor="message" className="block "></label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    placeholder="Message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows="4"
-                    className={`w-full px-3 py-2 border ${
-                      errors.message ? "border-red-500" : "border-putty"
-                    } rounded bg-transparent`}
-                  />
-                  {errors.message && (
-                    <p className="text-red-500 text-sm mt-1">
-                      {errors.message}
-                    </p>
-                  )}
-                </div>
+                  <div className="mb-4">
+                    <label htmlFor="message" className="block "></label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      placeholder="Message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      rows="4"
+                      className={`w-full px-3 py-2 border ${
+                        errors.message ? "border-red-500" : "border-putty"
+                      } rounded bg-transparent`}
+                    />
+                    {errors.message && (
+                      <p className="text-red-500 text-sm mt-1">
+                        {errors.message}
+                      </p>
+                    )}
+                  </div>
 
-                <button
-                  type="submit"
-                  className="bg-putty text-darkgrey py-2 px-4 hover:bg-charcoal hover:text-putty active:scale-90  duration-300"
-                >
-                  Submit
-                </button>
-              </form>
-            )}
+                  <button
+                    type="submit"
+                    className="bg-putty text-darkgrey py-2 px-4 hover:bg-charcoal hover:text-putty active:scale-90  duration-300"
+                  >
+                    Submit
+                  </button>
+                </form>
+              )}
+            </div>
           </div>
         </div>
       </div>

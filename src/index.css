@@ -69,3 +69,12 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #e2e4dd;
 }
+
+/* Navbar 50px comp */
+.section::before {
+  content: '';
+  display: block;
+  height: 50px; /* Height of your navbar */
+  margin-top: -50px; /* Negative value of your navbar height */
+  visibility: hidden;
+}

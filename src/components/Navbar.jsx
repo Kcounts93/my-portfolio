@@ -27,15 +27,6 @@ const Navbar = () => {
     },
   };
 
-  const listItemVariants = {
-    hover: {
-      scale: 1.1,
-    },
-    rest: {
-      scale: 1,
-    },
-  };
-
   return (
     <motion.div
       className="fixed z-10 w-full h-20 px-5 lg:px-20 flex justify-between items-center bg-darkgrey font-normal"
@@ -68,7 +59,7 @@ const Navbar = () => {
               {navLinks.map((link) => (
                 <motion.li
                   key={link}
-                  className="text-md transition-transform hover:-translate-y-1 hover:scale-125 duration-300"
+                  className="text-md transition-transform my-5 hover:-translate-y-1 hover:scale-125 duration-300"
                 >
                   <a href={`#${link}`} onClick={closeNav}>
                     {link}
