@@ -3,9 +3,15 @@ import Logo from "../assets/KC.svg";
 import { FiMenu, FiX, FiGithub, FiLinkedin, FiInstagram } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 
+// Define navLinks array
+const navLinks = ["Home", "Projects", "About", "Skills", "Contact"];
+
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const toggleNav = () => setNav(!nav);
+
+  // Function to close the nav menu
+  const closeNav = () => setNav(false);
 
   const navVariants = {
     hidden: {
@@ -24,7 +30,6 @@ const Navbar = () => {
   const listItemVariants = {
     hover: {
       scale: 1.1,
-      // Change to your desired color
     },
     rest: {
       scale: 1,
@@ -51,6 +56,7 @@ const Navbar = () => {
       </div>
       <AnimatePresence>
         {nav && (
+          // mobile
           <motion.div
             className="fixed top-0 right-0 w-full md:w-1/4 h-full flex flex-col items-center justify-center bg-charcoal"
             initial="hidden"
@@ -59,47 +65,18 @@ const Navbar = () => {
             variants={navVariants}
           >
             <ul className="text-4xl py-4 text-center font-medium">
-              <motion.li
-                className="mb-4"
-                variants={listItemVariants}
-                whileHover="hover"
-                whileTap="hover"
-              >
-                Home
-              </motion.li>
-              <motion.li
-                className="mb-4"
-                variants={listItemVariants}
-                whileHover="hover"
-                whileTap="hover"
-              >
-                Projects
-              </motion.li>
-              <motion.li
-                className="mb-4"
-                variants={listItemVariants}
-                whileHover="hover"
-                whileTap="hover"
-              >
-                Skills
-              </motion.li>
-              <motion.li
-                className="mb-4"
-                variants={listItemVariants}
-                whileHover="hover"
-                whileTap="hover"
-              >
-                Experience
-              </motion.li>
-              <motion.li
-                className="mb-4"
-                variants={listItemVariants}
-                whileHover="hover"
-                whileTap="hover"
-              >
-                Contact
-              </motion.li>
+              {navLinks.map((link) => (
+                <motion.li
+                  key={link}
+                  className="text-md transition-transform hover:-translate-y-1 hover:scale-125 duration-300"
+                >
+                  <a href={`#${link}`} onClick={closeNav}>
+                    {link}
+                  </a>
+                </motion.li>
+              ))}
             </ul>
+            {/* Social Media Links */}
             <ul className="flex">
               <li>
                 <a
@@ -123,22 +100,16 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
+      {/* Non Mobile Menu */}
       <ul className="hidden md:flex">
-        <li className="text-md transition-transform hover:-translate-y-1 hover:scale-125 duration-300">
-          Home
-        </li>
-        <li className="text-md transition-transform hover:-translate-y-1 hover:scale-125 duration-300">
-          Projects
-        </li>
-        <li className="text-md transition-transform hover:-translate-y-1 hover:scale-125 duration-300">
-          Skills
-        </li>
-        <li className="text-md transition-transform hover:-translate-y-1 hover:scale-125 duration-300">
-          Experience
-        </li>
-        <li className="text-md transition-transform hover:-translate-y-1 hover:scale-125 duration-300">
-          Contact
-        </li>
+        {navLinks.map((link) => (
+          <li
+            key={link}
+            className="text-md transition-transform hover:-translate-y-1 hover:scale-125 duration-300"
+          >
+            <a href={`#${link}`}>{link}</a>
+          </li>
+        ))}
       </ul>
     </motion.div>
   );

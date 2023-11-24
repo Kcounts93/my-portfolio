@@ -22,7 +22,7 @@ const Hero = () => {
 
   return (
     <div
-      name="home"
+      id="Home"
       className="container mx-auto h-screen px-10 md:px-20 lg:px-20"
     >
       <div className="max-w-full h-full flex flex-col justify-center items-start">

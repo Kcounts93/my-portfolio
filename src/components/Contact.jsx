@@ -48,7 +48,7 @@ const Contact = () => {
 
   return (
     <div
-      name="contact"
+      id="Contact"
       className="container mx-auto px-5 md:px-10 lg:px-20 mt-20 mb-20"
     >
       <div className="text-heading-section mb-10">

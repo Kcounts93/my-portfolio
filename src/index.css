@@ -32,6 +32,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Skills Logo Wrapper */
 .image_wrapper {
   margin: 0px 5rem;

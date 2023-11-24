@@ -89,7 +89,7 @@ const Projects = () => {
 
   return (
     <div
-      name="projects"
+      id="Projects"
       className="container mx-auto px-5 md:px-10 lg:px-20 mt-20 mb-10 flex-row"
     >
       <div className="flex justify-between text-heading-section mb-10">

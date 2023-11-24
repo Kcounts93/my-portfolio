@@ -7,7 +7,7 @@ import { MdOutlineArrowForward } from "react-icons/md";
 const About = () => {
   return (
     <div
-      name="about"
+      id="About"
       className="container mx-auto px-5 md:px-10 lg:px-20 mt-10 mb-5"
     >
       <div className="text-heading-section mb-7">
