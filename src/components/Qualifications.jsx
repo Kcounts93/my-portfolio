@@ -113,7 +113,7 @@ const Qualifications = () => {
             />
           ))}
         </div>
-        <div className="md:w-1/2 pl-4">
+        <div className="md:w-1/2 pl-0 md:pl-4">
           <h2 className="text-2xl font-light mb-5">Experience</h2>
           {experiences.map((exp, idx) => (
             <TimelineEntry
