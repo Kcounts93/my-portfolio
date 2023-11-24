@@ -19,7 +19,7 @@ const About = () => {
             transition={{ duration: 0.5 }}
             className="w-full lg:w-1/2 mb-6 md:mb-0"
           >
-            <p className=" leading-loose font-medium text-darkputty">
+            <p className="leading-loose font-medium text-darkputty">
               Hello! I'm Kayla Counts! I'm a dedicated and passionate front-end
               developer. I specialize in creating interactive and user-friendly
               web applications. I love exploring new technologies and bringing

@@ -53,18 +53,28 @@ const Contact = () => {
           <h2 className="text-4xl mb-2 font-medium">Contact</h2>
         </div>
         <div className="flex flex-row">
-          <div className="w-1/2">
-            <p>
+          <div className="w-1/2 pr-0 md:pr-10">
+            <p className="mt-2 text-lg leading-loose font-medium text-darkputty">
               I'd love to hear from you. My inbox is always open and I'm eager
               to connect with fellow professionals, recruiters, and potential
-              employers. Reach out at kcounts0211@gmail.com or drop me a message
-              through the form below, and I'll get back to you promptly.
+              employers. Reach out at{" "}
+              <span className="underline">
+                <a
+                  href="mailto:kcounts0211@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  kcounts0211@gmail.com
+                </a>
+              </span>{" "}
+              or drop me a message through the form below, and I'll get back to
+              you promptly.
             </p>
           </div>
           <div className="w-1/2">
-            <div className="p-4 mx-auto rounded-lg shadow-md">
+            <div className="p-4 mx-auto rounded-lg">
               {submissionSuccess ? (
-                <div className="text-green-500 text-center mb-4">
+                <div className="text-drap text-center mb-4">
                   Form submitted successfully!
                 </div>
               ) : (
@@ -78,7 +88,7 @@ const Contact = () => {
                       placeholder="Name"
                       value={formData.name}
                       onChange={handleChange}
-                      className={`w-full px-3 py-2 border ${
+                      className={`w-full px-3 py-2 border bg-transparent focus:outline-none focus:ring-2 focus:ring-drap focus:border-none rounded transition duration-500 ${
                         errors.name ? "border-red-500" : "border-putty"
                       } rounded bg-transparent`}
                     />
@@ -96,8 +106,8 @@ const Contact = () => {
                       placeholder="Email"
                       value={formData.email}
                       onChange={handleChange}
-                      className={`w-full px-3 py-2 border bg-transparent ${
-                        errors.email ? "border-red-500" : "border-putty"
+                      className={`w-full px-3 py-2 border bg-transparent focus:outline-none focus:ring-2 focus:ring-drap focus:border-none rounded transition duration-500 ${
+                        errors.email ? "border-red-500" : "border-putty "
                       } rounded bg-transparent`}
                     />
                     {errors.email && (
@@ -116,7 +126,7 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleChange}
                       rows="4"
-                      className={`w-full px-3 py-2 border ${
+                      className={`w-full px-3 py-2 border bg-transparent focus:outline-none focus:ring-2 focus:ring-drap focus:border-none rounded transition duration-500 ${
                         errors.message ? "border-red-500" : "border-putty"
                       } rounded bg-transparent`}
                     />
@@ -129,7 +139,7 @@ const Contact = () => {
 
                   <button
                     type="submit"
-                    className="bg-putty text-darkgrey py-2 px-4 hover:bg-charcoal hover:text-putty active:scale-90  duration-300"
+                    className="bg-putty rounded border border-putty text-darkgrey py-2 px-4 hover:bg-darkgrey hover:text-putty hover:border hover:border-drap hover:scale-105 active:scale-90 duration-500"
                   >
                     Submit
                   </button>
