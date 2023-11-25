@@ -34,7 +34,7 @@ const Navbar = () => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -100 }}
     >
-      <div className="container mx-auto flex justify-between items-center p-1 lg:px-20 ">
+      <div className="container mx-auto flex justify-between items-center px-5 lg:px-20 ">
         <div>
           <img src={Logo} alt="my logo" />
         </div>

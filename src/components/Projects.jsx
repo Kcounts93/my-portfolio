@@ -8,11 +8,11 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "On the Rocks Mixology Website",
+      title: "On the Rocks Website",
       subtitle: "Snippet",
       categories: ["Bootstrap", "SASS", "Javascript"],
       image: otr,
-      projectLink: "https://example.com/project-link",
+      projectLink: "https://github.com/Kcounts93/on-the-rocks",
       liveLink: "https://ontherocks.counts2six.com/",
       featured: true, // Featured project
     },
@@ -23,7 +23,7 @@ const Projects = () => {
       categories: ["JavaScript", "React"],
       image: cursor,
       projectLink: "https://example.com/project-link",
-      liveLink: "https://example.com/live-link",
+      liveLink: "https://ontherocks.counts2six.com/",
       featured: true, // Featured project
     },
     {
@@ -32,7 +32,7 @@ const Projects = () => {
       subtitle: "Snippet",
       categories: ["React", "Typescript"],
       image: notesApp,
-      projectLink: "https://example.com/project-link",
+      projectLink: "https://github.com/Kcounts93/react-category-notes-app",
       liveLink: "https://notes.counts2six.com/",
       featured: true, // Featured project
     },
@@ -153,7 +153,7 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Project Link
+                      Code
                     </a>
                     <span className="mx-2">•</span>
                     <a
