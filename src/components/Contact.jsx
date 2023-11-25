@@ -52,9 +52,9 @@ const Contact = () => {
         <div className="text-heading-section mb-10">
           <h2 className="text-4xl mb-2 font-medium">Contact</h2>
         </div>
-        <div className="flex flex-row">
-          <div className="w-1/2 pr-0 md:pr-10">
-            <p className="mt-2 text-lg leading-loose font-medium text-darkputty">
+        <div className="flex flex-col md:flex-row">
+          <div className="px-4 md:w-1/2 md:pr-10 mb-6 md:mb-0">
+            <p className="mt-2 text-md leading-loose font-medium text-darkputty">
               I'd love to hear from you. My inbox is always open and I'm eager
               to connect with fellow professionals, recruiters, and potential
               employers. Reach out at{" "}
@@ -71,7 +71,7 @@ const Contact = () => {
               you promptly.
             </p>
           </div>
-          <div className="w-1/2">
+          <div className="md:w-1/2">
             <div className="p-4 mx-auto rounded-lg">
               {submissionSuccess ? (
                 <div className="text-drap text-center mb-4">

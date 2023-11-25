@@ -6,7 +6,7 @@ const TimelineEntry = ({ title, subtitle, date, description, icon: Icon }) => (
   <motion.div
     className="flex flex-col md:flex-row items-start md:items-start text-left mb-5"
     whileHover={{ scale: 1.05 }}
-    transition={{ type: "spring", stiffness: 300 }}
+    transition={{ type: "spring", stiffness: 100 }}
   >
     <div className="flex-shrink-0">
       <div className="flex items-center justify-center h-12 w-12 rounded-full bg-blue-500 text-putty">
@@ -26,16 +26,9 @@ const TimelineEntry = ({ title, subtitle, date, description, icon: Icon }) => (
 const Qualifications = () => {
   const experiences = [
     {
-      title: "Web Designer/Video Editor",
-      company: "EML Radio - Full time",
-      date: "Oct 2019 - Aug 2020",
-      description:
-        "Leveraged technical skills in WordPress, CSS, HTML, and Adobe Premiere to edit podcasts, videos and make edits to a custom themed website hosted in WordPress",
-    },
-    {
-      title: "Marketing & Social Media Intern",
-      company: "The Jacklin Arts Center",
-      date: "Jan 2022 - Apr 2022",
+      title: "Front End Developer/Designer",
+      company: "Ignitium",
+      date: "Jun 2022 - Present",
       description:
         "Leveraged technical skills in WordPress, CSS, HTML, and Adobe Premiere to edit podcasts, videos and make edits to a custom themed website hosted in WordPress",
     },
@@ -47,9 +40,16 @@ const Qualifications = () => {
         "Leveraged technical skills in WordPress, CSS, HTML, and Adobe Premiere to edit podcasts, videos and make edits to a custom themed website hosted in WordPress",
     },
     {
-      title: "Front End Developer/Designer",
-      company: "Ignitium",
-      date: "Jun 2022 - Present",
+      title: "Marketing & Social Media Intern",
+      company: "The Jacklin Arts Center",
+      date: "Jan 2022 - Apr 2022",
+      description:
+        "Leveraged technical skills in WordPress, CSS, HTML, and Adobe Premiere to edit podcasts, videos and make edits to a custom themed website hosted in WordPress",
+    },
+    {
+      title: "Web Designer/Video Editor",
+      company: "EML Radio - Full time",
+      date: "Oct 2019 - Aug 2020",
       description:
         "Leveraged technical skills in WordPress, CSS, HTML, and Adobe Premiere to edit podcasts, videos and make edits to a custom themed website hosted in WordPress",
     },
@@ -92,42 +92,47 @@ const Qualifications = () => {
   };
 
   return (
-    <motion.div
-      className="container mx-auto px-5 md:px-10 lg:px-20 mt-10"
-      variants={containerVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-    >
-      <div className="md:flex px-5">
-        <div className="md:w-1/2 pr-4 mb-20">
-          <h2 className="text-2xl font-light mb-5">Education</h2>
-          {education.map((edu, idx) => (
-            <TimelineEntry
-              key={idx}
-              title={edu.degree}
-              subtitle={edu.school}
-              date={edu.year}
-              description={edu.description}
-              icon={FaUniversity}
-            />
-          ))}
+    <div id="Expertise" className="section">
+      <motion.div
+        className="container mx-auto px-5 md:px-10 lg:px-20 mt-20 mb-10"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <div className="text-heading-section mb-10">
+          <h2 className="text-4xl font-medium">Expertise</h2>
         </div>
-        <div className="md:w-1/2 pl-0 md:pl-4">
-          <h2 className="text-2xl font-light mb-5">Experience</h2>
-          {experiences.map((exp, idx) => (
-            <TimelineEntry
-              key={idx}
-              title={exp.title}
-              subtitle={exp.company}
-              date={exp.date}
-              description={exp.description}
-              icon={FaBriefcase}
-            />
-          ))}
+        <div className="md:flex px-5">
+          <div className="md:w-1/2 pr-4 mb-20">
+            <h2 className="text-2xl font-light mb-5">Education</h2>
+            {education.map((edu, idx) => (
+              <TimelineEntry
+                key={idx}
+                title={edu.degree}
+                subtitle={edu.school}
+                date={edu.year}
+                description={edu.description}
+                icon={FaUniversity}
+              />
+            ))}
+          </div>
+          <div className="md:w-1/2 pl-0 md:pl-4">
+            <h2 className="text-2xl font-light mb-5">Experience</h2>
+            {experiences.map((exp, idx) => (
+              <TimelineEntry
+                key={idx}
+                title={exp.title}
+                subtitle={exp.company}
+                date={exp.date}
+                description={exp.description}
+                icon={FaBriefcase}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 };
 
