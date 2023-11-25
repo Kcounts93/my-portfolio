@@ -8,7 +8,9 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-5">
         <div className="mb-4 md:mb-0">
           <h3 className="text-md font-light mb-2">
-            Kayla Counts - Front End Developer
+            Kayla Counts
+            <br />
+            Front End Developer
           </h3>
         </div>
 

@@ -140,7 +140,7 @@ const Projects = () => {
                     {project.categories.map((category, index) => (
                       <span
                         key={index}
-                        className="whitespace-nowrap rounded-full bg-charcoal px-2.5 py-0.5 text-s"
+                        className="whitespace-nowrap rounded-full bg-charcoal px-2.5 py-0.5 text-sm"
                       >
                         {category}
                       </span>
@@ -149,7 +149,7 @@ const Projects = () => {
                   <div className="my-4">
                     <a
                       href={project.projectLink}
-                      className="hover:text-drap text-sm hover:underline"
+                      className="text-sm hover:text-drap hover:pointer hover:duration-500"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -158,7 +158,7 @@ const Projects = () => {
                     <span className="mx-2">•</span>
                     <a
                       href={project.liveLink}
-                      className="hover:text-drap text-sm hover:underline"
+                      className="text-sm hover:text-drap hover:pointer hover:duration-500"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

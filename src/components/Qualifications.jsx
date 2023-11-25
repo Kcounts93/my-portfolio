@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const TimelineEntry = ({ title, subtitle, date, description, icon: Icon }) => (
   <motion.div
-    className="flex flex-col md:flex-row items-start md:items-start text-left mb-5"
+    className="flex flex-row items-start md:items-start text-left mb-5"
     whileHover={{ scale: 1.05 }}
     transition={{ type: "spring", stiffness: 100 }}
   >

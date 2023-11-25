@@ -17,7 +17,7 @@ const About = () => {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="w-full lg:w-1/2 mb-6 md:mb-0"
+            className="w-full lg:w-1/2 mb-6 md:mb-0 px-5 md:px-0 md:pl-5"
           >
             <p className="leading-loose font-medium text-darkputty">
               Hello! I'm Kayla Counts! I'm a dedicated and passionate front-end
@@ -44,9 +44,9 @@ const About = () => {
           </motion.div>
 
           {/* Right Section */}
-          <div className="w-full lg:w-1/2 flex justify-center items-center">
+          <div className="w-full lg:w-1/2 flex px-5 justify-start items-center md:justify-center md:px-0 ">
             <img
-              className="rounded w-40 md:w-80 opacity-90 mt-10"
+              className="rounded w-80 md:w-100 opacity-90 mt-10"
               src={me}
               alt="portfolio me"
             />
