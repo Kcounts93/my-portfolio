@@ -103,8 +103,8 @@ const Qualifications = () => {
         <div className="text-heading-section mb-10">
           <h2 className="text-4xl font-medium">Expertise</h2>
         </div>
-        <div className="md:flex px-5">
-          <div className="md:w-1/2 pr-4 mb-20">
+        <div className="md:flex">
+          <div className="md:w-1/2 pr-5 mb-20">
             <h2 className="text-2xl font-light mb-5">Education</h2>
             {education.map((edu, idx) => (
               <TimelineEntry

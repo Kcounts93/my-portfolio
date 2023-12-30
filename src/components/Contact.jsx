@@ -53,7 +53,7 @@ const Contact = () => {
           <h2 className="text-4xl mb-2 font-medium">Contact</h2>
         </div>
         <div className="flex flex-col md:flex-row">
-          <div className="px-4 md:w-1/2 md:pr-10 mb-6 md:mb-0">
+          <div className="md:w-1/2 md:pr-10 mb-6 md:mb-0">
             <p className="mt-2 text-md leading-loose font-medium text-darkputty">
               I'd love to hear from you. My inbox is always open and I'm eager
               to connect with fellow professionals, recruiters, and potential

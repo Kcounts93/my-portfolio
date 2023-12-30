@@ -17,7 +17,7 @@ const About = () => {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="w-full lg:w-1/2 mb-6 md:mb-0 px-5 md:px-0 md:pl-5"
+            className="w-full lg:w-1/2 mb-6 md:mb-0"
           >
             <p className="leading-loose font-medium text-darkputty">
               Hello! I'm Kayla Counts! I'm a dedicated and passionate front-end
