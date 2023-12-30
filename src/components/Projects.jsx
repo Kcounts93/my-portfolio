@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Project1 from "../assets/project_1.jpeg";
 import notesApp from "../assets/notes-app.png";
 import otr from "../assets/ontherocks.png";
-import cursor from "../assets/cursor.png";
+import gpt4 from "../assets/gpt4.png";
 
 const Projects = () => {
   const projects = [
@@ -10,7 +9,7 @@ const Projects = () => {
       id: 1,
       title: "On the Rocks Website",
       subtitle: "Snippet",
-      categories: ["Bootstrap", "SASS", "Javascript"],
+      categories: ["Bootstrap - ", "SASS -", "Javascript"],
       image: otr,
       projectLink: "https://github.com/Kcounts93/on-the-rocks",
       liveLink: "https://ontherocks.counts2six.com/",
@@ -18,57 +17,57 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Cursor.io Landing Page",
+      title: "GPT-4 Landing Page",
       subtitle: "Snippet",
-      categories: ["JavaScript", "React"],
-      image: cursor,
-      projectLink: "https://example.com/project-link",
-      liveLink: "https://ontherocks.counts2six.com/",
+      categories: ["React -", "CSS"],
+      image: gpt4,
+      projectLink: "https://github.com/Kcounts93/gpt4-react-landing",
+      liveLink: "https://gpt4.kaylacounts.com/",
       featured: true, // Featured project
     },
     {
       id: 3,
       title: "Category Notes App",
       subtitle: "Snippet",
-      categories: ["React", "Typescript"],
+      categories: ["React -", "Typescript"],
       image: notesApp,
       projectLink: "https://github.com/Kcounts93/react-category-notes-app",
       liveLink: "https://notes.counts2six.com/",
       featured: true, // Featured project
     },
-    {
-      id: 4,
-      title: "Using JavaScript and jQuery",
-      subtitle: "Snippet",
-      date: "10th Oct 2022",
-      categories: ["JavaScript"],
-      image: Project1,
-      projectLink: "https://example.com/project-link",
-      liveLink: "https://example.com/live-link",
-      featured: false, // Featured project
-    },
-    {
-      id: 4,
-      title: "Using JavaScript and jQuery",
-      subtitle: "Snippet",
-      date: "10th Oct 2022",
-      categories: ["JavaScript"],
-      image: Project1,
-      projectLink: "https://example.com/project-link",
-      liveLink: "https://example.com/live-link",
-      featured: false, // Featured project
-    },
-    {
-      id: 4,
-      title: "Using JavaScript and jQuery",
-      subtitle: "Snippet",
-      date: "10th Oct 2022",
-      categories: ["JavaScript"],
-      image: Project1,
-      projectLink: "https://example.com/project-link",
-      liveLink: "https://example.com/live-link",
-      featured: false, // Featured project
-    },
+    // {
+    //   id: 4,
+    //   title: "Using JavaScript and jQuery",
+    //   subtitle: "Snippet",
+    //   date: "10th Oct 2022",
+    //   categories: ["JavaScript"],
+    //   image: Project1,
+    //   projectLink: "https://example.com/project-link",
+    //   liveLink: "https://example.com/live-link",
+    //   featured: false, // Featured project
+    // },
+    // {
+    //   id: 4,
+    //   title: "Using JavaScript and jQuery",
+    //   subtitle: "Snippet",
+    //   date: "10th Oct 2022",
+    //   categories: ["JavaScript"],
+    //   image: Project1,
+    //   projectLink: "https://example.com/project-link",
+    //   liveLink: "https://example.com/live-link",
+    //   featured: false, // Featured project
+    // },
+    // {
+    //   id: 4,
+    //   title: "Using JavaScript and jQuery",
+    //   subtitle: "Snippet",
+    //   date: "10th Oct 2022",
+    //   categories: ["JavaScript"],
+    //   image: Project1,
+    //   projectLink: "https://example.com/project-link",
+    //   liveLink: "https://example.com/live-link",
+    //   featured: false, // Featured project
+    // },
     // Add more project objects here as needed
   ];
 
@@ -122,9 +121,9 @@ const Projects = () => {
               className="w-full sm:w-1/2 lg:w-1/3 sm:h-[450px] md:h-[400px] lg:h-[425px] p-2 flex flex-col"
             >
               {/* Project card content */}
-              <div className="mx-3 h-full rounded-xl bg-gradient-to-br from-putty to-charcoal p-0.5 shadow-xl transition hover:scale-105 duration-300">
+              <div className="mx-3 h-full rounded-xl p-0.5 shadow-lg transition hover:scale-105 duration-300">
                 {/* Project details */}
-                <div className="flex-col h-full justify-center align-middle rounded-[10px] bg-darkgrey p-4 sm:p-6  flex-grow">
+                <div className="flex-col h-full justify-center align-middle rounded-[10px] bg-charcoal p-4 sm:p-6  flex-grow">
                   <div className="overflow-hidden">
                     <img
                       className="mb-5"
@@ -140,7 +139,7 @@ const Projects = () => {
                     {project.categories.map((category, index) => (
                       <span
                         key={index}
-                        className="whitespace-nowrap rounded-full bg-charcoal px-2.5 py-0.5 text-sm"
+                        className="whitespace-nowrap rounded-full text-drap mr-1 text-sm"
                       >
                         {category}
                       </span>
