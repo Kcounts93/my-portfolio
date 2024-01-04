@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import notesApp from "../assets/notes-app.png";
 import otr from "../assets/ontherocks.png";
 import gpt4 from "../assets/gpt4.png";
+import chatBot from "../assets/chatronix.png";
+import portfolioImg from "../assets/portfolio.png";
 
 const Projects = () => {
   const projects = [
@@ -9,7 +11,7 @@ const Projects = () => {
       id: 1,
       title: "On the Rocks Website",
       subtitle: "Snippet",
-      categories: ["Bootstrap - ", "SASS -", "Javascript"],
+      categories: ["HTML", "Bootstrap", "SASS", "Javascript"],
       image: otr,
       projectLink: "https://github.com/Kcounts93/on-the-rocks",
       liveLink: "https://ontherocks.counts2six.com/",
@@ -19,7 +21,7 @@ const Projects = () => {
       id: 2,
       title: "GPT-4 Landing Page",
       subtitle: "Snippet",
-      categories: ["React -", "CSS"],
+      categories: ["HTML", "React", "CSS"],
       image: gpt4,
       projectLink: "https://github.com/Kcounts93/gpt4-react-landing",
       liveLink: "https://gpt4.kaylacounts.com/",
@@ -27,25 +29,35 @@ const Projects = () => {
     },
     {
       id: 3,
+      title: "Chatronix AI Chatbot ",
+      subtitle: "Snippet",
+      categories: ["Bootstrap", "PHP", "Javascript"],
+      image: chatBot,
+      projectLink: "https://github.com/Kcounts93/php-chatbot",
+      liveLink: "https://chatronix.kaylacounts.com/",
+      featured: true, // Featured project
+    },
+    {
+      id: 4,
       title: "Category Notes App",
       subtitle: "Snippet",
-      categories: ["React -", "Typescript"],
+      categories: ["React", "Typescript"],
       image: notesApp,
       projectLink: "https://github.com/Kcounts93/react-category-notes-app",
       liveLink: "https://notes.counts2six.com/",
-      featured: true, // Featured project
+      featured: false, // Featured project
     },
-    // {
-    //   id: 4,
-    //   title: "Using JavaScript and jQuery",
-    //   subtitle: "Snippet",
-    //   date: "10th Oct 2022",
-    //   categories: ["JavaScript"],
-    //   image: Project1,
-    //   projectLink: "https://example.com/project-link",
-    //   liveLink: "https://example.com/live-link",
-    //   featured: false, // Featured project
-    // },
+
+    {
+      id: 5,
+      title: "My Portfolio",
+      subtitle: "Snippet",
+      categories: ["HTML", "Tailwind", "React"],
+      image: portfolioImg,
+      projectLink: "https://example.com/project-link",
+      liveLink: "https://example.com/live-link",
+      featured: false, // Featured project
+    },
     // {
     //   id: 4,
     //   title: "Using JavaScript and jQuery",
@@ -121,7 +133,7 @@ const Projects = () => {
               className="w-full sm:w-1/2 lg:w-1/3 sm:h-[450px] md:h-[400px] lg:h-[425px] p-2 flex flex-col"
             >
               {/* Project card content */}
-              <div className="mx-3 h-full rounded-xl p-0.5 shadow-lg transition hover:scale-105 duration-300">
+              <div className="mx-3 h-full rounded-xl p-0.5 shadow-lg transition">
                 {/* Project details */}
                 <div className="flex-col h-full justify-center align-middle rounded-[10px] bg-charcoal p-4 sm:p-6  flex-grow">
                   <div className="overflow-hidden">
@@ -148,7 +160,7 @@ const Projects = () => {
                   <div className="my-4">
                     <a
                       href={project.projectLink}
-                      className="text-sm hover:text-drap hover:pointer hover:duration-500"
+                      className="text-sm underline pointer hover:text-drap hover:pointer hover:duration-500"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -157,7 +169,7 @@ const Projects = () => {
                     <span className="mx-2">•</span>
                     <a
                       href={project.liveLink}
-                      className="text-sm hover:text-drap hover:pointer hover:duration-500"
+                      className="text-sm underline pointer hover:text-drap hover:pointer hover:duration-500"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
