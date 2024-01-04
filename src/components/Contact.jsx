@@ -48,7 +48,7 @@ const Contact = () => {
 
   return (
     <div id="Contact" className="section">
-      <div className="container mx-auto px-5 md:px-10 lg:px-20 mt-20 mb-20">
+      <div className="container mx-auto px-5 md:px-10 lg:px-20 mt-10 mb-20">
         <div className="text-heading-section mb-10">
           <h2 className="text-4xl mb-2 font-medium">Contact</h2>
         </div>
@@ -75,7 +75,8 @@ const Contact = () => {
             <div className="p-4 mx-auto rounded-lg">
               {submissionSuccess ? (
                 <div className="text-drap text-center mb-4">
-                  Form submitted successfully!
+                  Success!
+                  <br />I will be in touch shortly!
                 </div>
               ) : (
                 <form onSubmit={handleSubmit}>

@@ -58,29 +58,6 @@ const Projects = () => {
       liveLink: "https://example.com/live-link",
       featured: false, // Featured project
     },
-    // {
-    //   id: 4,
-    //   title: "Using JavaScript and jQuery",
-    //   subtitle: "Snippet",
-    //   date: "10th Oct 2022",
-    //   categories: ["JavaScript"],
-    //   image: Project1,
-    //   projectLink: "https://example.com/project-link",
-    //   liveLink: "https://example.com/live-link",
-    //   featured: false, // Featured project
-    // },
-    // {
-    //   id: 4,
-    //   title: "Using JavaScript and jQuery",
-    //   subtitle: "Snippet",
-    //   date: "10th Oct 2022",
-    //   categories: ["JavaScript"],
-    //   image: Project1,
-    //   projectLink: "https://example.com/project-link",
-    //   liveLink: "https://example.com/live-link",
-    //   featured: false, // Featured project
-    // },
-    // Add more project objects here as needed
   ];
 
   const featuredProjects = projects.filter((project) => project.featured);
@@ -130,10 +107,10 @@ const Projects = () => {
           {projectsToShow.map((project) => (
             <div
               key={project.id}
-              className="w-full sm:w-1/2 lg:w-1/3 sm:h-[450px] md:h-[400px] lg:h-[425px] p-2 flex flex-col"
+              className="w-full sm:w-1/2 lg:w-1/3 sm:h-[450px] md:h-[400px] lg:h-[425px] p-2 flex flex-col mb-4"
             >
               {/* Project card content */}
-              <div className="mx-3 h-full rounded-xl p-0.5 shadow-lg transition">
+              <div className="mx-2 h-full rounded-xl p-0.5 shadow-lg transition">
                 {/* Project details */}
                 <div className="flex-col h-full justify-center align-middle rounded-[10px] bg-charcoal p-4 sm:p-6  flex-grow">
                   <div className="overflow-hidden">

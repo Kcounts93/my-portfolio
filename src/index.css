@@ -32,6 +32,12 @@
   }
 }
 
+.fade-in {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -77,4 +83,10 @@ html {
   height: 50px; /* Height of your navbar */
   margin-top: -50px; /* Negative value of your navbar height */
   visibility: hidden;
+}
+
+.fade-in {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 }
