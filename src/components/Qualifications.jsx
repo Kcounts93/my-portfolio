@@ -26,7 +26,7 @@ const Qualifications = () => {
       company: "Ignitium",
       date: "Jun 2022 - Present",
       description:
-        "Responsible for replicating websites and building, maintaining, and designing HTML, CSS, JavaScript landing pages, emphasizing adaptability in a fast-paced environment.",
+        "Responsible for replicating websites. Building, maintaining, and designing HTML, CSS, JavaScript landing pages in a fast-paced, collaborative, ever-changing environment.",
     },
     {
       title: "Web Designer/Developer",
