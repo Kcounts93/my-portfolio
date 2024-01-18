@@ -26,7 +26,7 @@ const Qualifications = () => {
       company: "Ignitium",
       date: "Jun 2022 - Present",
       description:
-        "Responsible for building, maintaining and designing landing pages using HTML, CSS, JavaScript and Adobe Creative Suite with a continuous focus on embracing change and technological evolution in a fast paced environment",
+        "Responsible for replicating websites and building, maintaining, and designing HTML, CSS, JavaScript landing pages, emphasizing adaptability in a fast-paced environment.",
     },
     {
       title: "Web Designer/Developer",
@@ -78,7 +78,7 @@ const Qualifications = () => {
       degree: "A.A.S in Graphic/Web Design",
       year: "2020 - 2022",
       description:
-        "Developed practical skills in digital design, web development, and multimedia communication.",
+        "Acquired practical skills in digital design, web development, and multimedia communication.",
     },
   ];
 

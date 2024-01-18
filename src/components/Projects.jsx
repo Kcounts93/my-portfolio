@@ -11,7 +11,7 @@ const Projects = () => {
       id: 1,
       title: "On the Rocks Website",
       subtitle: "Snippet",
-      categories: ["HTML", "Bootstrap", "SASS", "Javascript"],
+      categories: ["Bootstrap", "SASS", "Javascript"],
       image: otr,
       projectLink: "https://github.com/Kcounts93/on-the-rocks",
       liveLink: "https://ontherocks.counts2six.com/",
@@ -50,7 +50,7 @@ const Projects = () => {
 
     {
       id: 5,
-      title: "My Portfolio",
+      title: "Front End Portfolio",
       subtitle: "Snippet",
       categories: ["HTML", "Tailwind", "React"],
       image: portfolioImg,
@@ -107,18 +107,24 @@ const Projects = () => {
           {projectsToShow.map((project) => (
             <div
               key={project.id}
-              className="w-full sm:w-1/2 lg:w-1/3 sm:h-[450px] md:h-[400px] lg:h-[425px] p-2 flex flex-col mb-4"
+              className="w-full sm:w-1/2 lg:w-1/3 sm:h-[450px] md:h-[400px] lg:h-[425px] p-2 flex flex-col mb-4 hover:scale-105 duration-300"
             >
               {/* Project card content */}
               <div className="mx-2 h-full rounded-xl p-0.5 shadow-lg transition">
                 {/* Project details */}
                 <div className="flex-col h-full justify-center align-middle rounded-[10px] bg-charcoal p-4 sm:p-6  flex-grow">
                   <div className="overflow-hidden">
-                    <img
-                      className="mb-5"
-                      src={project.image}
-                      alt={project.title}
-                    />
+                    <a
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        className="mb-5"
+                        src={project.image}
+                        alt={project.title}
+                      />
+                    </a>
                   </div>
 
                   <h3 className="mt-0.5 text-xl font-medium">
@@ -128,7 +134,7 @@ const Projects = () => {
                     {project.categories.map((category, index) => (
                       <span
                         key={index}
-                        className="whitespace-nowrap rounded-full text-drap mr-1 text-sm"
+                        className="whitespace-nowrap rounded-full bg-putty px-2 py-1 text-darkgrey mr-1 text-sm"
                       >
                         {category}
                       </span>
@@ -150,7 +156,7 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Live Link
+                      Project
                     </a>
                   </div>
                 </div>

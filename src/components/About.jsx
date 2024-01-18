@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-
+import hike from "../assets/hiking.png";
 import me from "../assets/me.png";
 import { MdOutlineArrowForward } from "react-icons/md";
 
@@ -20,12 +20,21 @@ const About = () => {
             className="w-full lg:w-1/2 mb-6 md:mb-0"
           >
             <p className="leading-loose font-medium text-darkputty">
-              Hello! I'm Kayla Counts! I'm a dedicated and passionate front-end
-              developer. I specialize in creating interactive and user-friendly
-              web applications. I love exploring new technologies and bringing
-              creative ideas to life in my projects. When I'm not coding, I
-              enjoy longboarding with my chihuahua, snowboarding, hiking,
-              playing videogames.
+              Hello, I'm Kayla Counts, a front-end developer with a passion for
+              learning and building. I take pride in my ability to bring
+              creative ideas to life through coding.
+              <br />
+              <br />
+              Outside of work, I lead an active lifestyle. I enjoy longboarding
+              and I'm always up for a good hike to connect with nature. When
+              winter comes around, you'll find me hitting the slopes on my
+              snowboard. My chihuahua comes with me on all my adventures. Speed
+              isn't her biggest strength so she hitches a ride in a backpack.
+              <br />
+              <br />
+              Additionally, I love video games in my downtime. I love exploring
+              virtual worlds, my current favorites include Starfield, Stardew
+              Valley, and Call of Duty.
             </p>
             <div className="flex mt-5">
               <a
@@ -44,12 +53,21 @@ const About = () => {
           </motion.div>
 
           {/* Right Section */}
-          <div className="w-full lg:w-1/2 flex px-5 justify-start items-center md:justify-center md:px-0 ">
-            <img
-              className="rounded w-80 md:w-100 opacity-90 mt-10"
-              src={me}
-              alt="portfolio me"
-            />
+          <div className="w-full lg:w-1/2 flex flex-col px-0 md:pl-20">
+            <div className="flex justify-start">
+              <img
+                className="rounded w-80 md:w-100 opacity-90 sm:mt-5 md:mt-10 lg:mt-0 "
+                src={me}
+                alt="portfolio me"
+              />
+            </div>
+            <div className="flex justify-end">
+              <img
+                className="rounded w-80 md:w-100 opacity-90 mt-5"
+                src={hike}
+                alt="portfolio me"
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply bg-[#121212];
+    @apply bg-[#101014];
     @apply font-[Montserrat];
     @apply text-putty;
   }
@@ -63,7 +63,7 @@ html {
 /* Apply global styles after the specific container styles */
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #121212;
+  background: #101014;
 }
 
 /* Handle */
