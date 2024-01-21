@@ -4,21 +4,12 @@ import otr from "../assets/ontherocks.png";
 import gpt4 from "../assets/gpt4.png";
 import chatBot from "../assets/chatronix.png";
 import portfolioImg from "../assets/portfolio.png";
+import kingsQuest from "../assets/kings-quest.png";
 
 const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "On the Rocks Website",
-      subtitle: "Snippet",
-      categories: ["Bootstrap", "SASS", "Javascript"],
-      image: otr,
-      projectLink: "https://github.com/Kcounts93/on-the-rocks",
-      liveLink: "https://ontherocks.counts2six.com/",
-      featured: true, // Featured project
-    },
-    {
-      id: 2,
       title: "GPT-4 Landing Page",
       subtitle: "Snippet",
       categories: ["HTML", "React", "CSS"],
@@ -28,17 +19,37 @@ const Projects = () => {
       featured: true, // Featured project
     },
     {
-      id: 3,
-      title: "Chatronix AI Chatbot ",
+      id: 2,
+      title: "The King's Quest",
       subtitle: "Snippet",
-      categories: ["Bootstrap", "PHP", "Javascript"],
-      image: chatBot,
-      projectLink: "https://github.com/Kcounts93/php-chatbot",
-      liveLink: "https://chatronix.kaylacounts.com/",
+      categories: ["HTML", "CSS", "JS"],
+      image: kingsQuest,
+      projectLink: "https://kingsquest.kaylacounts.com/",
+      liveLink: "https://github.com/Kcounts93/kings-quest-cyoa",
+      featured: true, // Featured project
+    },
+    {
+      id: 3,
+      title: "On the Rocks Website",
+      subtitle: "Snippet",
+      categories: ["Bootstrap", "SASS", "JS"],
+      image: otr,
+      projectLink: "https://github.com/Kcounts93/on-the-rocks",
+      liveLink: "https://ontherocks.counts2six.com/",
       featured: true, // Featured project
     },
     {
       id: 4,
+      title: "Chatronix AI Chatbot ",
+      subtitle: "Snippet",
+      categories: ["Bootstrap", "PHP", "JS"],
+      image: chatBot,
+      projectLink: "https://github.com/Kcounts93/php-chatbot",
+      liveLink: "https://chatronix.kaylacounts.com/",
+      featured: false, // Featured project
+    },
+    {
+      id: 5,
       title: "Category Notes App",
       subtitle: "Snippet",
       categories: ["React", "Typescript"],
@@ -49,13 +60,13 @@ const Projects = () => {
     },
 
     {
-      id: 5,
+      id: 6,
       title: "Front End Portfolio",
       subtitle: "Snippet",
       categories: ["HTML", "Tailwind", "React"],
       image: portfolioImg,
       projectLink: "https://example.com/project-link",
-      liveLink: "https://example.com/live-link",
+      liveLink: "#",
       featured: false, // Featured project
     },
   ];

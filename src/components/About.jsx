@@ -56,7 +56,7 @@ const About = () => {
           <div className="w-full lg:w-1/2 flex flex-col px-0 md:pl-20">
             <div className="flex justify-start">
               <img
-                className="rounded w-[300px] md:w-100 opacity-90 sm:mt-5 md:mt-10 lg:mt-0 "
+                className="rounded w-[300px] md:w-100 opacity-90 mt-10 lg:mt-0 "
                 src={me}
                 alt="portfolio me"
               />

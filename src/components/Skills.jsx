@@ -50,7 +50,9 @@ const Skills = () => {
             </div>
             <div className="h-full rounded-xl ">
               <div className="ml-1 bg-darkgrey rounded-lg">
-                <h2 className="text-2xl font-light mb-5">Hard skills</h2>
+                <h2 className="text-2xl font-light mt-10 md:mt-0 mb-5">
+                  Hard skills
+                </h2>
                 <div className="grid grid-cols-2 gap-4">
                   {hardSkills.map(({ skill, Icon }) => (
                     <div className="flex items-center px-2 py-2 bg-charcoal rounded-lg">
