@@ -24,8 +24,8 @@ const Projects = () => {
       subtitle: "Snippet",
       categories: ["HTML", "CSS", "JS"],
       image: kingsQuest,
-      projectLink: "https://kingsquest.kaylacounts.com/",
-      liveLink: "https://github.com/Kcounts93/kings-quest-cyoa",
+      projectLink: "https://github.com/Kcounts93/kings-quest-cyoa",
+      liveLink: "https://kingsquest.kaylacounts.com/",
       featured: true, // Featured project
     },
     {

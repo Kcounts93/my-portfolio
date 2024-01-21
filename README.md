@@ -1,73 +1,16 @@
-# Getting Started with Create React App
+# My Personal Portfolio
 
-#242628 - Charcoal
-#e2e4dd - putty
-#00aa3c - green
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the source code for my personal portfolio website. It's built with React and styled using Tailwind CSS. I embarked on this project as a learning endeavor, keen to explore the capabilities of Tailwind CSS for the first time. The journey led me to fall in love with its utility-first approach and how it seamlessly integrates with React components.
 
-## Available Scripts
+## Project Overview
 
-In the project directory, you can run:
+The primary goal of this portfolio is to present a clean, minimal design that highlights my projects and skills, while also providing a deeper insight into my professional journey and personal interests. I've iterated through many versions to refine the design and user experience, ensuring that the focus remains on the content and its presentation.
 
-### `npm start`
+### Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Responsive Design**: Ensures a seamless viewing experience across a wide range of devices.
+- **Clean & Minimal Aesthetic**: Emphasizes the portfolio content without unnecessary distractions.
+- **Project Showcase**: Cards for each project, highlighting the technologies used and links to the GitHub code and live projects.
+- **About Me Section**: A personal narrative that sheds light on my professional background and personal interests.
+- **Skills Section**: A place to view what my interpersonal and technical skills are.
+- **Contact Section**: A classic contact form to provide a place for people to contact me directly as opposed to LinkedIn.
