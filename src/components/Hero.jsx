@@ -23,11 +23,11 @@ const Hero = () => {
   return (
     <div id="Home" className="section">
       <div className="container mx-auto h-screen px-10 md:px-20 lg:px-20">
-        <div className="max-w-full h-full flex flex-col justify-center items-start">
+        <div className="max-w-full h-full flex flex-col justify-center items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={textAnimation}
-            className="md:w-3/4 xl:w-3/4 mb-6"
+            className="md:w-3/4 xl:w-3/4 mb-6 text-center"
           >
             <h2 className="text-md md:text-xl lg:text-xl mb-2 font-light">
               Hello, my name is Kayla Counts
@@ -39,12 +39,10 @@ const Hero = () => {
             </h1>
           </motion.div>
           <a
-            href="https://www.linkedin.com/in/kaylacounts/"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#Projects"
           >
             <button className="flex rounded items-center mt-5 px-5 py-3 border border-putty bg-putty text-charcoal text-bold hover:bg-darkgrey hover:text-putty hover:border-drap hover:scale-105 active:scale-90 duration-500">
-              Contact me
+              View projects
               <FiArrowRight className="ml-2" />
             </button>
           </a>

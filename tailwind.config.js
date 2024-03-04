@@ -10,10 +10,7 @@ module.exports = {
         "blue": "#114adc",
         "darkputty": "#BEBFBA",
         "drap": "#33A1C9",
-      },
-      backgroundImage: {
-        "hero-pattern": "url('src/assets/blue-circles.png)",
-      },
+      }
     },
   },
   plugins: [],

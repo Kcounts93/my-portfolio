@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <motion.div
-      className="fixed z-10 w-full h-50 bg-darkgrey border-b border-charcoal"
+      className="fixed z-10 w-full h-50 bg-transparent my-2"
       initial={{ opacity: 0, y: -100 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -100 }}
