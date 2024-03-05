@@ -41,7 +41,7 @@ const Hero = () => {
           <a
             href="#Projects"
           >
-            <button className="flex rounded items-center mt-5 px-5 py-3 border border-putty bg-putty text-charcoal text-bold hover:bg-darkgrey hover:text-putty hover:border-drap hover:scale-105 active:scale-90 duration-500">
+            <button className="flex rounded items-center m-2 px-5 py-3 border bg-charcoal text-putty border-drap hover:scale-110 active:scale-90 duration-500">
               View projects
               <FiArrowRight className="ml-2" />
             </button>
