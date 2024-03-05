@@ -42,7 +42,7 @@ const About = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className="flex rounded items-center mt-5 px-5 py-3 border border-putty text-putty text-bold hover:bg-darkgrey hover:text-putty hover:border-drap hover:scale-105 active:scale-90 duration-500">
+                <button className="flex rounded items-center mt-5 px-5 py-3 border bg-charcoal text-putty border-drap hover:scale-110 active:scale-90 duration-500">
                   Connect with me
                   <span className="duration-300">
                     <MdOutlineArrowForward className="ml-2" />

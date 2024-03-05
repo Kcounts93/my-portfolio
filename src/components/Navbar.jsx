@@ -8,20 +8,20 @@ const navLinks = ["Home", "Projects", "About", "Skills", "Contact"];
 const SocialLinks = () => (
   <ul className="flex">
     <li className="">
-      <a href="https://www.linkedin.com/in/kaylacounts/" target="_blank" rel="noopener noreferrer">
-        <FiLinkedin className="text-2xl transition-transform hover:scale-150 duration-300" />
+      <a href="https://www.linkedin.com/in/kaylacounts/" target="_blank" rel="noopener noreferrer" title="View my LinkedIn">
+        <FiLinkedin className="text-2xl transition-transform hover:scale-125 duration-300" />
       </a>
     </li>
     <li>
-      <a href="https://github.com/Kcounts93" target="_blank" rel="noopener noreferrer">
-        <FiGithub className="text-2xl transition-transform hover:scale-150 duration-300" />
+      <a href="https://github.com/Kcounts93" target="_blank" rel="noopener noreferrer" title="View my GitHub">
+        <FiGithub className="text-2xl transition-transform hover:scale-125 duration-300" />
       </a>
     </li>
-    <li>
-      <a href="https://github.com/Kcounts93" target="_blank" rel="noopener noreferrer">
-        <FiFileText className="text-2xl transition-transform hover:scale-150 duration-300" />
-      </a>
-    </li>
+    {/* <li>
+    <a href="https://github.com/Kcounts93" target="_blank" rel="noopener noreferrer" title="View my resume">
+    <FiFileText className="text-2xl transition-transform hover:scale-150 duration-300" />
+  </a>
+    </li> */}
   </ul>
 );
 
@@ -71,13 +71,13 @@ const Navbar = () => {
 
   return (
     <motion.div className="fixed z-10 w-full flex justify-center" initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -100 }}>
-      <div className="container bg-charcoal my-4 flex justify-between items-center w-full max-w-6xl mx-auto px-4">
+      <div className="bg-charcoal py-1 rounded-md my-6 flex justify-between items-center w-full max-w-5xl mx-auto px-4">
         <img src={Logo} alt="Logo" className="ml-2" />
         <div onClick={toggleNav} className="md:hidden z-10 text-2xl">
           {isMobileMenuOpen ? <FiX className="transition-transform hover:rotate-180 hover:scale-125 text-drap duration-300" /> : <FiMenu />}
         </div>
         <MobileMenu navVariants={navVariants} isMobileMenuOpen={isMobileMenuOpen} toggleNav={toggleNav} />
-        <ul className="hidden md:flex">
+        <ul className="hidden md:flex ml-20">
           {navLinks.map((link) => (
             <NavLink key={link} link={link} />
           ))}
