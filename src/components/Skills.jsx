@@ -36,7 +36,7 @@ const Skills = () => {
         <div className="container py-5">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
             <div className="h-full rounded-xl">
-              <div className="mr-1 bg-darkgrey rounded-lg">
+              <div className="mr-1">
                 <h2 className="text-2xl font-light mb-5">Soft skills</h2>
                 <div className="grid grid-cols-2 gap-4">
                   {softSkills.map(({ skill, Icon }) => (
@@ -49,7 +49,7 @@ const Skills = () => {
               </div>
             </div>
             <div className="h-full rounded-xl ">
-              <div className="ml-1 bg-darkgrey rounded-lg">
+              <div className="ml-1">
                 <h2 className="text-2xl font-light mt-10 md:mt-0 mb-5">
                   Hard skills
                 </h2>

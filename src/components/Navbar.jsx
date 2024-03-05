@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Logo from "../assets/KC.svg";
-import { FiMenu, FiX, FiGithub, FiLinkedin, FiFileText } from "react-icons/fi";
+import { FiMenu, FiX, FiGithub, FiLinkedin } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = ["Home", "Projects", "About", "Skills", "Contact"];
@@ -71,7 +71,7 @@ const Navbar = () => {
 
   return (
     <motion.div className="fixed z-10 w-full flex justify-center" initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -100 }}>
-      <div className="bg-charcoal py-1 rounded-md my-6 flex justify-between items-center w-full max-w-5xl mx-auto px-4">
+      <div className="bg-charcoal backdrop-filter backdrop-blur-md bg-opacity-40 py-2 rounded-md my-6 flex justify-between items-center w-full max-w-6xl mx-auto px-5">
         <img src={Logo} alt="Logo" className="ml-2" />
         <div onClick={toggleNav} className="md:hidden z-10 text-2xl">
           {isMobileMenuOpen ? <FiX className="transition-transform hover:rotate-180 hover:scale-125 text-drap duration-300" /> : <FiMenu />}
