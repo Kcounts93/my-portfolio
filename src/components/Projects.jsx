@@ -18,7 +18,7 @@ const projectsData = [
       categories: ["HTML", "React", "CSS"],
       image: gpt4,
       projectLink: "https://github.com/Kcounts93/gpt4-react-landing",
-      liveLink: "https://gpt4.kaylacounts.com/",
+      liveLink: "https://kcounts93.github.io/gpt4-react-landing/",
       featured: true, // Featured project
     },
     {
@@ -27,7 +27,7 @@ const projectsData = [
       subtitle: "Snippet",
       categories: ["HTML", "CSS", "JS"],
       image: kingsQuest,
-      projectLink: "https://github.com/Kcounts93/kings-quest-cyoa",
+      projectLink: "https://kcounts93.github.io/kings-quest-cyoa/",
       liveLink: "https://kingsquest.kaylacounts.com/",
       featured: true, // Featured project
     },
@@ -38,7 +38,7 @@ const projectsData = [
       categories: ["Bootstrap", "SASS", "JS"],
       image: otr,
       projectLink: "https://github.com/Kcounts93/on-the-rocks",
-      liveLink: "https://ontherocks.counts2six.com/",
+      liveLink: "https://ontherocksmixology.netlify.app/",
       featured: true, // Featured project
     },
     {
@@ -58,7 +58,7 @@ const projectsData = [
       categories: ["React", "Typescript"],
       image: notesApp,
       projectLink: "https://github.com/Kcounts93/react-category-notes-app",
-      liveLink: "https://notes.counts2six.com/",
+      liveLink: "https://kcounts93.github.io/react-notes-app/",
       featured: false, // Featured project
     },
 
