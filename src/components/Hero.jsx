@@ -67,7 +67,7 @@ const Hero = () => {
         <div className="max-w-full h-full flex flex-col justify-center items-center">
           <HeroText textAnimation={textAnimation} />
           <a href="#Projects">
-            <button className="flex rounded items-center m-2 px-5 py-3 border bg-charcoal text-putty border-drap hover:scale-110 active:scale-90 duration-500">
+            <button className="primary-btn">
               View projects
               <FiArrowRight className="ml-2" />
             </button>
