@@ -41,7 +41,7 @@ const HeroText = ({ textAnimation }) => (
   <motion.div
     initial={{ opacity: 0, x: -50 }}
     animate={textAnimation}
-    className="md:w-3/4 xl:w-3/4 mb-6 text-center"
+    className="w-3/4 mb-6 text-center"
   >
     <h2 className="text-md md:text-xl lg:text-xl mb-2 font-light">
       Hello, my name is Kayla Counts
