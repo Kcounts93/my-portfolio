@@ -70,8 +70,10 @@ const Navbar = () => {
   };
 
   return (
-    <motion.div className="fixed z-10 w-full flex justify-center" initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -100 }}>
-      <div className="bg-charcoal backdrop-filter backdrop-blur-md bg-opacity-40 py-2 rounded-md my-6 flex justify-between items-center w-full max-w-6xl mx-auto px-5">
+
+    <motion.div className="fixed top-0 left-0 z-10 w-full" initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -100 }}>
+      <div className="container my-5 max-w-xxx mx-auto px-10 md:px-10 lg:px-20">
+      <div className="flex justify-between items-center py-3 px-3 bg-charcoal backdrop-filter backdrop-blur-md bg-opacity-40 rounded-xl">
         <img src={Logo} alt="Logo" className="ml-2" />
         <div onClick={toggleNav} className="md:hidden z-10 text-2xl">
           {isMobileMenuOpen ? <FiX className="transition-transform hover:rotate-180 hover:scale-125 text-drap duration-300" /> : <FiMenu />}
@@ -85,8 +87,10 @@ const Navbar = () => {
         <div className="hidden md:flex">
           <SocialLinks />
         </div>
+        </div>
       </div>
     </motion.div>
+
   );
 };
 

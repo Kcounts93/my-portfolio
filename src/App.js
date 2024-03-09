@@ -8,7 +8,8 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Skills from "./components/Skills";
 import Qualifications from "./components/Qualifications";
-import Resume from "./components/Resume";
+import Resume from './components/Resume';
+
 
 function App() {
 
@@ -52,8 +53,8 @@ function App() {
       <Projects />
       <LogoMarquee />
       <About />
-      <Resume />
       <Skills />
+      <Resume />
       <Qualifications />
       <Contact />
       <Footer />

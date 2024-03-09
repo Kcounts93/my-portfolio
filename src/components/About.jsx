@@ -1,8 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
-import hike from "../assets/hiking.png";
-import me from "../assets/me.png";
 import { MdOutlineArrowForward } from "react-icons/md";
+import BentoGrid from "./BentoGrid";
+import hiking from '../assets/hiking.png';
+import me from '../assets/me.png';
+import illustration1 from '../assets/dev.png';
+import illustration2 from '../assets/dev2.png';
+
+
+const images = [
+  { id: '1', src: me, alt: 'Description of Image 1' },
+  { id: '2', src: illustration1, alt: 'Description of Image 2' },
+  { id: '3', src: illustration2, alt: 'Description of Image 3' },
+  { id: '4', src: hiking, alt: 'Description of Image 3' }
+];
 
 const About = () => {
   return (
@@ -53,21 +64,8 @@ const About = () => {
           </motion.div>
 
           {/* Right Section */}
-          <div className="w-full lg:w-1/2 flex flex-col px-0 md:pl-20">
-            <div className="flex justify-start">
-              <img
-                className="rounded w-[300px] md:w-100 opacity-90 mt-10 lg:mt-0 "
-                src={me}
-                alt="portfolio me"
-              />
-            </div>
-            <div className="flex justify-end">
-              <img
-                className="w-[300px] rounded md:w-100 opacity-90 mt-5"
-                src={hike}
-                alt="portfolio me"
-              />
-            </div>
+          <div className="w-full lg:w-1/2">
+            <BentoGrid images={images}/>
           </div>
         </div>
       </div>

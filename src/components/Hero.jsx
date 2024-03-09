@@ -74,9 +74,11 @@ const Hero = () => {
             </button>
           </a>
         </div>
+      <a href="#Projects">
         <div className="flex justify-center mt-[-6rem] ">
           <TriangleAnimation currentTriangle={currentTriangle} />
         </div>
+        </a>
       </div>
     </div>
   );
