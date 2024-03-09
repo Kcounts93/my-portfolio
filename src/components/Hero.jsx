@@ -35,7 +35,6 @@ const TriangleAnimation = ({ currentTriangle }) => {
     </div>
   );
 };
-
 // Hero Text Component
 const HeroText = ({ textAnimation }) => (
   <motion.div
