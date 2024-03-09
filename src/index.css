@@ -36,7 +36,6 @@
 body { 
   background-size: 40px 40px !important;
   background-image: linear-gradient(to right, #bebfba18 1px, transparent 1px), linear-gradient(to bottom, #bebfba18 1px, transparent 1px) !important;
-  color: rgb(51, 161, 201);
 }
 
 html {
