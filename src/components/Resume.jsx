@@ -41,7 +41,7 @@ const Resume = () => {
           <Hobbies />
         </div>
       </div>
-      <button className="primary-btn">View resume</button>
+      {/* <button className="primary-btn">View resume</button> */}
     </div>
   );
 };
