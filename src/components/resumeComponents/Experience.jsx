@@ -1,5 +1,5 @@
 import React from "react";
-import { FaBriefcase } from "react-icons/fa";
+import { FiBriefcase } from "react-icons/fi";
 
 const experiences = [
   {
@@ -38,15 +38,12 @@ const Experience = () => {
       <h2 className="text-2xl font-light mb-5">Experience</h2>
       <div className="flex flex-col items-center">
         {experiences.map((exp, index) => (
-          <div key={index} className="flex items-center w-full mb-7">
-            <div className="flex flex-col items-center mr-4">
-              <FaBriefcase className="text-xl text-blue-500" />
-              {index < experiences.length - 1 && (
-                <div className="w-px h-8 bg-gray-300" />
-              )}
+          <div key={index} className="flex items-start w-full mb-7 rounded-lg bg-charcoal backdrop-filter backdrop-blur-sm bg-opacity-40 px-2 py-2">
+            <div className="flex flex-col items-start mr-4">
+              <FiBriefcase className="text-xl text-drap mt-1 text-blue-500" />
             </div>
             <div className="flex-1">
-              <h3 className="text-xl font-medium">{exp.title}</h3>
+              <h3 className="text-md">{exp.title}</h3>
               <p className="text-darkputty">{exp.company}</p>
               <p className="text-gray-400">{exp.date}</p>
             </div>

@@ -3,7 +3,7 @@ const ProjectCard = ({ project }) => (
     {/* Project card content */}
     <div className="mx-2 h-full rounded-xl p-0.5 shadow-lg transition">
       {/* Project details */}
-      <div className="flex-col h-full justify-center align-middle rounded-[10px] bg-charcoal backdrop-filter backdrop-blur-sm bg-opacity-40 p-4 sm:p-6 flex-grow">
+      <div className="flex-col h-full justify-center align-middle rounded-lg bg-charcoal backdrop-filter backdrop-blur-sm bg-opacity-40 p-4 sm:p-6 flex-grow">
         <div className="overflow-hidden">
           <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
             <img className="mb-5" src={project.image} alt={project.title} />

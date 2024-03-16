@@ -1,18 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { MdOutlineArrowForward } from "react-icons/md";
-import BentoGrid from "./BentoGrid";
-import hiking from "../assets/hiking.png";
 import me from "../assets/me.png";
-import illustration1 from "../assets/dev.png";
-import illustration2 from "../assets/dev2.png";
+// import hiking from "../assets/hiking.png";
+// import illustration1 from "../assets/dev.png";
+// import illustration2 from "../assets/dev2.png";
 
-const images = [
-  { id: "1", src: me, alt: "Description of Image 1" },
-  { id: "2", src: illustration1, alt: "Description of Image 2" },
-  { id: "3", src: illustration2, alt: "Description of Image 3" },
-  { id: "4", src: hiking, alt: "Description of Image 3" },
-];
+// const images = [
+//   { id: "1", src: me, alt: "Description of Image 1" },
+//   { id: "2", src: illustration1, alt: "Description of Image 2" },
+//   { id: "3", src: illustration2, alt: "Description of Image 3" },
+//   { id: "4", src: hiking, alt: "Description of Image 3" },
+// ];
 
 const About = () => {
   return (
@@ -46,7 +45,7 @@ const About = () => {
               virtual worlds, my current favorites include Starfield, Stardew
               Valley, and Call of Duty.
             </p>
-            <div className="flex mt-5">
+            <div className="mt-10">
               <a
                 href="https://www.linkedin.com/in/kaylacounts/"
                 target="_blank"
@@ -63,8 +62,8 @@ const About = () => {
           </motion.div>
 
           {/* Right Section */}
-          <div className="w-full lg:w-1/2 flex flex-col justify-between">
-            <BentoGrid images={images} />
+          <div className="w-full lg:w-1/2 flex flex-col justify-center items-center">
+            <img src={me} alt="me" className="w-[65%] h-auto rounded-lg opacity-75"/>
           </div>
         </div>
       </div>
