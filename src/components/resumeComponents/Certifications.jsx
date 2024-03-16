@@ -14,24 +14,27 @@ const certificates = [
     degree: "Front End Web & Mobile Dev",
     year: "2022 - 2023",
     description:
-      "Focuses on building engaging user interfaces. Skills & Technologies developed: Bootstrap, React, React Native, Git, Redux, Google Cloud Platform",
+      "Focuses on building engaging user interfaces responsively with modern technologies including mobile apps. Skills & Technologies developed: Bootstrap, React, React Native, Git, Redux, Google Cloud Platform",
   },
 ];
 
 const Certifications = () => {
   return (
-    <div className="h-full rounded-xl mx-10">
+    <div className="h-full rounded-xl">
       <h2 className="text-2xl font-light mb-5">Certifications</h2>
       <div className="flex flex-col items-center">
         {certificates.map((cert, index) => (
-          <div key={index} className="flex items-start w-full mb-8 rounded-lg bg-charcoal backdrop-filter backdrop-blur-sm bg-opacity-40 pl-4 py-2">
+          <div key={index} className="no-select cursor-pointer shadow-md group relative flex items-start w-full mb-7 rounded-lg bg-charcoal px-2 py-3 overflow-hidden">
             <div className="flex flex-col items-start mr-4">
               <FiAward className="text-xl text-drap mt-2 text-blue-500" />
             </div>
             <div className="flex-1">
-              <h3 className="text-lg font-medium">{cert.school}</h3>
+              <h3 className="text-md font-medium">{cert.school}</h3>
               <p className="text-darkputty">{cert.degree}</p>
-              <p className="text-gray-400">{cert.year}</p>
+              <p className="text-darkputty">{cert.year}</p>
+            </div>
+            <div className="absolute left-0 right-0 bottom-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out bg-charcoal p-2 rounded-b-lg">
+              <p className="text-sm text-putty">{cert.description}</p>
             </div>
           </div>
         ))}

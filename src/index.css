@@ -10,6 +10,7 @@
     @apply font-[Montserrat];
     @apply text-putty;
 
+
   }
   li {
     @apply font-[Raleway];
@@ -39,6 +40,7 @@
   }
 }
 
+
 body { 
   background-size: 40px 40px !important;
   background-image: linear-gradient(to right, #bebfba18 1px, transparent 1px), linear-gradient(to bottom, #bebfba18 1px, transparent 1px) !important;
@@ -46,6 +48,13 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+.no-select {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE10+/Edge */
+  user-select: none;         /* Standard */
 }
 
 /* Skills Logo Wrapper */
@@ -96,3 +105,19 @@ html {
   visibility: visible;
   transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 }
+
+@keyframes rainbow-color {
+  0% { color: rgba(255, 0, 0, 0.731); }
+  14% { color: rgba(255, 166, 0, 0.689); }
+  28% { color: rgba(255, 255, 0, 0.697); }
+  42% { color: rgba(0, 128, 0, 0.763); }
+  57% { color: rgba(0, 0, 255, 0.596); }
+  71% { color: rgba(76, 0, 130, 0.838); }
+  85% { color: rgba(238, 130, 238, 0.743); }
+  100% { color: rgba(255, 0, 0, 0.582); }
+}
+
+.icon-animation-hover:hover {
+  animation: rainbow-color 2s infinite;
+}
+

@@ -3,12 +3,14 @@ import { MdCode } from "react-icons/md";
 
 const HardSkills = () => {
   const hardSkills = [
-    { skill: "React.js" },
+    { skill: "React" },
     { skill: "Javascript" },
-    { skill: "SASS" },
+    { skill: "SASS/SCSS" },
     { skill: "HTML/CSS" },
-    { skill: "Frameworks" },
+    { skill: "CSS Frameworks" },
     { skill: "Responsive" },
+    { skill: "Google Cloud" },
+    { skill: "Wordpress" }
   ];
 
   return (
@@ -19,7 +21,7 @@ const HardSkills = () => {
           {hardSkills.map(({ skill, Icon }) => (
             <div className="flex items-center px-2 py-2 bg-charcoal rounded-lg">
               <MdCode className="text-xl text-drap mr-2" />
-              <span className="">{skill}</span>
+              <span className="text-md">{skill}</span>
             </div>
           ))}
         </div>

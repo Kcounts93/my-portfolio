@@ -5,61 +5,41 @@ import Experience from "./resumeComponents/Experience";
 import Education from "./resumeComponents/Education";
 import Certifications from "./resumeComponents/Certifications";
 import Tools from "./resumeComponents/Tools";
+import Hobbies from "./resumeComponents/Hobbies";
+import DesignSkills from "./resumeComponents/DesignSkills";
 
 const Resume = () => {
   return (
-    <div id="Resume">
-      <div className="container mx-auto px-5 md:px-10 lg:px-20 mt-20 mb-10 flex-row">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {/* Left Side: Skills */}
-          <div className="md:col-span-1 flex flex-col justify-around">
-            <div>
-              <HardSkills />
-            </div>
-            <div>
-              <SoftSkills />
-            </div>
-          </div>
-
-          {/* Middle Side: Experience and Education */}
-          <div className="md:col-span-1">
-            <div>
-              <Experience />
-            </div>
-          </div>
-
-          {/* Right Side: What Can I Do?, Design Skills, Hobbies & Interests */}
-          <div className="md:col-span-1">
-            {/* Software Skills */}
-            <div>
-              <h2 className="font-light text-2xl mb-4">Tools</h2>
-              <Tools />
-            </div>
-            {/* Design Skills */}
-            <div>
-              <h2 className="font-light text-2xl mb-4">Design Skills</h2>
-              {/* ... list of design skills ... */}
-            </div>
-
-            {/* Hobbies & Interests */}
-            <div>
-              <h2 className="font-light text-2xl mb-4">Hobbies & Interests</h2>
-              {/* ... list of hobbies ... */}
-            </div>
-          </div>
+    <div id="Resume" className="container mx-auto px-5 md:px-10 lg:px-20 mt-20 mb-10">
+      <h2 className="text-4xl mb-10 font-light">Resume</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10">
+        {/* Skills, Experience, Tools/Design Skills/Hobbies in the first 3-column grid */}
+        <div className="flex flex-col md:order-1">
+          <HardSkills />
+          <SoftSkills />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-12">
-          {/* Left Side: Skills */}
-          <div className="md:col-span-1">
-            <Education />
-            </div>
-            <div className="md:col-span-1">
-              <Certifications />
-            </div>
-            <div className="md:col-span-1">
-            </div>
-          </div>
-
+        <div className="md:order-2 p-0 md:pl-5">
+          <Experience />
+        </div>
+        
+        {/* Tools, Design Skills, Hobbies */}
+        {/* Ensure it appears below Experience and above Education and Certifications on mobile */}
+        <div className="md:order-3 order-4 p-0 md:pl-5">
+          <Tools />
+          <DesignSkills />
+          {/* Design Skills and Hobbies sections */}
+        </div>
+        
+        {/* Education and Certifications with adjusted order for mobile view */}
+        <div className="md:order-4 order-2">
+          <Education />
+        </div>
+        <div className="p-0 md:order-5 order-3 md:pl-5">
+          <Certifications />
+        </div>
+        <div className="md:order-6 order-8 p-0 md:pl-5">
+          <Hobbies />
+        </div>
       </div>
       <button className="primary-btn">View resume</button>
     </div>
