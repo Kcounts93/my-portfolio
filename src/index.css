@@ -107,17 +107,17 @@ html {
 }
 
 @keyframes rainbow-color {
-  0% { color: rgba(255, 0, 0, 0.731); }
-  14% { color: rgba(255, 166, 0, 0.689); }
-  28% { color: rgba(255, 255, 0, 0.697); }
-  42% { color: rgba(0, 128, 0, 0.763); }
-  57% { color: rgba(0, 0, 255, 0.596); }
-  71% { color: rgba(76, 0, 130, 0.838); }
+  0% { color: #33A1C9; }
+  14% { color: rgba(0, 0, 255, 0.596); }
+  28% { color: rgba(0, 128, 0, 0.763); }
+  42% { color: rgba(255, 255, 0, 0.697); }
+  57% { color: rgba(255, 166, 0, 0.689); }
+  71% { color: rgba(255, 0, 0, 0.582); }
   85% { color: rgba(238, 130, 238, 0.743); }
-  100% { color: rgba(255, 0, 0, 0.582); }
+  100% { color: #33A1C9; }
 }
 
 .icon-animation-hover:hover {
-  animation: rainbow-color 2s infinite;
+  animation: rainbow-color 4s infinite;
 }
 
