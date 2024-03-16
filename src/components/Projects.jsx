@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import ProjectCard from "./ProjectCard"; // Assuming you extract the project card
 
@@ -11,76 +10,76 @@ import portfolioImg from "../assets/portfolio.png";
 import kingsQuest from "../assets/kings-quest.png";
 
 const projectsData = [
-    {
-      id: 1,
-      title: "GPT-4 Landing Page",
-      subtitle: "Snippet",
-      categories: ["HTML", "React", "CSS"],
-      image: gpt4,
-      projectLink: "https://github.com/Kcounts93/gpt4-react-landing",
-      liveLink: "https://kcounts93.github.io/gpt4-react-landing/",
-      featured: true, // Featured project
-    },
-    {
-      id: 2,
-      title: "The King's Quest",
-      subtitle: "Snippet",
-      categories: ["HTML", "CSS", "JS"],
-      image: kingsQuest,
-      projectLink: "https://github.com/Kcounts93/kings-quest-cyoa",
-      liveLink: "https://kcounts93.github.io/kings-quest-cyoa//",
-      featured: true, // Featured project
-    },
-    {
-      id: 3,
-      title: "On the Rocks Website",
-      subtitle: "Snippet",
-      categories: ["Bootstrap", "SASS", "JS"],
-      image: otr,
-      projectLink: "https://github.com/Kcounts93/on-the-rocks",
-      liveLink: "https://ontherocksmixology.netlify.app/",
-      featured: true, // Featured project
-    },
-    // {
-    //   id: 4,
-    //   title: "Chatronix AI Chatbot ",
-    //   subtitle: "Snippet",
-    //   categories: ["Bootstrap", "PHP", "JS"],
-    //   image: chatBot,
-    //   projectLink: "https://github.com/Kcounts93/php-chatbot",
-    //   liveLink: "https://chatronix.kaylacounts.com/",
-    //   featured: false, // Featured project
-    // },
-    {
-      id: 5,
-      title: "Category Notes App",
-      subtitle: "Snippet",
-      categories: ["React", "Typescript"],
-      image: notesApp,
-      projectLink: "https://github.com/Kcounts93/react-notes-app",
-      liveLink: "https://kcounts93.github.io/react-notes-app/",
-      featured: false, // Featured project
-    },
+  {
+    id: 1,
+    title: "GPT-4 Landing Page",
+    subtitle: "Snippet",
+    categories: ["HTML", "React", "CSS"],
+    image: gpt4,
+    projectLink: "https://github.com/Kcounts93/gpt4-react-landing",
+    liveLink: "https://kcounts93.github.io/gpt4-react-landing/",
+    featured: true, // Featured project
+  },
+  {
+    id: 2,
+    title: "The King's Quest",
+    subtitle: "Snippet",
+    categories: ["HTML", "CSS", "JS"],
+    image: kingsQuest,
+    projectLink: "https://github.com/Kcounts93/kings-quest-cyoa",
+    liveLink: "https://kcounts93.github.io/kings-quest-cyoa//",
+    featured: true, // Featured project
+  },
+  {
+    id: 3,
+    title: "On the Rocks Website",
+    subtitle: "Snippet",
+    categories: ["Bootstrap", "SASS", "JS"],
+    image: otr,
+    projectLink: "https://github.com/Kcounts93/on-the-rocks",
+    liveLink: "https://ontherocksmixology.netlify.app/",
+    featured: true, // Featured project
+  },
+  // {
+  //   id: 4,
+  //   title: "Chatronix AI Chatbot ",
+  //   subtitle: "Snippet",
+  //   categories: ["Bootstrap", "PHP", "JS"],
+  //   image: chatBot,
+  //   projectLink: "https://github.com/Kcounts93/php-chatbot",
+  //   liveLink: "https://chatronix.kaylacounts.com/",
+  //   featured: false, // Featured project
+  // },
+  {
+    id: 5,
+    title: "Category Notes App",
+    subtitle: "Snippet",
+    categories: ["React", "Typescript"],
+    image: notesApp,
+    projectLink: "https://github.com/Kcounts93/react-notes-app",
+    liveLink: "https://kcounts93.github.io/react-notes-app/",
+    featured: false, // Featured project
+  },
 
-    {
-      id: 6,
-      title: "Front End Portfolio",
-      subtitle: "Snippet",
-      categories: ["HTML", "Tailwind", "React"],
-      image: portfolioImg,
-      projectLink: "#",
-      liveLink: "#",
-      featured: false, // Featured project
-    },
-  ];
-  
+  {
+    id: 6,
+    title: "Front End Portfolio",
+    subtitle: "Snippet",
+    categories: ["HTML", "Tailwind", "React"],
+    image: portfolioImg,
+    projectLink: "#",
+    liveLink: "#",
+    featured: false, // Featured project
+  },
+];
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState("featured");
 
-  const filteredProjects = activeTab === "featured"
-    ? projectsData.filter(project => project.featured)
-    : projectsData;
+  const filteredProjects =
+    activeTab === "featured"
+      ? projectsData.filter((project) => project.featured)
+      : projectsData;
 
   return (
     <div id="Projects" className="section">
@@ -89,12 +88,22 @@ const Projects = () => {
           <h2 className="text-4xl mb-5 font-light">Projects</h2>
           {/* Tab Buttons */}
           <div className="flex justify-end mb-4 mx-5">
-            <TabButton isActive={activeTab === "featured"} onClick={() => setActiveTab("featured")}>Featured</TabButton>
-            <TabButton isActive={activeTab === "all"} onClick={() => setActiveTab("all")}>All projects</TabButton>
+            <TabButton
+              isActive={activeTab === "featured"}
+              onClick={() => setActiveTab("featured")}
+            >
+              Featured
+            </TabButton>
+            <TabButton
+              isActive={activeTab === "all"}
+              onClick={() => setActiveTab("all")}
+            >
+              All projects
+            </TabButton>
           </div>
         </div>
         <div className="flex flex-wrap project-list">
-          {filteredProjects.map(project => (
+          {filteredProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
@@ -107,7 +116,9 @@ const Projects = () => {
 const TabButton = ({ isActive, onClick, children }) => (
   <button
     onClick={onClick}
-    className={`mr-4 tab-button font-light text-sm md:text-lg ${isActive ? "active hover:none underline" : ""}`}
+    className={`mr-4 tab-button font-light text-sm md:text-lg ${
+      isActive ? "active hover:none underline" : ""
+    }`}
   >
     {children}
   </button>

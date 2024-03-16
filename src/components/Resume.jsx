@@ -51,14 +51,12 @@ const Resume = () => {
           {/* Left Side: Skills */}
           <div className="md:col-span-1">
             <Education />
-            </div>
-            <div className="md:col-span-1">
-              <Certifications />
-            </div>
-            <div className="md:col-span-1">
-            </div>
           </div>
-
+          <div className="md:col-span-1">
+            <Certifications />
+          </div>
+          <div className="md:col-span-1"></div>
+        </div>
       </div>
       <button className="primary-btn">View resume</button>
     </div>

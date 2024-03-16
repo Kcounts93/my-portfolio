@@ -12,17 +12,30 @@ const ProjectCard = ({ project }) => (
         <h3 className="mt-0.5 text-xl font-medium">{project.title}</h3>
         <div className="mt-4 flex flex-wrap gap-1">
           {project.categories.map((category, index) => (
-            <span key={index} className="whitespace-nowrap rounded-full bg-putty px-2 py-1 text-darkgrey mr-1 text-sm">
+            <span
+              key={index}
+              className="whitespace-nowrap rounded-full bg-putty px-2 py-1 text-darkgrey mr-1 text-sm"
+            >
               {category}
             </span>
           ))}
         </div>
         <div className="my-4">
-          <a href={project.projectLink} className="text-sm underline pointer hover:text-drap hover:pointer hover:duration-500" target="_blank" rel="noopener noreferrer">
+          <a
+            href={project.projectLink}
+            className="text-sm underline pointer hover:text-drap hover:pointer hover:duration-500"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Code
           </a>
           <span className="mx-2">•</span>
-          <a href={project.liveLink} className="text-sm underline pointer hover:text-drap hover:pointer hover:duration-500" target="_blank" rel="noopener noreferrer">
+          <a
+            href={project.liveLink}
+            className="text-sm underline pointer hover:text-drap hover:pointer hover:duration-500"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Live project
           </a>
         </div>

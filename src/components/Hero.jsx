@@ -26,7 +26,9 @@ const TriangleAnimation = ({ currentTriangle }) => {
       {triangles.map((triangle, index) => (
         <div key={index} className="h-4">
           <img
-            className={`h-4 ${currentTriangle === index + 1 ? "fade-in" : "hidden"}`}
+            className={`h-4 ${
+              currentTriangle === index + 1 ? "fade-in" : "hidden"
+            }`}
             src={triangle}
             alt={`arrow down ${index + 1}`}
           />
@@ -46,9 +48,9 @@ const HeroText = ({ textAnimation }) => (
       Hello, my name is Kayla Counts
     </h2>
     <h1 className="text-xl leading-relaxed md:text-4xl lg:text-4xl md:leading-relaxed lg:leading-relaxed font-light">
-      I specialize in crafting visually pleasing, responsive web
-      applications, bringing a combined four years of design and
-      development expertise to my work.
+      I specialize in crafting visually pleasing, responsive web applications,
+      bringing a combined four years of design and development expertise to my
+      work.
     </h1>
   </motion.div>
 );
@@ -73,10 +75,10 @@ const Hero = () => {
             </button>
           </a>
         </div>
-      <a href="#Projects">
-        <div className="flex justify-center mt-[-6rem] ">
-          <TriangleAnimation currentTriangle={currentTriangle} />
-        </div>
+        <a href="#Projects">
+          <div className="flex justify-center mt-[-6rem] ">
+            <TriangleAnimation currentTriangle={currentTriangle} />
+          </div>
         </a>
       </div>
     </div>

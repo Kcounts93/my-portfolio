@@ -2,17 +2,16 @@ import React from "react";
 import { motion } from "framer-motion";
 import { MdOutlineArrowForward } from "react-icons/md";
 import BentoGrid from "./BentoGrid";
-import hiking from '../assets/hiking.png';
-import me from '../assets/me.png';
-import illustration1 from '../assets/dev.png';
-import illustration2 from '../assets/dev2.png';
-
+import hiking from "../assets/hiking.png";
+import me from "../assets/me.png";
+import illustration1 from "../assets/dev.png";
+import illustration2 from "../assets/dev2.png";
 
 const images = [
-  { id: '1', src: me, alt: 'Description of Image 1' },
-  { id: '2', src: illustration1, alt: 'Description of Image 2' },
-  { id: '3', src: illustration2, alt: 'Description of Image 3' },
-  { id: '4', src: hiking, alt: 'Description of Image 3' }
+  { id: "1", src: me, alt: "Description of Image 1" },
+  { id: "2", src: illustration1, alt: "Description of Image 2" },
+  { id: "3", src: illustration2, alt: "Description of Image 3" },
+  { id: "4", src: hiking, alt: "Description of Image 3" },
 ];
 
 const About = () => {
@@ -28,8 +27,8 @@ const About = () => {
             className="w-full lg:w-1/2 flex flex-col justify-between mb-6 md:mb-0"
           >
             <div className="text-heading-section mb-7">
-          <h2 className="text-4xl mb-5 font-light">About</h2>
-        </div>
+              <h2 className="text-4xl mb-5 font-light">About</h2>
+            </div>
             <p className="leading-loose font-medium text-darkputty">
               Hello, I'm Kayla Counts, a front-end developer with a passion for
               learning and building. I take pride in my ability to bring
@@ -65,7 +64,7 @@ const About = () => {
 
           {/* Right Section */}
           <div className="w-full lg:w-1/2 flex flex-col justify-between">
-            <BentoGrid images={images}/>
+            <BentoGrid images={images} />
           </div>
         </div>
       </div>
