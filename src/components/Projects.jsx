@@ -6,7 +6,7 @@ import ProjectCard from "./ProjectCard"; // Assuming you extract the project car
 import notesApp from "../assets/notes-app.png";
 import otr from "../assets/ontherocks.png";
 import gpt4 from "../assets/gpt4.png";
-import chatBot from "../assets/chatronix.png";
+// import chatBot from "../assets/chatronix.png";
 import portfolioImg from "../assets/portfolio.png";
 import kingsQuest from "../assets/kings-quest.png";
 
@@ -27,8 +27,8 @@ const projectsData = [
       subtitle: "Snippet",
       categories: ["HTML", "CSS", "JS"],
       image: kingsQuest,
-      projectLink: "https://kcounts93.github.io/kings-quest-cyoa/",
-      liveLink: "https://kingsquest.kaylacounts.com/",
+      projectLink: "https://github.com/Kcounts93/kings-quest-cyoa",
+      liveLink: "https://kcounts93.github.io/kings-quest-cyoa//",
       featured: true, // Featured project
     },
     {
@@ -41,23 +41,23 @@ const projectsData = [
       liveLink: "https://ontherocksmixology.netlify.app/",
       featured: true, // Featured project
     },
-    {
-      id: 4,
-      title: "Chatronix AI Chatbot ",
-      subtitle: "Snippet",
-      categories: ["Bootstrap", "PHP", "JS"],
-      image: chatBot,
-      projectLink: "https://github.com/Kcounts93/php-chatbot",
-      liveLink: "https://chatronix.kaylacounts.com/",
-      featured: false, // Featured project
-    },
+    // {
+    //   id: 4,
+    //   title: "Chatronix AI Chatbot ",
+    //   subtitle: "Snippet",
+    //   categories: ["Bootstrap", "PHP", "JS"],
+    //   image: chatBot,
+    //   projectLink: "https://github.com/Kcounts93/php-chatbot",
+    //   liveLink: "https://chatronix.kaylacounts.com/",
+    //   featured: false, // Featured project
+    // },
     {
       id: 5,
       title: "Category Notes App",
       subtitle: "Snippet",
       categories: ["React", "Typescript"],
       image: notesApp,
-      projectLink: "https://github.com/Kcounts93/react-category-notes-app",
+      projectLink: "https://github.com/Kcounts93/react-notes-app",
       liveLink: "https://kcounts93.github.io/react-notes-app/",
       featured: false, // Featured project
     },
@@ -68,7 +68,7 @@ const projectsData = [
       subtitle: "Snippet",
       categories: ["HTML", "Tailwind", "React"],
       image: portfolioImg,
-      projectLink: "https://example.com/project-link",
+      projectLink: "#",
       liveLink: "#",
       featured: false, // Featured project
     },

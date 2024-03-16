@@ -19,17 +19,17 @@ const About = () => {
   return (
     <div id="About" className="section">
       <div className="container mx-auto px-5 md:px-10 lg:px-20 mt-20 mb-10 flex-row">
-        <div className="text-heading-section mb-7">
-          <h2 className="text-4xl mb-5 font-light">About</h2>
-        </div>
-        <div className="flex flex-wrap flex-col md:flex-row items-center">
+        <div className="flex flex-wrap md:flex-row items-center h-auto max-h-screen">
           {/* Left Section */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="w-full lg:w-1/2 mb-6 md:mb-0"
+            className="w-full lg:w-1/2 flex flex-col justify-between mb-6 md:mb-0"
           >
+            <div className="text-heading-section mb-7">
+          <h2 className="text-4xl mb-5 font-light">About</h2>
+        </div>
             <p className="leading-loose font-medium text-darkputty">
               Hello, I'm Kayla Counts, a front-end developer with a passion for
               learning and building. I take pride in my ability to bring
@@ -64,7 +64,7 @@ const About = () => {
           </motion.div>
 
           {/* Right Section */}
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 flex flex-col justify-between">
             <BentoGrid images={images}/>
           </div>
         </div>

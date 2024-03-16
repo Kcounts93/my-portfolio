@@ -9,7 +9,7 @@ const BentoGrid = ({ images }) => {
   
   ];
   return (
-<div className="grid grid-cols-5 grid-rows-2 gap-4 ">
+<div className="grid grid-cols-4 grid-rows-2 gap-4 h-full">
       {images.map((image, index) => (
         <div key={image.id} className={`overflow-hidden rounded-lg ${gridSpans[index] || ""}`}>
           <img src={image.src} alt={image.alt} className="object-cover w-full h-full" />
