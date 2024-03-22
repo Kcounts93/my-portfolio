@@ -96,7 +96,8 @@ const Projects = () => {
 
   return (
     <div id="Projects" className="section" >
-    <div className="container mx-auto px-5 md:px-10 lg:px-20 mt-20 mb-10 h-[80vh]">
+    <div className="container mx-auto px-5 md:px-10 lg:px-20 mt-20 mb-20 h-[80vh]">
+    <h2 className="text-4xl mb-10 font-light">Projects</h2>
       <div className="grid grid-cols-3 gap-4 h-full">
         {projectsData.map((project, index) => (
           <div key={project.id} className={`${projectClasses[index % projectClasses.length]} shadow-lg rounded-lg overflow-hidden group relative`}>
