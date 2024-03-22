@@ -26,7 +26,7 @@ const Certifications = () => {
         {certificates.map((cert, index) => (
           <div key={index} className="no-select cursor-pointer shadow-md group relative flex items-start w-full mb-7 rounded-lg bg-charcoal px-2 py-3 overflow-hidden">
             <div className="flex flex-col items-start mr-4">
-              <FiAward className="text-xl text-putty mt-2 text-blue-500" />
+              <FiAward className="text-md text-drap mt-2 text-blue-500" />
             </div>
             <div className="flex-1">
               <h3 className="text-md font-medium">{cert.school}</h3>

@@ -14,15 +14,15 @@ const Tools = () => {
     <div className="mb-10">
       <h2 className="text-xl font-light mb-5">Tools</h2>
     <div className="flex justify-between flex-wrap">
-      <TbBrandVscode className="text-2xl icon-animation-hover" />
-      <SiJetbrains className="text-2xl icon-animation-hover" />
-      <FaGitAlt className="text-2xl icon-animation-hover" />
-      <FiGithub className="text-2xl icon-animation-hover" />
-      <FiFigma className="text-2xl icon-animation-hover" />
-      <SiAdobecreativecloud className="text-2xl icon-animation-hover" />
-      <SiPrettier className="text-2xl icon-animation-hover" />
-      <FaNpm className="text-2xl icon-animation-hover" />
-      <SiOpenai className="text-2xl icon-animation-hover" />
+      <TbBrandVscode className="text-2xl" />
+      <SiJetbrains className="text-2xl" />
+      <FaGitAlt className="text-2xl" />
+      <FiGithub className="text-2xl" />
+      <FiFigma className="text-2xl" />
+      <SiAdobecreativecloud className="text-2xl" />
+      <SiPrettier className="text-2xl" />
+      <FaNpm className="text-2xl" />
+      <SiOpenai className="text-2xl" />
     </div>
     </div>
   );

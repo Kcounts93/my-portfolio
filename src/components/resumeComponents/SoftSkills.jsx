@@ -26,7 +26,7 @@ const SoftSkills = () => {
         <div className="grid grid-cols-2 gap-4">
           {softSkills.map(({ skill, Icon }) => (
             <div className="flex items-center p-2 bg-charcoal border-drap rounded-lg">
-              <Icon className="icon-animation-hover text-[1em] text-putty mr-2" />
+              <Icon className="icon-animation-hover text-[1em] text-drap mr-2" />
               <span className="font-medium text-md">{skill}</span>
             </div>
           ))}

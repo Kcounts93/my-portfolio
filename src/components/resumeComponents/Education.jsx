@@ -27,7 +27,7 @@ const Education = () => {
         {education.map((edu, index) => (
           <div key={index} className="no-select cursor-pointer group relative flex items-start w-full mb-7 rounded-lg  bg-charcoal px-2 py-4 overflow-hidden">
             <div className="flex flex-col items-start mr-4">
-              <LuGraduationCap className="text-xl text-putty mt-1 text-blue-500" />
+              <LuGraduationCap className="text-lg text-drap mt-1 text-blue-500" />
             </div>
             <div className="flex-1">
               <h3 className="text-md">{edu.school}</h3>
