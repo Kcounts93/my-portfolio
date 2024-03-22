@@ -108,7 +108,7 @@ const Projects = () => {
                 <p className="mt-2">{project.categories.join(', ')}</p>
               </div>
             </div>
-            <button onClick={() => openModal(project)} className="absolute inset-0 w-full h-full z-10 focus:outline-none"></button>
+            <button onClick={() => openModal(project)} className="absolute inset-0 w-full h-full z-10 focus:outline-none transition duration-700"></button>
           </div>
         ))}
       </div>
