@@ -5,8 +5,6 @@ import Experience from "./resumeComponents/Experience";
 import Education from "./resumeComponents/Education";
 import Certifications from "./resumeComponents/Certifications";
 import Tools from "./resumeComponents/Tools";
-import Hobbies from "./resumeComponents/Hobbies";
-import DesignSkills from "./resumeComponents/DesignSkills";
 
 const Resume = () => {
   return (

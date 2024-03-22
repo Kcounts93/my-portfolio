@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import ProjectCard from "./ProjectCard"; // Assuming you extract the project card
+import React from "react";
 
 // Project data
 import notesApp from "../assets/notes-app.png";
@@ -74,54 +73,29 @@ const projectsData = [
 ];
 
 const Projects = () => {
-  const [activeTab, setActiveTab] = useState("featured");
-
-  const filteredProjects =
-    activeTab === "featured"
-      ? projectsData.filter((project) => project.featured)
-      : projectsData;
+  const projectClasses = [
+    "col-span-1 row-span-2", // First project: 1 column, 2 rows
+    "col-span-2 row-span-1", // Second project: 2 columns, 1 row
+    "col-span-1 row-span-1", // Third project: 1 column, 1 row
+    "col-span-1 row-span-2", // Fourth project: 1 column, 2 rows
+    "col-span-2 row-span-1", // Fifth project: 2 columns, 1 row
+  ];
 
   return (
-    <div id="Projects" className="section">
-      <div className="container mx-auto px-5 md:px-10 lg:px-20 mt-20 mb-10 flex-row">
-        <div className="flex justify-between text-heading-section mb-10">
-          <h2 className="text-4xl mb-5 font-light">Projects</h2>
-          {/* Tab Buttons */}
-          <div className="flex justify-end mb-4 mx-5">
-            <TabButton
-              isActive={activeTab === "featured"}
-              onClick={() => setActiveTab("featured")}
-            >
-              Featured
-            </TabButton>
-            <TabButton
-              isActive={activeTab === "all"}
-              onClick={() => setActiveTab("all")}
-            >
-              All projects
-            </TabButton>
+    <div className="container mx-auto px-4 py-8 h-[90vh]">
+      <div className="grid grid-cols-3 gap-4 h-full">
+        {projectsData.map((project, index) => (
+          <div key={project.id} className={`${projectClasses[index % projectClasses.length]} shadow-lg overflow-hidden`}>
+            <a href={project.projectLink} target="_blank" rel="noopener noreferrer">
+              <img src={project.image} alt={project.title} className="w-full h-full object-cover"/>
+              <div className="p-4">
+                <h3 className="text-lg font-semibold">{project.title}</h3>
+              </div>
+            </a>
           </div>
-        </div>
-        <div className="flex flex-wrap project-list">
-          {filteredProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </div>
+        ))}
       </div>
     </div>
   );
 };
-
-// TabButton component for better readability
-const TabButton = ({ isActive, onClick, children }) => (
-  <button
-    onClick={onClick}
-    className={`mr-4 tab-button font-light text-sm md:text-lg ${
-      isActive ? "active hover:none underline" : ""
-    }`}
-  >
-    {children}
-  </button>
-);
-
 export default Projects;
