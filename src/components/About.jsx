@@ -17,7 +17,7 @@ const About = () => {
   return (
     <div id="About" className="section">
       <div className="container mx-auto px-5 md:px-10 lg:px-20 mt-20 mb-10 flex-row">
-        <div className="flex flex-wrap md:flex-row items-center h-auto max-h-screen">
+        <div className="flex flex-wrap md:flex-row items-center h-auto">
           {/* Left Section */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
@@ -62,8 +62,8 @@ const About = () => {
           </motion.div>
 
           {/* Right Section */}
-          <div className="w-full lg:w-1/2 flex flex-col justify-center items-center">
-            <img src={me} alt="me" className="w-[65%] h-auto rounded-lg opacity-75"/>
+          <div className="w-full lg:w-1/2 flex flex-col justify-center items-center mt-10 md:mt-0">
+            <img src={me} alt="me" className="w-full md:w-[65%] h-auto rounded-lg opacity-75"/>
           </div>
         </div>
       </div>

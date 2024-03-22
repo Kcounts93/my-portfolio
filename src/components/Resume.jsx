@@ -9,7 +9,7 @@ import Tools from "./resumeComponents/Tools";
 const Resume = () => {
   return (
     <div id="Resume" className="container mx-auto px-5 md:px-10 lg:px-20 mt-20 mb-10">
-      <h2 className="text-4xl mb-10 font-light">Resume</h2>
+      <h2 className="text-4xl mb-10 font-light mx-0">Resume</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10">
         {/* Skills, Experience, Tools/Design Skills/Hobbies in the first 3-column grid */}
         <div className="flex flex-col md:order-1">
