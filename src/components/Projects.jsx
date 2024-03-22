@@ -13,7 +13,7 @@ const projectsData = [
   {
     id: 1,
     title: "GPT-4 Landing Page",
-    subtitle: "Snippet",
+    subtitle: "The ChatGPT-4 Landing Page is a testament to my front-end development journey with NuCamp's React course, showcasing mastery in React, BEM for CSS organization, and custom styling without reliance on frameworks. This project highlights my dedication to learning and excellence in web development, embodying core React principles, personalized UI design, and a clean, systematic file structure for optimal code readability and scalability.",
     categories: ["HTML", "CSS", "JS", "React"],
     image: gpt4,
     projectLink: "https://github.com/Kcounts93/gpt4-react-landing",
@@ -24,7 +24,7 @@ const projectsData = [
   {
     id: 2,
     title: "On the Rocks",
-    subtitle: "Snippet",
+    subtitle: "The On The Rocks Mixology Academy Website showcases my first fully functional web app, leveraging Bootstrap 5.3 and SASS/SCSS for responsive design. This project was a hands-on learning experience in employing modern, basic technologies to build a mixology education platform, blending my passion for bartending with skills in creating engaging, custom web components.",
     categories: ["HTML", "CSS", "JS", "Bootstrap", "SASS"],
     image: otr,
     projectLink: "https://github.com/Kcounts93/on-the-rocks",
@@ -34,7 +34,7 @@ const projectsData = [
   {
     id: 3,
     title: "The King's Quest",
-    subtitle: "Snippet",
+    subtitle: "The King's Quest is a choose-your-own-adventure game crafted with vanilla HTML, CSS, and JavaScript. Emphasizing decision-driven narratives, it leverages structured object-oriented programming for dynamic story progression, offering players a unique, interactive storytelling experience.",
     categories: ["HTML", "CSS", "JS"],
     image: kingsQuest,
     projectLink: "https://github.com/Kcounts93/kings-quest-cyoa",
@@ -54,7 +54,7 @@ const projectsData = [
   {
     id: 5,
     title: "Category Notes App",
-    subtitle: "Snippet",
+    subtitle: "The React Category Notes App is a testament to my growing expertise in React and state management, enriched by integrating Bootstrap 5.3 for a responsive layout. This project was a deep dive into utilizing local storage for data persistence and advancing my understanding of state management techniques. Through developing functionalities to filter, search, and tag notes, I gained valuable insights into creating more organized and user-friendly applications. This experience has significantly bolstered my skills and enthusiasm for tackling more complex projects in the future.",
     categories: ["HTML", "CSS", "JS", "Bootstrap", "React"],
     image: notesApp,
     projectLink: "https://github.com/Kcounts93/react-notes-app",
@@ -65,7 +65,7 @@ const projectsData = [
   {
     id: 6,
     title: "Front End Portfolio",
-    subtitle: "Snippet",
+    subtitle: "My personal portfolio website has been one of the biggest sources of learning. It has gone through many iterations and so much growth. I have learned from this more than anything so far. It has challenged me to try new things, read an un-godly amount of documentation and expand my horizons on what I can do. I built this using Tailwind and React. I never used Tailwind before this and now I love it. I've learned state management and more on React hooks. It's been such a fun journey that will truly never end.",
     categories: ["HTML", "CSS", "JS", "Tailwind", "React"],
     image: portfolioImg,
     projectLink: "#",
