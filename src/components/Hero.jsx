@@ -44,7 +44,7 @@ const HeroText = ({ textAnimation }) => (
     animate={textAnimation}
     className="w-3/4 mb-6 text-center"
   >
-    <h2 className="text-md md:text-xl lg:text-xl mb-2 font-light">
+    <h2 className="text-sm md:text-xl lg:text-xl mb-2 font-light">
       Hello, my name is Kayla Counts
     </h2>
     <h1 className="text-xl leading-relaxed md:text-4xl lg:text-4xl md:leading-relaxed lg:leading-relaxed font-light">
@@ -65,7 +65,7 @@ const Hero = () => {
 
   return (
     <div id="Home" className="section">
-      <div className="container mx-auto h-screen px-10 md:px-20 lg:px-20">
+      <div className="container mx-auto h-screen px-0 md:px-20">
         <div className="max-w-full h-full flex flex-col justify-center items-center">
           <HeroText textAnimation={textAnimation} />
           <a href="#Projects">
