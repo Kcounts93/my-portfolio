@@ -12,17 +12,17 @@ import { FaGitAlt, FaNpm } from "react-icons/fa";
 const Tools = () => {
   return (
     <div className="">
-      <h2 className="text-2xl font-light mb-5">Tools</h2>
-    <div className="grid grid-cols-3 grid-rows-3 gap-5 my-4 w-60 mb-10">
-      <TbBrandVscode className="text-3xl" />
-      <SiJetbrains className="text-3xl " />
-      <FaGitAlt className="text-3xl" />
-      <FiGithub className="text-3xl" />
-      <FiFigma className="text-3xl" />
-      <SiAdobecreativecloud className="text-3xl" />
-      <SiPrettier className="text-3xl" />
-      <FaNpm className="text-3xl" />
-      <SiOpenai className="text-3xl" />
+      <h2 className="text-xl font-light mb-5">Tools</h2>
+    <div className="grid grid-cols-9 grid-rows-1 gap-5 my-4 mb-10">
+      <TbBrandVscode className="text-2xl icon-animation-hover" />
+      <SiJetbrains className="text-2xl icon-animation-hover" />
+      <FaGitAlt className="text-2xl icon-animation-hover" />
+      <FiGithub className="text-2xl icon-animation-hover" />
+      <FiFigma className="text-2xl icon-animation-hover" />
+      <SiAdobecreativecloud className="text-2xl icon-animation-hover" />
+      <SiPrettier className="text-2xl icon-animation-hover" />
+      <FaNpm className="text-2xl icon-animation-hover" />
+      <SiOpenai className="text-2xl icon-animation-hover" />
     </div>
     </div>
   );

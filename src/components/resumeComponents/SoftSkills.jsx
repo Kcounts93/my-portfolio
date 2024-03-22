@@ -20,13 +20,13 @@ const SoftSkills = () => {
   ];
 
   return (
-    <div className="h-full rounded-xl mt-14">
+    <div className="rounded-xl mt-5">
       <div className="mr-1">
-        <h2 className="text-2xl font-light mb-5">Soft skills</h2>
+        <h2 className="text-xl font-light mb-5">Soft skills</h2>
         <div className="grid grid-cols-2 gap-4">
           {softSkills.map(({ skill, Icon }) => (
-            <div className="flex items-center p-2 bg-charcoal rounded-lg">
-              <Icon className="icon-animation-hover text-xl text-drap mr-2" />
+            <div className="flex items-center p-2 bg-charcoal border-drap rounded-lg">
+              <Icon className="icon-animation-hover text-xl text-putty mr-2" />
               <span className="font-medium text-md">{skill}</span>
             </div>
           ))}

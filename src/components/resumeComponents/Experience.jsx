@@ -41,10 +41,10 @@ const ExperienceItem = ({ exp }) => {
   return (
     <div
       onClick={toggleVisibility}
-      className="no-select cursor-pointer group relative flex items-start w-full mb-7 rounded-lg bg-charcoal px-2 py-3 overflow-hidden md:hover:bg-opacity-60 md:transition md:duration-300 md:ease-in-out"
+      className="no-select cursor-pointer group relative flex items-start w-full mb-7 rounded-lg  bg-charcoal px-2 py-4 overflow-hidden md:hover:bg-opacity-60 md:transition md:duration-300 md:ease-in-out"
     >
       <div className="flex flex-col items-start mr-4">
-        <FiBriefcase className="text-xl text-drap mt-1 text-blue-500" />
+        <FiBriefcase className="text-xl text-putty mt-1 text-blue-500" />
       </div>
       <div className="flex-1">
         <h3 className="text-md">{exp.title}</h3>
@@ -61,7 +61,7 @@ const ExperienceItem = ({ exp }) => {
 const Experience = () => {
   return (
     <div className="h-full rounded-xl mt-10 md:mt-0">
-      <h2 className="text-2xl font-light mb-5">Experience</h2>
+      <h2 className="text-xl font-light mb-5">Experience</h2>
       <div className="flex flex-col items-center">
         {experiences.map((exp, index) => (
           <ExperienceItem key={index} exp={exp} />

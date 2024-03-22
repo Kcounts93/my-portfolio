@@ -21,13 +21,13 @@ const education = [
 
 const Education = () => {
   return (
-    <div className="h-full rounded-xl">
-      <h2 className="text-2xl font-light mb-5">Education</h2>
+    <div className="rounded-xl">
+      <h2 className="text-xl font-light mb-5">Education</h2>
       <div className="flex flex-col items-center">
         {education.map((edu, index) => (
-          <div key={index} className="no-select cursor-pointer group relative flex items-start w-full mb-7 rounded-lg bg-charcoal px-2 py-3 overflow-hidden">
+          <div key={index} className="no-select cursor-pointer group relative flex items-start w-full mb-7 rounded-lg  bg-charcoal px-2 py-4 overflow-hidden">
             <div className="flex flex-col items-start mr-4">
-              <LuGraduationCap className="text-xl text-drap mt-1 text-blue-500" />
+              <LuGraduationCap className="text-xl text-putty mt-1 text-blue-500" />
             </div>
             <div className="flex-1">
               <h3 className="text-md">{edu.school}</h3>

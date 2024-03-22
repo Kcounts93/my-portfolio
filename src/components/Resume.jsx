@@ -15,6 +15,7 @@ const Resume = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10">
         {/* Skills, Experience, Tools/Design Skills/Hobbies in the first 3-column grid */}
         <div className="flex flex-col md:order-1">
+          <Tools /> 
           <HardSkills />
           <SoftSkills />
         </div>
@@ -24,22 +25,11 @@ const Resume = () => {
         
         {/* Tools, Design Skills, Hobbies */}
         {/* Ensure it appears below Experience and above Education and Certifications on mobile */}
-        <div className="md:order-3 order-4 p-0 md:pl-5">
-          <Tools />
-          <DesignSkills />
-          {/* Design Skills and Hobbies sections */}
-        </div>
-        
-        {/* Education and Certifications with adjusted order for mobile view */}
-        <div className="md:order-4 order-2">
+        <div className="md:order-3 p-0 md:pl-5">
           <Education />
-        </div>
-        <div className="p-0 md:order-5 order-3 md:pl-5">
           <Certifications />
         </div>
-        <div className="md:order-6 order-8 p-0 md:pl-5">
-          <Hobbies />
-        </div>
+        
       </div>
       {/* <button className="primary-btn">View resume</button> */}
     </div>
