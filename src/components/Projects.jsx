@@ -82,6 +82,7 @@ const Projects = () => {
   ];
 
   return (
+    <div id="Projects" className="section">
     <div className="container mx-auto px-4 py-8 h-[90vh]">
       <div className="grid grid-cols-3 gap-4 h-full">
         {projectsData.map((project, index) => (
@@ -95,6 +96,7 @@ const Projects = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };
