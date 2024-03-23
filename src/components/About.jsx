@@ -16,7 +16,7 @@ import me from "../assets/me.png";
 const About = () => {
   return (
     <div id="About" className="section">
-      <div className="container mx-auto px-5 mt-5 md:px-10 md:mt-10 lg:px-20 mb-10 flex-row">
+      <div className="container mx-auto mb-10 mt-10 md:mt-20 px-5 md:px-10 md:mb-20 lg:px-20 flex-row">
         <div className="flex flex-wrap md:flex-row items-center h-auto">
           {/* Left Section */}
           <motion.div

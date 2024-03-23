@@ -45,7 +45,7 @@ function App() {
 
   return (
 
-    <div className="flex flex-col spotlight spotlight" style={backgroundStyle}>
+    <div className="flex flex-col spotlight" style={backgroundStyle}>
       <Navbar />
       <Hero />
       <Projects />
