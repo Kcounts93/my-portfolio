@@ -12,7 +12,7 @@ import { FaGitAlt, FaNpm } from "react-icons/fa";
 const Tools = () => {
   return (
     <div className="mb-10">
-      <h2 className="text-xl font-light mb-5">Tools</h2>
+      <h2 className="text-xl font-light mb-7">Tools</h2>
     <div className="flex justify-between flex-wrap">
       <TbBrandVscode className="text-2xl" />
       <SiJetbrains className="text-2xl" />
