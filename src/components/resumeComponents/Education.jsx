@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { LuGraduationCap } from "react-icons/lu";
 
 const education = [
   {
     school: "Western Governors University",
-    degree: "Bachelors Science in Software Engineering",
+    degree: "B.S in Software Engineering",
     year: "2023 - Present",
     description:
       "Degree track specializing in C# development, software engineering principles, web and desktop application development, database management, and software security.",
@@ -12,7 +12,7 @@ const education = [
 
   {
     school: "North Idaho College",
-    degree: "A.A.S in Graphic and Web Design",
+    degree: "A.A.S in Graphic & Web Design",
     year: "2020 - 2022",
     description:
       "Acquired hands-on, practical skills in digital design, web development, and multimedia communication integrating visual creativity and technical proficiency through real-life client engagement.",
@@ -20,23 +20,36 @@ const education = [
 ];
 
 const Education = () => {
+  const [visibleDescriptionIndex, setVisibleDescriptionIndex] = useState(null);
+
+  const handleToggleDescription = (index) => {
+    setVisibleDescriptionIndex(visibleDescriptionIndex === index ? null : index);
+  };
+
   return (
-    <div className="rounded-xl">
+    <div className="rounded-xl mt-5 md:mt-0">
       <h2 className="text-xl font-light mb-5">Education</h2>
       <div className="flex flex-col items-center">
         {education.map((edu, index) => (
-          <div key={index} className="no-select cursor-pointer group relative flex items-start w-full mb-7 rounded-lg  bg-charcoal px-2 py-4 overflow-hidden">
-            <div className="flex flex-col items-start mr-4">
-              <LuGraduationCap className="text-lg text-drap mt-1 text-blue-500" />
+          <div 
+            key={index} 
+            className="cursor-pointer shadow-md group relative flex flex-col items-start w-full mb-7 rounded-lg bg-charcoal px-3 py-3 overflow-hidden"
+            onClick={() => handleToggleDescription(index)}
+          >
+            <div className="flex flex-row">
+              <div>
+              <LuGraduationCap className="text-lg mt-1 text-drap" />
+              </div>
+              <div className="flex flex-col ml-2">
+              <h3 className="text-md font-medium">{edu.school}</h3>
+              <p className="text-darkputty">{edu.degree}</p>
+              <p className="text-darkputty">{edu.year}</p>
+              <div className={`transition-max-height duration-500 ease-in-out overflow-hidden ${visibleDescriptionIndex === index ? 'max-h-96' : 'max-h-0'}`}>
+              <p className="text-sm text-darkputty">{edu.description}</p>
             </div>
-            <div className="flex-1">
-              <h3 className="text-md">{edu.school}</h3>
-              <p className="text-darkputty font-medium">{edu.degree}</p>
-              <p className="text-gray-400">{edu.year}</p>
             </div>
-            <div className="absolute left-0 right-0 bottom-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out bg-charcoal p-2 rounded-b-lg">
-              <p className="text-sm text-gray-200">{edu.description}</p>
             </div>
+            
           </div>
         ))}
       </div>

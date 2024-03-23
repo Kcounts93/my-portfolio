@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FiAward } from "react-icons/fi";
 
 const certificates = [
@@ -19,28 +19,40 @@ const certificates = [
 ];
 
 const Certifications = () => {
+  const [visibleDescriptionIndex, setVisibleDescriptionIndex] = useState(null);
+
+  const handleToggleDescription = (index) => {
+    setVisibleDescriptionIndex(visibleDescriptionIndex === index ? null : index);
+  };
+
   return (
     <div className="rounded-xl">
       <h2 className="text-xl font-light mb-5">Certifications</h2>
       <div className="flex flex-col items-center">
         {certificates.map((cert, index) => (
-          <div key={index} className="no-select cursor-pointer shadow-md group relative flex items-start w-full mb-7 rounded-lg bg-charcoal px-2 py-3 overflow-hidden">
-            <div className="flex flex-col items-start mr-4">
-              <FiAward className="text-md text-drap mt-2 text-blue-500" />
-            </div>
-            <div className="flex-1">
+          <div 
+            key={index} 
+            className="cursor-pointer shadow-md group relative flex flex-col items-start w-full mb-7 rounded-lg bg-charcoal px-3 py-3 overflow-hidden"
+            onClick={() => handleToggleDescription(index)}
+          >
+            <div className="flex flex-row">
+              <div>
+              <FiAward className="text-lg mt-1 text-drap" />
+              </div>
+              <div className="flex flex-col ml-2">
               <h3 className="text-md font-medium">{cert.school}</h3>
               <p className="text-darkputty">{cert.degree}</p>
               <p className="text-darkputty">{cert.year}</p>
+              <div className={`transition-max-height duration-500 ease-in-out overflow-hidden ${visibleDescriptionIndex === index ? 'max-h-96' : 'max-h-0'}`}>
+              <p className="text-sm text-darkputty">{cert.description}</p>
             </div>
-            <div className="absolute left-0 right-0 bottom-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out bg-charcoal p-2 rounded-b-lg">
-              <p className="text-sm text-putty">{cert.description}</p>
             </div>
+            </div>
+            
           </div>
         ))}
       </div>
     </div>
   );
 };
-
 export default Certifications;

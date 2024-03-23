@@ -72,7 +72,7 @@ const Navbar = () => {
   return (
 
     <motion.div className="fixed top-0 left-0 z-10 w-full" initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -100 }}>
-      <div className="container my-5 max-w-xxx mx-auto px-10 md:px-10 lg:px-20">
+      <div className="container my-5 max-w-xxx mx-auto px-5 md:px-10 lg:px-20">
       <div className="flex justify-between items-center py-3 px-3 bg-charcoal backdrop-filter backdrop-blur-md bg-opacity-40 rounded-xl">
         <img src={Logo} alt="Logo" className="ml-2" />
         <div onClick={toggleNav} className="md:hidden z-10 text-2xl">
