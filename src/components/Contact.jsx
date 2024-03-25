@@ -70,41 +70,31 @@ const Contact = () => {
   };
 
   return (
-    <div id="Contact" className="section">
-      <div className="container mx-auto px-5 md:px-10 lg:px-20 mt-10 mb-20">
-        <h2 className="text-4xl mb-2 font-medium">Contact</h2>
-        <div className="flex flex-wrap justify-between items-start">
-          <div className="w-full md:w-2/5 mb-6 md:mb-0">
-            <p className="mt-2 text-md leading-loose font-medium text-darkputty">
+    <div id='Contact' className='section'>
+      <div className='container mx-auto px-5 md:px-10 lg:px-20 mt-10 mb-20'>
+        <h2 className='text-4xl mb-2 font-medium'>Contact</h2>
+        <div className='flex flex-wrap justify-between items-start'>
+          <div className='w-full md:w-2/5 mb-6 md:mb-0'>
+            <p className='mt-2 text-md leading-loose font-medium text-darkputty'>
               I'd love to hear from you. My inbox is always open and I'm eager
               to connect with fellow professionals, recruiters, and potential
-              employers. Reach out at
-              <span className="underline text-blue-600">
-                <a
-                  href="mailto:kcounts0211@gmail.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  kcounts0211@gmail.com
-                </a>
-              </span>
-              or drop me a message through the form below, and I'll get back to
-              you promptly.
+              employers. Reach out at kcounts0211@gmail.com or drop me a message
+              through the form below, and I'll get back to you promptly.
             </p>
           </div>
-          <div className="w-full md:w-1/2">
+          <div className='w-full md:w-1/2'>
             {submissionSuccess ? (
-              <div className="text-drap text-center mb-4">
+              <div className='text-drap text-center mb-4'>
                 Success! <br /> I will be in touch shortly.
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className='space-y-4'>
                 <div>
                   <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Name"
+                    type='text'
+                    id='name'
+                    name='name'
+                    placeholder='Name'
                     value={formData.name}
                     onChange={handleChange}
                     className={`w-full px-3 py-2 border rounded bg-transparent transition duration-300 focus:outline-none ${
@@ -114,15 +104,15 @@ const Contact = () => {
                     }`}
                   />
                   {errors.name && (
-                    <p className="mt-1 text-red-500 text-sm">{errors.name}</p>
+                    <p className='mt-1 text-red-500 text-sm'>{errors.name}</p>
                   )}
                 </div>
                 <div>
                   <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Email"
+                    type='email'
+                    id='email'
+                    name='email'
+                    placeholder='Email'
                     value={formData.email}
                     onChange={handleChange}
                     className={`w-full px-3 py-2 border rounded bg-transparent transition duration-300 focus:outline-none ${
@@ -132,17 +122,17 @@ const Contact = () => {
                     }`}
                   />
                   {errors.email && (
-                    <p className="mt-1 text-red-500 text-sm">{errors.email}</p>
+                    <p className='mt-1 text-red-500 text-sm'>{errors.email}</p>
                   )}
                 </div>
                 <div>
                   <textarea
-                    id="message"
-                    name="message"
-                    placeholder="Message"
+                    id='message'
+                    name='message'
+                    placeholder='Message'
                     value={formData.message}
                     onChange={handleChange}
-                    rows="4"
+                    rows='4'
                     className={`w-full px-3 py-2 border rounded bg-transparent transition duration-300 focus:outline-none ${
                       errors.message
                         ? "border-red-500 bg-red-50"
@@ -150,15 +140,12 @@ const Contact = () => {
                     }`}
                   />
                   {errors.message && (
-                    <p className="mt-1 text-red-500 text-sm">
+                    <p className='mt-1 text-red-500 text-sm'>
                       {errors.message}
                     </p>
                   )}
                 </div>
-                <button
-                  type="submit"
-                  className="primary-btn mx-0 px-5"
-                >
+                <button type='submit' className='primary-btn mx-0 px-5'>
                   Submit
                 </button>
               </form>
