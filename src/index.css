@@ -9,8 +9,6 @@
     @apply bg-darkgrey;
     @apply font-[Montserrat];
     @apply text-putty;
-
-
   }
   li {
     @apply font-[Raleway];
@@ -40,10 +38,10 @@
   }
 }
 
-
-body { 
+body {
   background-size: 40px 40px !important;
-  background-image: linear-gradient(to right, #bebfba18 1px, transparent 1px), linear-gradient(to bottom, #bebfba18 1px, transparent 1px) !important;
+  background-image: linear-gradient(to right, #bebfba18 1px, transparent 1px),
+    linear-gradient(to bottom, #bebfba18 1px, transparent 1px) !important;
 }
 
 html {
@@ -52,9 +50,9 @@ html {
 
 .no-select {
   -webkit-user-select: none; /* Safari */
-  -moz-user-select: none;    /* Firefox */
-  -ms-user-select: none;     /* IE10+/Edge */
-  user-select: none;         /* Standard */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
 
 /* Skills Logo Wrapper */
@@ -93,7 +91,7 @@ html {
 
 /* Navbar 50px comp */
 .section::before {
-  content: '';
+  content: "";
   display: block;
   height: 50px; /* Height of your navbar */
   margin-top: -50px; /* Negative value of your navbar height */
@@ -107,16 +105,29 @@ html {
 }
 
 @keyframes rainbow-color {
-  0% { color: #33A1C9; }
-  28% { color: rgba(0, 128, 0, 0.763); }
-  42% { color: rgba(255, 255, 0, 0.697); }
-  57% { color: rgba(255, 166, 0, 0.689); }
-  71% { color: rgba(255, 0, 0, 0.582); }
-  85% { color: rgba(238, 130, 238, 0.743); }
-  100% { color: #33A1C9; }
+  0% {
+    color: #33a1c9;
+  }
+  28% {
+    color: rgba(0, 128, 0, 0.763);
+  }
+  42% {
+    color: rgba(255, 255, 0, 0.697);
+  }
+  57% {
+    color: rgba(255, 166, 0, 0.689);
+  }
+  71% {
+    color: rgba(255, 0, 0, 0.582);
+  }
+  85% {
+    color: rgba(238, 130, 238, 0.743);
+  }
+  100% {
+    color: #33a1c9;
+  }
 }
 
 .icon-animation-hover:hover {
   animation: rainbow-color 4s infinite;
 }
-

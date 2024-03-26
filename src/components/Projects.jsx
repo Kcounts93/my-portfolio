@@ -93,7 +93,7 @@ const Projects = () => {
               key={project.id}
               className={`${
                 projectClasses[index % projectClasses.length]
-              } shadow-lg rounded-lg overflow-hidden group relative`}
+              } shadow-lg rounded-md overflow-hidden group relative`}
             >
               <img
                 src={project.image}
