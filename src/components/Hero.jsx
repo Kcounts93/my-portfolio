@@ -69,8 +69,9 @@ const Hero = () => {
         <div className='max-w-full h-full flex flex-col justify-center items-center'>
           <HeroText textAnimation={textAnimation} />
           <a href='#Projects'>
-            <button class='group relative inline-flex items-center justify-start overflow-hidden rounded-sm bg-charcoal py-3 pl-6 pr-16 font-medium text-putty transition-all duration-150 ease-in-out hover:pl-16 hover:pr-6'>
-              <span class='absolute bottom-0 left-0 h-0.5 w-full bg-darkgrey border border-drap rounded-sm transition-all duration-300 ease-in-out group-hover:h-full'></span>
+            <button class='mt-2 shadow-lg group relative inline-flex items-center justify-start overflow-hidden rounded-md bg-charcoal py-3 pl-6 pr-16 font-medium text-putty transition-all duration-150 ease-in-out hover:pl-16 hover:pr-6 border border-drap md:border-none'>
+              {/* bg 2 */}
+              <span class='absolute bottom-0 left-0 h-0.5 w-full bg-darkgrey md:border md:border-drap rounded-md transition-all duration-300 ease-in-out group-hover:h-full'></span>
               <span class='absolute right-0 pr-7 duration-300 ease-out group-hover:translate-x-12'>
                 <FiArrowRight class='h-4 w-4 text-putty' />
               </span>

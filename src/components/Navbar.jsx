@@ -14,7 +14,7 @@ const SocialLinks = () => (
         rel='noopener noreferrer'
         title='View my LinkedIn'
       >
-        <FiLinkedin className='text-2xl transition-transform hover:scale-125 duration-300' />
+        <FiLinkedin className='text-xl transition-transform hover:scale-125 duration-300' />
       </a>
     </li>
     <li>
@@ -24,7 +24,7 @@ const SocialLinks = () => (
         rel='noopener noreferrer'
         title='View my GitHub'
       >
-        <FiGithub className='text-2xl transition-transform hover:scale-125 duration-300' />
+        <FiGithub className='text-xl transition-transform hover:scale-125 duration-300' />
       </a>
     </li>
     {/* <li>
@@ -36,7 +36,7 @@ const SocialLinks = () => (
 );
 
 const NavLink = ({ link }) => (
-  <li className='text-lg transition-transform hover:-translate-y-1 hover:scale-125 hover:text-drap duration-300'>
+  <li className='text-md font-light transition-transform hover:-translate-y-1  duration-300'>
     <a href={`#${link}`}>{link}</a>
   </li>
 );
@@ -87,7 +87,7 @@ const Navbar = () => {
       exit={{ opacity: 0, y: -100 }}
     >
       <div className='container my-5 max-w-xxx mx-auto px-5 md:px-10 lg:px-20'>
-        <div className='flex justify-between items-center py-3 px-3 bg-charcoal backdrop-filter backdrop-blur-md bg-opacity-40 rounded-sm'>
+        <div className='flex justify-between items-center py-3 px-3 bg-charcoal backdrop-filter backdrop-blur-md bg-opacity-40 rounded-md'>
           <img src={Logo} alt='Logo' className='ml-2' />
           <div onClick={toggleNav} className='md:hidden z-10 text-2xl'>
             {isMobileMenuOpen ? (

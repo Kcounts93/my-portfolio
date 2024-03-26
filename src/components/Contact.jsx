@@ -145,10 +145,7 @@ const Contact = () => {
                     </p>
                   )}
                 </div>
-                <button
-                  type='submit'
-                  className='rounded-sm border mx-0 py-3 px-6 hover:border-drap hover:scale-105 duration-300 '
-                >
+                <button type='submit' className='primary-btn m-0'>
                   Submit
                 </button>
               </form>

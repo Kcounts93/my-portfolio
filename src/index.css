@@ -19,7 +19,7 @@
 
 @layer components {
   .primary-btn {
-    @apply flex rounded items-center m-2 px-5 py-3 border bg-charcoal text-putty border-drap hover:scale-110 active:scale-90 duration-500;
+    @apply flex rounded items-center m-2 px-5 py-3 border bg-charcoal bg-opacity-70 text-putty border-drap hover:scale-110 active:scale-90 duration-500;
   }
 }
 
