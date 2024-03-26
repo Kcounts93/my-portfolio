@@ -23,15 +23,17 @@ const Modal = ({ project, isOpen, onRequestClose }) => {
             />
           </div>
           <p className='my-2 text-lg'>About the project:</p>
-          <p className='my-2 font-light'>{project.subtitle}</p>
+          <p className='my-2 font-light text-sm'>{project.subtitle}</p>
           <p className='my-2 text-lg '>Technologies used:</p>
-          <p className='text-lg mb-2'>{project.categories.join(" | ")}</p>
+          <p className='text-sm font-light mb-2'>
+            {project.categories.join(" | ")}
+          </p>
           <div className='flex'>
             <a
               href={project.projectLink}
               target='_blank'
               rel='noopener noreferrer'
-              className='mr-2 underline hover:text-drap transition duration-500'
+              className='mr-2 text-sm underline font-light hover:scale-110 hover:-translate-y-0.5 transition duration-500'
             >
               GitHub
             </a>
@@ -39,7 +41,7 @@ const Modal = ({ project, isOpen, onRequestClose }) => {
               href={project.liveLink}
               target='_blank'
               rel='noopener noreferrer'
-              className='ml-2 underline hover:text-drap transition duration-500'
+              className='ml-2 underline text-sm font-light hover:scale-110 hover:-translate-y-0.5 transition duration-500'
             >
               Live Project
             </a>
