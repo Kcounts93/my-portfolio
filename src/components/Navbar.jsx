@@ -3,7 +3,7 @@ import Logo from "../assets/KC.svg";
 import { FiMenu, FiX, FiGithub, FiLinkedin } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 
-const navLinks = ["Home", "Projects", "About", "Skills", "Contact"];
+const navLinks = ["Home", "Projects", "About", "Resume", "Contact"];
 
 const SocialLinks = () => (
   <ul className='flex'>
