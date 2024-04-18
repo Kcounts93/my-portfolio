@@ -45,12 +45,18 @@ const MobileMenu = ({ navVariants, isMobileMenuOpen, toggleNav }) => (
   <AnimatePresence>
     {isMobileMenuOpen && (
       <motion.div
-        className='fixed top-0 right-0 w-full md:w-1/4 h-full flex flex-col items-center justify-center bg-charcoal'
+        className='fixed inset-0 w-full h-full flex flex-col items-center justify-center bg-charcoal z-50'
         initial='hidden'
         animate='visible'
         exit='hidden'
         variants={navVariants}
       >
+        <button
+          onClick={toggleNav}
+          className='top-0 right-0 mt-4 mr-4 text-2xl z-50 ml-3'
+        >
+          <FiX className='text-white transition-transform hover:rotate-180 hover:scale-125 duration-300' />
+        </button>
         <ul className='text-4xl py-4 text-center font-medium'>
           {navLinks.map((link) => (
             <motion.li key={link} className='my-5'>
@@ -71,37 +77,34 @@ const Navbar = () => {
   const toggleNav = () => setMobileMenuOpen(!isMobileMenuOpen);
 
   const navVariants = {
-    hidden: { opacity: 0, x: -100 },
+    hidden: { opacity: 0, x: "100%" },
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.3 },
+      transition: { type: "ease-in-out", stiffness: 100 },
     },
   };
 
   return (
     <motion.div
       className='fixed top-0 left-0 z-10 w-full'
-      initial={{ opacity: 0, y: -100 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -100 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
     >
-      <div className='container my-5 max-w-xxx mx-auto px-5 md:px-10 lg:px-20'>
-        <div className='flex justify-between items-center py-3 px-3 bg-charcoal backdrop-filter backdrop-blur-md bg-opacity-40 rounded-md'>
+      <div className='container mx-auto px-5 md:px-10 lg:px-20 mt-5'>
+        <div className='flex justify-between items-center py-3 px-5 md:px-2 bg-charcoal backdrop-filter backdrop-blur-lg bg-opacity-40 rounded-md'>
           <img src={Logo} alt='Logo' className='ml-2' />
-          <div onClick={toggleNav} className='md:hidden z-10 text-2xl'>
-            {isMobileMenuOpen ? (
-              <FiX className='transition-transform hover:rotate-180 hover:scale-125 text-drap duration-300' />
-            ) : (
-              <FiMenu />
-            )}
+          <div className='md:hidden z-30 text-2xl ml-5'>
+            <button onClick={toggleNav}>
+              {isMobileMenuOpen ? (
+                <FiX className='transition-transform hover:rotate-180 hover:scale-125 duration-300' />
+              ) : (
+                <FiMenu className='text-white' />
+              )}
+            </button>
           </div>
-          <MobileMenu
-            navVariants={navVariants}
-            isMobileMenuOpen={isMobileMenuOpen}
-            toggleNav={toggleNav}
-          />
-          <ul className='hidden md:flex ml-20'>
+          <ul className='hidden md:flex md:ml-20'>
             {navLinks.map((link) => (
               <NavLink key={link} link={link} />
             ))}
@@ -110,6 +113,13 @@ const Navbar = () => {
             <SocialLinks />
           </div>
         </div>
+        {isMobileMenuOpen && (
+          <MobileMenu
+            navVariants={navVariants}
+            isMobileMenuOpen={isMobileMenuOpen}
+            toggleNav={toggleNav}
+          />
+        )}
       </div>
     </motion.div>
   );
