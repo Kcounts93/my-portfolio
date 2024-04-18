@@ -53,7 +53,7 @@ const MobileMenu = ({ navVariants, isMobileMenuOpen, toggleNav }) => (
       >
         <button
           onClick={toggleNav}
-          className='top-0 right-0 mt-4 mr-4 text-2xl z-50 ml-3'
+          className='absolute top-0 right-0 mt-4 mr-4 text-2xl z-50 ml-3'
         >
           <FiX className='text-white transition-transform hover:rotate-180 hover:scale-125 duration-300' />
         </button>
